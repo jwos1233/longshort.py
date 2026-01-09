@@ -48,7 +48,8 @@ class SimpleLiveTrader:
             vol_lookback=30, 
             max_positions=10,
             atr_stop_loss=2.0,
-            atr_period=14
+            atr_period=14,
+            ema_smoothing_period=20  # EMA smoothing for quad scores
         )
         self.ib_port = ib_port
         self.dry_run = dry_run

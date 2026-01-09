@@ -17,9 +17,13 @@ def format_telegram_message(signals: dict) -> str:
     target_weights = signals['target_weights']
     excluded_below_ema = signals.get('excluded_below_ema', {})
     timestamp = signals.get('timestamp', datetime.now())
+    price_date = signals.get('price_date', timestamp.date())
+    analysis_timestamp_utc = signals.get('analysis_timestamp_utc', datetime.utcnow())
     
     # Build message - only primary, secondary, and positions
-    message = f"{timestamp.strftime('%Y-%m-%d')}\n\n"
+    message = f"{price_date}\n\n"
+    message += f"<b>Price Data Date:</b> {price_date}\n"
+    message += f"<b>Analysis Time (UTC):</b> {analysis_timestamp_utc.strftime('%Y-%m-%d %H:%M:%S')} UTC\n\n"
     message += f"<b>Primary Quad:</b> {top1}\n"
     message += f"<b>Secondary Quad:</b> {top2}\n\n"
     

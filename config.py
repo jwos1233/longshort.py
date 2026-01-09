@@ -153,10 +153,9 @@ LOG_FILE = "macro_quadrant_strategy.log"
 QUAD_ALLOCATIONS = {
     'Q1': {
         'QQQ': 0.60 * 0.40,      # 40% of 60% Growth
+        'BTC-USD': 0.60 * 0.40,     # 40% of 60% Growth (Bitcoin)
         'ARKK': 0.60 * 0.30,     # 30% of 60% Growth
         'IWM': 0.60 * 0.15,      # 15% of 60% Growth (Small Caps)
-        'IBIT': 0.60 * 0.10,     # 10% of 60% Growth (Bitcoin ETF)
-        'ETHA': 0.60 * 0.05,     # 5% of 60% Growth (Ethereum ETF)
         'XLC': 0.15 * 0.50,      # 50% of 15% Consumer Disc
         'XLY': 0.15 * 0.50,      # 50% of 15% Consumer Disc
         'TLT': 0.10 * 0.50,      # 50% of 10% Bonds
@@ -167,12 +166,10 @@ QUAD_ALLOCATIONS = {
         'DBC': 0.35 * 0.20,      # 20% of 35% Commodities
         'GCC': 0.35 * 0.20,      # 20% of 35% Commodities
         'LIT': 0.35 * 0.10,      # 10% of 35% Commodities (Lithium)
-        'AA':  0.35 * 0.10,      # 10% of 35% Commodities (Alcoa)
-        'PALL': 0.35 * 0.10,     # 10% of 35% Commodities (Palladium)
-        'VALT': 0.35 * 0.10,     # 10% of 35% Commodities (Treasury collateral)
         'XLF': 0.30 * 0.333,     # 33% of 30% Cyclicals
         'XLI': 0.30 * 0.333,     # 33% of 30% Cyclicals
         'XLB': 0.30 * 0.334,     # 34% of 30% Cyclicals
+        'USO': 0.30 * 0.334,     # 34% of 30% Cyclicals
         'XOP': 0.15 * 0.333,     # 33% of 15% Energy
         'FCG': 0.15 * 0.333,     # 33% of 15% Energy
         'USO': 0.15 * 0.334,     # 34% of 15% Energy (Crude Oil)
@@ -180,9 +177,11 @@ QUAD_ALLOCATIONS = {
         'PAVE': 0.10 * 0.50,     # 50% of 10% Real Assets
         'VTV': 0.10 * 0.50,      # 50% of 10% Value
         'IWD': 0.10 * 0.50,      # 50% of 10% Value
+        'EEM': 0.25 * 0.333,     # 33% of 25% Energy
     },
     'Q3': {
         'FCG': 0.25 * 0.333,     # 33% of 25% Energy
+        'EEM': 0.25 * 0.333,     # 33% of 25% Energy
         'XLE': 0.25 * 0.333,     # 33% of 25% Energy
         'XOP': 0.25 * 0.334,     # 34% of 25% Energy
         'GLD': 0.30 * 0.12,      # 12% of 30% Commodities
@@ -191,9 +190,6 @@ QUAD_ALLOCATIONS = {
         'REMX': 0.30 * 0.12,     # 12% of 30% Commodities
         'URA': 0.30 * 0.12,      # 12% of 30% Commodities (Uranium)
         'LIT': 0.30 * 0.10,      # 10% of 30% Commodities (Lithium)
-        'AA':  0.30 * 0.10,      # 10% of 30% Commodities (Alcoa)
-        'PALL': 0.30 * 0.10,     # 10% of 30% Commodities (Palladium)
-        'VALT': 0.30 * 0.10,     # 10% of 30% Commodities (Treasury collateral)
         'TIP': 0.20 * 0.50,      # 50% of 20% TIPS
         'VTIP': 0.20 * 0.50,     # 50% of 20% TIPS
         'VNQ': 0.10 * 0.50,      # 50% of 10% Real Assets

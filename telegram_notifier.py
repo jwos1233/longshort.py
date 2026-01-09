@@ -49,6 +49,10 @@ class TelegramNotifier:
         top_quads = signals.get('top_quadrants', ('?', '?'))
         leverage = signals.get('total_leverage', 0)
         
+        # Get price date and UTC timestamp if available
+        price_date = signals.get('price_date', None)
+        analysis_timestamp_utc = signals.get('analysis_timestamp_utc', None)
+        
         # Get all positions by weight
         weights = signals.get('target_weights', {})
         sorted_weights = sorted(weights.items(), key=lambda x: x[1], reverse=True)
@@ -59,7 +63,16 @@ class TelegramNotifier:
         message = f"""
 <b>🌙 NIGHT SIGNAL GENERATION</b>
 {datetime.now().strftime('%Y-%m-%d %H:%M')}
-
+"""
+        
+        # Add price date and UTC timestamp if available
+        if price_date:
+            message += f"<b>Price Data Date:</b> {price_date}\n"
+        if analysis_timestamp_utc:
+            if isinstance(analysis_timestamp_utc, datetime):
+                message += f"<b>Analysis Time (UTC):</b> {analysis_timestamp_utc.strftime('%Y-%m-%d %H:%M:%S')} UTC\n"
+        
+        message += f"""
 <b>Market Regime:</b> {regime}
 <b>Top Quadrants:</b> {top_quads[0]}, {top_quads[1]}
 <b>Target Leverage:</b> {leverage:.2f}x

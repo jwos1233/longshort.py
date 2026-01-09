@@ -15,7 +15,7 @@ Strategy:
 import numpy as np
 import pandas as pd
 import yfinance as yf
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, date
 from typing import Dict, Tuple
 from config import QUAD_ALLOCATIONS
 
@@ -32,13 +32,14 @@ class SignalGenerator:
     """Generate live trading signals for macro quadrant rotation strategy"""
     
     def __init__(self, momentum_days=20, ema_period=50, vol_lookback=30, max_positions=10,
-                 atr_stop_loss=2.0, atr_period=14):
+                 atr_stop_loss=2.0, atr_period=14, ema_smoothing_period=20):
         self.momentum_days = momentum_days
         self.ema_period = ema_period
         self.vol_lookback = vol_lookback
         self.max_positions = max_positions  # Top 10 positions (optimal from backtesting)
         self.atr_stop_loss = atr_stop_loss  # ATR 2.0x stop loss (optimal from backtesting)
         self.atr_period = atr_period  # 14-day ATR
+        self.ema_smoothing_period = ema_smoothing_period  # EMA smoothing for quad scores
         
         # Leverage by quadrant
         self.quad_leverage = {
@@ -67,20 +68,36 @@ class SignalGenerator:
         
         all_tickers = sorted(list(all_tickers))
         
-        end_date = datetime.now()
+        # Use yesterday's date to ensure consistent data availability
+        # This prevents issues where same-day data isn't finalized yet when run right after close
+        # When run on T+1, it will use T's finalized data (which is what we want)
+        today = date.today()
+        end_date = datetime.combine(today - timedelta(days=1), datetime.min.time())
         start_date = end_date - timedelta(days=lookback_days)
         
         print(f"Fetching data for {len(all_tickers)} tickers...")
+        print(f"  Date range: {start_date.date()} to {end_date.date()} (using finalized close prices)")
         
         price_series = []
+        last_available_dates = []
+        
         for ticker in all_tickers:
             try:
-                data = yf.download(ticker, start=start_date, end=end_date, 
+                # Use period='6mo' to get recent data, which is more reliable than start/end dates
+                # This ensures we get the most recent available finalized data
+                data = yf.download(ticker, period='6mo', 
                                  progress=False, auto_adjust=True)
                 if len(data) > 0 and 'Close' in data.columns:
                     series = data['Close'].copy()
-                    series.name = ticker
-                    price_series.append(series)
+                    # Filter to our desired date range (but keep all recent data)
+                    series = series[series.index.date >= start_date.date()]
+                    # Only include data up to our target end_date (yesterday)
+                    # This ensures consistency - always uses finalized close prices
+                    series = series[series.index.date <= end_date.date()]
+                    if len(series) > 0:
+                        series.name = ticker
+                        price_series.append(series)
+                        last_available_dates.append(series.index[-1])
             except Exception as e:
                 print(f"Error fetching {ticker}: {e}")
         
@@ -90,30 +107,70 @@ class SignalGenerator:
         df = pd.concat(price_series, axis=1)
         df = df.ffill().bfill()
         
-        print(f"✓ Loaded {len(df.columns)} tickers, {len(df)} days")
+        # Determine actual last available date (most common date across all tickers)
+        if last_available_dates:
+            # Convert to dates if they're Timestamps
+            dates_only = [d.date() if hasattr(d, 'date') else d for d in last_available_dates]
+            actual_last_date = max(set(dates_only))
+            print(f"✓ Loaded {len(df.columns)} tickers, {len(df)} days")
+            print(f"  Last available price date: {actual_last_date}")
+        else:
+            print(f"✓ Loaded {len(df.columns)} tickers, {len(df)} days")
+        
         return df
     
-    def calculate_quadrant_scores(self, price_data: pd.DataFrame) -> pd.Series:
+    def calculate_quadrant_scores(self, price_data: pd.DataFrame, apply_smoothing: bool = True) -> pd.Series:
         """
         Calculate momentum scores for each quadrant
         
+        Args:
+            price_data: DataFrame with price data
+            apply_smoothing: If True, apply EMA smoothing to scores
+        
         Returns:
-            Series with quad scores for today
+            Series with quad scores for today (smoothed if apply_smoothing=True)
         """
-        scores = {}
+        # Calculate raw scores for all dates (needed for EMA smoothing)
+        raw_scores_df = pd.DataFrame(index=price_data.index, columns=list(QUAD_INDICATORS.keys()))
         
         for quad, indicators in QUAD_INDICATORS.items():
-            quad_scores = []
-            for ticker in indicators:
-                if ticker in price_data.columns:
-                    # 50-day momentum
-                    momentum = price_data[ticker].pct_change(self.momentum_days).iloc[-1] * 100
-                    if not pd.isna(momentum):
-                        quad_scores.append(momentum)
+            quad_score_series = pd.Series(index=price_data.index, dtype=float)
             
-            scores[quad] = np.mean(quad_scores) if quad_scores else 0
+            for date in price_data.index:
+                quad_scores_list = []
+                for ticker in indicators:
+                    if ticker in price_data.columns:
+                        momentum = price_data[ticker].pct_change(self.momentum_days).loc[date] * 100
+                        if pd.notna(momentum):
+                            quad_scores_list.append(momentum)
+                
+                if quad_scores_list:
+                    quad_score_series.loc[date] = np.mean(quad_scores_list)
+                else:
+                    quad_score_series.loc[date] = 0.0
+            
+            raw_scores_df[quad] = quad_score_series
         
-        return pd.Series(scores).sort_values(ascending=False)
+        # Apply EMA smoothing if requested
+        if apply_smoothing and self.ema_smoothing_period and self.ema_smoothing_period > 0:
+            smoothed_scores_df = pd.DataFrame(index=price_data.index, columns=list(QUAD_INDICATORS.keys()))
+            for quad in QUAD_INDICATORS.keys():
+                smoothed_scores_df[quad] = raw_scores_df[quad].ewm(
+                    span=self.ema_smoothing_period, 
+                    adjust=False
+                ).mean()
+            
+            # Return smoothed scores for last date
+            final_scores = {}
+            for quad in QUAD_INDICATORS.keys():
+                final_scores[quad] = smoothed_scores_df[quad].iloc[-1]
+        else:
+            # Return raw scores for last date
+            final_scores = {}
+            for quad in QUAD_INDICATORS.keys():
+                final_scores[quad] = raw_scores_df[quad].iloc[-1]
+        
+        return pd.Series(final_scores).sort_values(ascending=False)
     
     def get_top_quadrants(self, quad_scores: pd.Series) -> Tuple[str, str]:
         """Get top 2 quadrants"""
@@ -121,12 +178,14 @@ class SignalGenerator:
         return top_quads[0], top_quads[1]
     
     def calculate_target_weights(self, price_data: pd.DataFrame, 
-                                 top1: str, top2: str) -> Dict[str, float]:
+                                 top1: str, top2: str) -> Tuple[Dict[str, float], Dict[str, dict]]:
         """
         Calculate target portfolio weights
         
         Returns:
-            Dictionary of {ticker: weight} where weights sum to ~2.5 (if Q1 active)
+            Tuple of:
+            - Dictionary of {ticker: weight} where weights sum to ~2.5 (if Q1 active)
+            - Dictionary of {ticker: {'price': float, 'ema': float, 'quadrant': str}} for excluded assets
         """
         # Calculate EMA
         ema_data = price_data.ewm(span=self.ema_period, adjust=False).mean()
@@ -136,6 +195,7 @@ class SignalGenerator:
         volatility_data = returns.rolling(window=self.vol_lookback).std() * np.sqrt(252)
         
         final_weights = {}
+        excluded_below_ema = {}  # Track assets excluded due to being below EMA
         
         for quad in [top1, top2]:
             # Get leverage for this quad
@@ -168,12 +228,21 @@ class SignalGenerator:
                 current_price = price_data[ticker].iloc[-1]
                 current_ema = ema_data[ticker].iloc[-1]
                 
-                if pd.notna(current_price) and pd.notna(current_ema) and current_price > current_ema:
-                    # Pass EMA filter
-                    if ticker in final_weights:
-                        final_weights[ticker] += weight
+                if pd.notna(current_price) and pd.notna(current_ema):
+                    if current_price > current_ema:
+                        # Pass EMA filter
+                        if ticker in final_weights:
+                            final_weights[ticker] += weight
+                        else:
+                            final_weights[ticker] = weight
                     else:
-                        final_weights[ticker] = weight
+                        # Below EMA - exclude from weights but track it
+                        excluded_below_ema[ticker] = {
+                            'price': float(current_price),
+                            'ema': float(current_ema),
+                            'quadrant': quad,
+                            'would_be_weight': weight
+                        }
         
         # Filter to top N positions if max_positions is set
         if self.max_positions and len(final_weights) > self.max_positions:
@@ -194,7 +263,7 @@ class SignalGenerator:
             final_weights = dict(sorted_weights[:self.max_positions])
             print(f"⚠️ WARNING: Had to force-filter to {self.max_positions} positions!")
         
-        return final_weights
+        return final_weights, excluded_below_ema
     
     def generate_signals(self) -> Dict:
         """
@@ -219,8 +288,13 @@ class SignalGenerator:
         self.price_data = price_data
         self.ema_data = price_data.ewm(span=self.ema_period, adjust=False).mean()
         
-        # Calculate quadrant scores
-        quad_scores = self.calculate_quadrant_scores(price_data)
+        # Calculate quadrant scores (with EMA smoothing if enabled)
+        apply_smoothing = self.ema_smoothing_period and self.ema_smoothing_period > 0
+        if apply_smoothing:
+            print(f"\nCalculating quadrant scores with {self.ema_smoothing_period}-period EMA smoothing...")
+        quad_scores = self.calculate_quadrant_scores(price_data, apply_smoothing=apply_smoothing)
+        if apply_smoothing:
+            print(f"✓ Smoothed scores calculated")
         top1, top2 = self.get_top_quadrants(quad_scores)
         
         print(f"\nQuadrant Scores:")
@@ -230,7 +304,7 @@ class SignalGenerator:
         print(f"\n🎯 Top 2 Quadrants: {top1}, {top2}")
         
         # Calculate target weights
-        target_weights = self.calculate_target_weights(price_data, top1, top2)
+        target_weights, excluded_below_ema = self.calculate_target_weights(price_data, top1, top2)
         
         # Calculate ATR for stop losses
         atr_data = {}
@@ -272,12 +346,39 @@ class SignalGenerator:
                 
                 print(f"  {ticker:<8} {weight*100:>8.2f}%  ${notional_10k:>12,.2f}  {quad_str:<10}")
         
+        # Print excluded assets if any
+        if excluded_below_ema:
+            print(f"\n  ⚠️ EXCLUDED (Below EMA):")
+            print(f"  {'Ticker':<8} {'Price':<12} {'EMA':<12} {'% Below':<10} {'Quadrant':<10}")
+            print(f"  {'-'*8} {'-'*12} {'-'*12} {'-'*10} {'-'*10}")
+            
+            sorted_excluded = sorted(excluded_below_ema.items(), 
+                                    key=lambda x: x[1].get('would_be_weight', 0), 
+                                    reverse=True)
+            for ticker, info in sorted_excluded:
+                price = info.get('price', 0)
+                ema_val = info.get('ema', 0)
+                pct_below = ((price - ema_val) / ema_val * 100) if ema_val > 0 else 0
+                quad = info.get('quadrant', '')
+                print(f"  {ticker:<8} ${price:>10.2f}  ${ema_val:>10.2f}  {pct_below:>8.2f}%  {quad:<10}")
+        
+        # Get the date of the last price data point (the date prices are from)
+        price_date = price_data.index[-1] if len(price_data) > 0 else datetime.now().date()
+        if isinstance(price_date, pd.Timestamp):
+            price_date = price_date.date()
+        
+        # Get UTC timestamp for when analysis was run
+        analysis_timestamp_utc = datetime.utcnow()
+        
         return {
             'top_quadrants': (top1, top2),
             'quadrant_scores': quad_scores,
             'target_weights': target_weights,
+            'excluded_below_ema': excluded_below_ema,
             'current_regime': f"{top1} + {top2}",
             'timestamp': datetime.now(),
+            'price_date': price_date,  # Date of the price data used
+            'analysis_timestamp_utc': analysis_timestamp_utc,  # UTC time when analysis was run
             'total_leverage': total_leverage,
             'atr_data': atr_data
         }

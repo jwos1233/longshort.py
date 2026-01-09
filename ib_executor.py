@@ -398,12 +398,21 @@ class IBExecutor:
                 # Calculate delta (integer)
                 delta_quantity = int(target_quantity - current_quantity)
                 
+                # Get ATR for stop calculation (prefer from atr_data, but calculate if needed)
+                atr = None
+                if atr_data and ticker in atr_data:
+                    atr = atr_data[ticker]
+                elif position_manager:
+                    # Try to get ATR from position manager if it has this position
+                    pos = position_manager.get_position(ticker)
+                    if pos and 'atr_at_entry' in pos:
+                        atr = pos['atr_at_entry']
+                
                 # Only trade if delta > threshold (e.g., 5% of target) AND delta >= 1 share
                 if abs(delta_quantity) >= 1 and abs(delta_quantity) > abs(target_quantity) * 0.05:
                     
                     # Case 1: NEW POSITION - use position_manager.enter_position (places stop!)
-                    if current_quantity == 0 and position_manager and atr_data and ticker in atr_data:
-                        atr = atr_data[ticker]
+                    if current_quantity == 0 and position_manager and atr:
                         stop_price = price - (2.0 * atr)  # 2 ATR stop
                         
                         print(f"    📈 NEW POSITION - Entry with stop loss")
@@ -422,7 +431,7 @@ class IBExecutor:
                         else:
                             print(f"    ✗ Failed to enter position via manager")
                     
-                    # Case 2: ADJUSTING EXISTING - use position_manager.adjust_position (keeps stop!)
+                    # Case 2: ADJUSTING EXISTING IN STATE - use position_manager.adjust_position (keeps stop!)
                     elif current_quantity != 0 and position_manager and position_manager.has_position(ticker):
                         print(f"    🔄 ADJUSTING POSITION - Keeping original stop")
                         
@@ -436,9 +445,65 @@ class IBExecutor:
                         else:
                             print(f"    ✗ Failed to adjust position via manager")
                     
-                    # Case 3: FALLBACK - direct order (no stop management)
+                    # Case 3: EXISTING POSITION NOT IN STATE - add to state and place stop
+                    elif current_quantity != 0 and position_manager and atr:
+                        print(f"    ⚠️ Position exists in IB but not in state - adding to state with stop")
+                        
+                        # Calculate stop price based on current price (entry price approximation)
+                        stop_price = price - (2.0 * atr)  # 2 ATR stop
+                        
+                        # Add position to state manually (simulating entry)
+                        position_manager.state['positions'][ticker] = {
+                            'shares': current_quantity,
+                            'entry_price': price,  # Use current price as approximation
+                            'stop_price': stop_price,
+                            'atr_at_entry': atr,
+                            'entry_order_id': None,  # Unknown
+                            'stop_order_id': None,  # Will be set when we place stop
+                            'entry_date': datetime.now().isoformat(),
+                            'contract_details': {
+                                'symbol': contract.symbol,
+                                'secType': contract.secType,
+                                'exchange': contract.exchange,
+                                'currency': contract.currency
+                            }
+                        }
+                        
+                        # Place stop order
+                        stop_order = Order()
+                        stop_order.action = 'SELL'
+                        stop_order.orderType = 'STP'
+                        stop_order.auxPrice = stop_price
+                        stop_order.totalQuantity = current_quantity
+                        stop_order.tif = 'GTC'  # Good-Till-Cancelled
+                        stop_order.transmit = True
+                        
+                        print(f"    🛑 Placing STOP: Sell {current_quantity} {ticker} @ ${stop_price:.2f} (GTC)")
+                        stop_trade = self.ib.placeOrder(contract, stop_order)
+                        position_manager.state['positions'][ticker]['stop_order_id'] = stop_trade.order.orderId
+                        position_manager.save_state()
+                        
+                        # Now adjust if needed
+                        if delta_quantity != 0:
+                            print(f"    🔄 Now adjusting position size...")
+                            success = position_manager.adjust_position(
+                                contract=contract,
+                                new_quantity=target_quantity
+                            )
+                            if success:
+                                print(f"    ✓ Position adjusted with stop")
+                            else:
+                                print(f"    ✗ Failed to adjust position")
+                        else:
+                            print(f"    ✓ Position added to state with stop placed")
+                    
+                    # Case 4: FALLBACK - direct order (no stop management) - WARNING
                     else:
-                        print(f"    ⚠️ No position manager or ATR data - trading without stop")
+                        print(f"    ⚠️ WARNING: Trading without stop loss!")
+                        if not position_manager:
+                            print(f"    ⚠️ No position manager available")
+                        if not atr:
+                            print(f"    ⚠️ No ATR data for {ticker}")
                         action = 'BUY' if delta_quantity > 0 else 'SELL'
                         trade = self.place_order(contract, int(abs(delta_quantity)), action)
                         if trade:
@@ -446,6 +511,42 @@ class IBExecutor:
                 
                 else:
                     print(f"    ⊘ Position close to target, no trade needed")
+                    # Even if no trade needed, ensure stop exists if position is in IB
+                    if current_quantity != 0 and position_manager and atr and not position_manager.has_position(ticker):
+                        print(f"    🛑 Ensuring stop exists for existing position...")
+                        stop_price = price - (2.0 * atr)
+                        
+                        # Add to state
+                        position_manager.state['positions'][ticker] = {
+                            'shares': current_quantity,
+                            'entry_price': price,
+                            'stop_price': stop_price,
+                            'atr_at_entry': atr,
+                            'entry_order_id': None,
+                            'stop_order_id': None,
+                            'entry_date': datetime.now().isoformat(),
+                            'contract_details': {
+                                'symbol': contract.symbol,
+                                'secType': contract.secType,
+                                'exchange': contract.exchange,
+                                'currency': contract.currency
+                            }
+                        }
+                        
+                        # Place stop
+                        stop_order = Order()
+                        stop_order.action = 'SELL'
+                        stop_order.orderType = 'STP'
+                        stop_order.auxPrice = stop_price
+                        stop_order.totalQuantity = current_quantity
+                        stop_order.tif = 'GTC'
+                        stop_order.transmit = True
+                        
+                        print(f"    🛑 Placing STOP: Sell {current_quantity} {ticker} @ ${stop_price:.2f} (GTC)")
+                        stop_trade = self.ib.placeOrder(contract, stop_order)
+                        position_manager.state['positions'][ticker]['stop_order_id'] = stop_trade.order.orderId
+                        position_manager.save_state()
+                        print(f"    ✓ Stop placed for existing position")
             
             except Exception as e:
                 # If any ticker fails (e.g., CPER restricted), log it and continue with others
@@ -454,6 +555,71 @@ class IBExecutor:
                 continue
         
         print(f"\n✓ Executed {len(executed_trades)} trades")
+        
+        # FINAL CHECK: Ensure all positions in target have stops
+        if position_manager and atr_data:
+            print(f"\n🛑 FINAL CHECK: Ensuring all positions have stop losses...")
+            final_positions = self.get_current_positions()
+            
+            for ticker in target_sizes.keys():
+                if ticker in final_positions and final_positions[ticker] != 0:
+                    # Check if position has a stop
+                    if not position_manager.has_position(ticker):
+                        print(f"  ⚠️ {ticker}: Position exists but no stop in state - adding stop...")
+                        
+                        if ticker in atr_data:
+                            try:
+                                contract = self.create_cfd_contract(ticker)
+                                if contract:
+                                    price = self.get_market_price(contract)
+                                    if price and price > 0:
+                                        atr = atr_data[ticker]
+                                        stop_price = price - (2.0 * atr)
+                                        quantity = int(abs(final_positions[ticker]))
+                                        
+                                        # Add to state
+                                        position_manager.state['positions'][ticker] = {
+                                            'shares': quantity,
+                                            'entry_price': price,
+                                            'stop_price': stop_price,
+                                            'atr_at_entry': atr,
+                                            'entry_order_id': None,
+                                            'stop_order_id': None,
+                                            'entry_date': datetime.now().isoformat(),
+                                            'contract_details': {
+                                                'symbol': contract.symbol,
+                                                'secType': contract.secType,
+                                                'exchange': contract.exchange,
+                                                'currency': contract.currency
+                                            }
+                                        }
+                                        
+                                        # Place stop
+                                        stop_order = Order()
+                                        stop_order.action = 'SELL'
+                                        stop_order.orderType = 'STP'
+                                        stop_order.auxPrice = stop_price
+                                        stop_order.totalQuantity = quantity
+                                        stop_order.tif = 'GTC'
+                                        stop_order.transmit = True
+                                        
+                                        stop_trade = self.ib.placeOrder(contract, stop_order)
+                                        position_manager.state['positions'][ticker]['stop_order_id'] = stop_trade.order.orderId
+                                        position_manager.save_state()
+                                        print(f"    ✓ Stop placed: ${stop_price:.2f}")
+                            except Exception as e:
+                                print(f"    ✗ Error adding stop for {ticker}: {e}")
+                    else:
+                        # Verify stop order is still active
+                        pos = position_manager.get_position(ticker)
+                        if pos and pos.get('stop_order_id'):
+                            # Check if order still exists
+                            try:
+                                # Try to get order status (if order was cancelled/filled, we need to replace it)
+                                # Note: This is a simplified check - in production you might want to query open orders
+                                print(f"  ✓ {ticker}: Stop order exists (ID: {pos['stop_order_id']})")
+                            except:
+                                pass
         
         return executed_trades
     

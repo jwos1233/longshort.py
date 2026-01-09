@@ -1,36 +1,6 @@
 """
 Macro Quadrant Portfolio Backtest - PRODUCTION VERSION
 ===========================================================
-
-Advanced algorithmic portfolio allocation based on macroeconomic regime detection.
-
-Key Features:
-- Allocates to top 2 quadrants based on 50-day momentum scoring (T-1 lag)
-- Within-quad weighting: DIRECT volatility (higher vol = higher weight)
-- 30-day volatility lookback (optimal for responsiveness vs stability)
-- 50-day EMA trend filter (only allocate to assets above EMA)
-- Event-driven rebalancing (quad change or EMA crossover)
-- UNIFORM leverage: All quads get 150% (1.5x) exposure
-- ENTRY CONFIRMATION: 1-day lag using CURRENT/TODAY's EMA (not lagged)
-- 5% MINIMUM DELTA: Only rebalance if position changes > 5%
-- REALISTIC EXECUTION: Trade at next day's open (accounts for gap risk)
-
-Performance (5-Year Backtest):
-- Total Return: 250.32%
-- Annualized: 32.12%
-- Sharpe Ratio: 1.01
-- Max Drawdown: -28.76%
-
-Risk Management:
-- EMA filter prevents allocation to downtrending assets
-- Entry confirmation reduces false signals
-- Quad-aware rebalancing: don't touch stable quads
-- Minimum delta threshold reduces unnecessary trading
-
-Lag Structure (Prevents Forward-Looking Bias):
-- Macro signals (quad rankings): T-1 lag (trade yesterday's regime)
-- Entry confirmation (EMA filter): T+0 (check TODAY's live EMA)
-- Exit rule: Immediate (no lag)
 """
 
 import numpy as np
@@ -39,6 +9,14 @@ import yfinance as yf
 import matplotlib.pyplot as plt
 from datetime import datetime, timedelta
 from config import QUAD_ALLOCATIONS, QUADRANT_DESCRIPTIONS
+
+# Quadrant indicators for scoring (same as signal_generator.py)
+QUAD_INDICATORS = {
+    'Q1': ['QQQ', 'VUG', 'IWM', 'BTC-USD'],
+    'Q2': ['XLE', 'DBC'],
+    'Q3': ['GLD', 'LIT'],
+    'Q4': ['TLT', 'XLU', 'VIXY']
+}
 
 # Backtest leverage controls
 BASE_QUAD_LEVERAGE = 1.5       # 1.5x exposure for all quads
@@ -51,7 +29,7 @@ ADDITIONAL_BACKTEST_TICKERS = ['LIT', 'AA', 'PALL', 'VALT']
 class QuadrantPortfolioBacktest:
     def __init__(self, start_date, end_date, initial_capital=50000, 
                  momentum_days=50, ema_period=50, vol_lookback=30, max_positions=None,
-                 atr_stop_loss=None, atr_period=14):
+                 atr_stop_loss=None, atr_period=14, ema_smoothing_period=20):
         self.start_date = start_date
         self.end_date = end_date
         self.initial_capital = initial_capital
@@ -61,6 +39,7 @@ class QuadrantPortfolioBacktest:
         self.max_positions = max_positions  # If set, only trade top N positions
         self.atr_stop_loss = atr_stop_loss  # ATR multiplier for stop loss (None = no stops)
         self.atr_period = atr_period  # ATR lookback period (default 14)
+        self.ema_smoothing_period = ema_smoothing_period  # EMA smoothing for quad scores (default 20)
         
         self.price_data = None
         self.open_data = None
@@ -80,18 +59,30 @@ class QuadrantPortfolioBacktest:
         
         print(f"Fetching data for {len(all_tickers)} tickers...")
         
+        # Use yesterday's date to ensure finalized close prices (no look-ahead bias)
+        # This matches signal_generator.py behavior
+        from datetime import date
+        today = date.today()
+        end_date_actual = datetime.combine(today - timedelta(days=1), datetime.min.time())
+        
         # Add buffer for momentum calculation
         buffer_days = max(self.momentum_days, self.ema_period, self.vol_lookback) + 10
         fetch_start = pd.to_datetime(self.start_date) - timedelta(days=buffer_days)
         
-        print(f"Period: {fetch_start.date()} to {self.end_date}")
+        print(f"Period: {fetch_start.date()} to {end_date_actual.date()} (using finalized close prices)")
         
         price_data = {}
         open_data = {}
         for ticker in all_tickers:
             try:
-                data = yf.download(ticker, start=fetch_start, end=self.end_date, 
+                # Use start/end dates to fetch full historical range
+                # Add 1 day to end_date_actual to ensure we get data up to that date
+                end_date_for_download = end_date_actual + timedelta(days=1)
+                data = yf.download(ticker, start=fetch_start, end=end_date_for_download, 
                                  progress=False, auto_adjust=True)
+                # Filter to our desired date range (inclusive of end_date_actual)
+                if len(data) > 0:
+                    data = data[data.index.date <= end_date_actual.date()]
                 
                 # Extract Close prices (for signals, momentum, EMA)
                 if isinstance(data.columns, pd.MultiIndex):
@@ -150,19 +141,38 @@ class QuadrantPortfolioBacktest:
             self.atr_data = daily_returns.rolling(window=self.atr_period).mean() * self.price_data
     
     def calculate_quad_scores(self):
-        """Calculate momentum scores for each quadrant"""
-        print(f"\nCalculating {self.momentum_days}-day momentum scores...")
+        """
+        Calculate momentum scores for each quadrant using QUAD_INDICATORS
+        (same as signal_generator.py - uses indicators for scoring, not all assets)
+        """
+        print(f"\nCalculating {self.momentum_days}-day momentum scores (using QUAD_INDICATORS)...")
         
         # Calculate momentum for all assets
         momentum = self.price_data.pct_change(self.momentum_days)
         
-        # Score each quadrant by average momentum of its assets
+        # Score each quadrant using QUAD_INDICATORS (same as signal generator)
         quad_scores = pd.DataFrame(index=momentum.index)
         
-        for quad, assets in QUAD_ALLOCATIONS.items():
-            quad_tickers = [t for t in assets.keys() if t in momentum.columns]
-            if quad_tickers:
-                quad_scores[quad] = momentum[quad_tickers].mean(axis=1)
+        for quad, indicators in QUAD_INDICATORS.items():
+            # For each date, calculate quad score the same way signal_generator does
+            quad_score_series = pd.Series(index=momentum.index, dtype=float)
+            
+            for date in momentum.index:
+                quad_scores_list = []
+                for ticker in indicators:
+                    if ticker in momentum.columns:
+                        # Get momentum for this ticker on this date
+                        ticker_momentum = momentum.loc[date, ticker]
+                        if pd.notna(ticker_momentum):
+                            quad_scores_list.append(ticker_momentum)
+                
+                # Average across indicators for this quadrant (same as signal_generator)
+                if quad_scores_list:
+                    quad_score_series.loc[date] = np.mean(quad_scores_list)
+                else:
+                    quad_score_series.loc[date] = 0.0
+            
+            quad_scores[quad] = quad_score_series
         
         return quad_scores
     
@@ -272,6 +282,18 @@ class QuadrantPortfolioBacktest:
         # Warmup period
         warmup = self.momentum_days
         quad_scores.iloc[:warmup] = np.nan
+        
+        # Apply EMA smoothing to quad scores if enabled
+        if self.ema_smoothing_period and self.ema_smoothing_period > 0:
+            print(f"\nApplying {self.ema_smoothing_period}-period EMA smoothing to quad scores...")
+            smoothed_scores = pd.DataFrame(index=quad_scores.index, columns=quad_scores.columns)
+            for quad in quad_scores.columns:
+                smoothed_scores[quad] = quad_scores[quad].ewm(
+                    span=self.ema_smoothing_period, 
+                    adjust=False
+                ).mean()
+            quad_scores = smoothed_scores
+            print(f"✓ Smoothed scores calculated")
         
         # Determine top 2 quads each day
         print("\nDetermining top 2 quadrants daily...")
@@ -432,8 +454,9 @@ class QuadrantPortfolioBacktest:
                     for ticker, weight in confirmed_entries.items():
                         actual_positions[ticker] = weight
                         # Record entry price, date, and ATR for stop loss tracking
-                        if self.atr_stop_loss is not None and date in self.price_data.index:
-                            entry_prices[ticker] = self.price_data.loc[date, ticker]
+                        # Use OPEN price (no look-ahead bias) - entry executes at open
+                        if self.atr_stop_loss is not None and date in self.open_data.index:
+                            entry_prices[ticker] = self.open_data.loc[date, ticker]
                             entry_dates[ticker] = date
                             if ticker in self.atr_data.columns:
                                 # Use ATR from SIGNAL date (yesterday) for stop calculation
