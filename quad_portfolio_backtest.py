@@ -8,7 +8,7 @@ import pandas as pd
 import yfinance as yf
 import matplotlib.pyplot as plt
 from datetime import datetime, timedelta
-from config import QUAD_ALLOCATIONS, QUADRANT_DESCRIPTIONS
+from config import QUAD_ALLOCATIONS, QUADRANT_DESCRIPTIONS, BTC_PROXY_BASKET, BTC_PROXY_MAX_POSITIONS
 
 # Quadrant indicators for scoring (same as signal_generator.py)
 QUAD_INDICATORS = {
@@ -54,6 +54,8 @@ class QuadrantPortfolioBacktest:
         all_tickers = []
         for quad_assets in QUAD_ALLOCATIONS.values():
             all_tickers.extend(quad_assets.keys())
+        # Ensure BTC proxy basket tickers are included for backtests
+        all_tickers.extend(list(BTC_PROXY_BASKET.keys()))
         all_tickers.extend(ADDITIONAL_BACKTEST_TICKERS)
         all_tickers = sorted(set(all_tickers))
         
@@ -247,6 +249,47 @@ class QuadrantPortfolioBacktest:
                                 final_weights[ticker] += weight
                             else:
                                 final_weights[ticker] = weight
+
+            # Replace BTC-USD weight with proxy basket (if present)
+            if 'BTC-USD' in final_weights and BTC_PROXY_BASKET:
+                btc_weight = final_weights.pop('BTC-USD')
+
+                # Pure volatility weighting (volatility chasing within crypto bucket)
+                proxy_vols = {}
+                for proxy_ticker in BTC_PROXY_BASKET.keys():
+                    if proxy_ticker not in self.price_data.columns:
+                        continue
+                    if proxy_ticker not in self.volatility_data.columns:
+                        continue
+
+                    vol = self.volatility_data.loc[date, proxy_ticker]
+                    if pd.isna(vol) or vol <= 0:
+                        continue
+
+                    # Apply EMA filter at proxy level
+                    if proxy_ticker not in self.ema_data.columns:
+                        continue
+                    price = self.price_data.loc[date, proxy_ticker]
+                    ema = self.ema_data.loc[date, proxy_ticker]
+                    if pd.isna(price) or pd.isna(ema) or price <= ema:
+                        continue
+
+                    # Pure volatility weighting (volatility chasing within crypto bucket)
+                    proxy_vols[proxy_ticker] = float(vol)
+
+                if proxy_vols:
+                    # Keep only top N proxies (by volatility) to avoid fragmenting the portfolio
+                    n = int(BTC_PROXY_MAX_POSITIONS) if BTC_PROXY_MAX_POSITIONS else 10
+                    # Sort by volatility (highest first) and take top N
+                    top_proxies = sorted(proxy_vols.items(), key=lambda x: x[1], reverse=True)[:n]
+                    total_vol = sum(v for _, v in top_proxies)
+                    
+                    if total_vol > 0:
+                        # Weight by volatility (volatility chasing within crypto bucket)
+                        for proxy_ticker, vol in top_proxies:
+                            proxy_weight = btc_weight * (vol / total_vol)
+                            final_weights[proxy_ticker] = final_weights.get(proxy_ticker, 0.0) + proxy_weight
+                # else: no eligible proxies -> treated as cash
             
             # Filter to top N positions if max_positions is set
             if self.max_positions and len(final_weights) > self.max_positions:

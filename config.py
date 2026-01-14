@@ -216,3 +216,54 @@ QUAD_INDICATORS = {
     'Q3': ['GLD', 'DBC', 'DBA', 'REMX', 'URA', 'LIT'],
     'Q4': ['TLT', 'XLU', 'VIXY']
 } 
+
+# === CRYPTO PROXY CONFIGURATION ===
+# If your broker cannot trade spot crypto tickers like 'BTC-USD', the strategy can
+# keep BTC-USD in the model but execute that sleeve using tradeable proxy equities.
+#
+# Behavior:
+# - Any BTC-USD weight produced by the strategy is reallocated into these proxies
+# - Proxies must pass the same EMA filter (above 50d EMA) to be eligible
+# - Within the crypto sleeve, weights are set by volatility-chasing (higher vol = higher weight)
+# - The sleeve is capped to at most BTC_PROXY_MAX_POSITIONS tickers (default 10)
+BTC_PROXY_BASKET = {
+    # BTC Treasury Companies
+    'MSTR': 0.10,
+    'STRIVE': 0.05,
+
+    # ETH Treasury Companies
+    'SBET': 0.05,
+
+    # Pure Play Miners
+    'MARA': 0.03,
+    'CLSK': 0.02,
+    'RIOT': 0.03,
+    'BITF': 0.02,
+    'CIFR': 0.02,
+
+    # Diversified Miners
+    'IREN': 0.03,
+    'CORZ': 0.03,
+    'HUT': 0.02,
+    'BTDR': 0.02,
+    'BTBT': 0.02,
+    'WULF': 0.02,
+    'HIVE': 0.02,
+
+    # Altcoin Digital Asset Treasuries
+    'ASST': 0.015,
+    'UPXI': 0.015,
+    'AVX': 0.01,
+    'DFDV': 0.01,
+
+    # Infrastructure/Exchanges
+    'COIN': 0.03,
+    'GLXY': 0.02,
+    'CRCL': 0.02,
+    'HOOD': 0.02,
+    'BLSH': 0.015,
+    'CAN': 0.015,
+    'SQ': 0.02,
+}
+
+BTC_PROXY_MAX_POSITIONS = 10

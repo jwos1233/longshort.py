@@ -17,7 +17,21 @@ import pandas as pd
 import yfinance as yf
 from datetime import datetime, timedelta, date
 from typing import Dict, Tuple
-from config import QUAD_ALLOCATIONS
+import sys
+from config import QUAD_ALLOCATIONS, BTC_PROXY_BASKET, BTC_PROXY_MAX_POSITIONS
+
+# Windows consoles sometimes default to a legacy codepage (cp1252) that can't print
+# common Unicode symbols used in logs. Ensure UTF-8 output to avoid crashes.
+if hasattr(sys.stdout, "reconfigure"):
+    try:
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
+if hasattr(sys.stderr, "reconfigure"):
+    try:
+        sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
 
 # Quadrant indicators for momentum scoring
 QUAD_INDICATORS = {
@@ -65,6 +79,9 @@ class SignalGenerator:
             all_tickers.update(quad_assets.keys())
         for indicators in QUAD_INDICATORS.values():
             all_tickers.update(indicators)
+
+        # Ensure BTC proxy basket tickers are fetched so we can replace BTC-USD at execution time
+        all_tickers.update(BTC_PROXY_BASKET.keys())
         
         all_tickers = sorted(list(all_tickers))
         
@@ -243,6 +260,60 @@ class SignalGenerator:
                             'quadrant': quad,
                             'would_be_weight': weight
                         }
+
+        # Replace BTC-USD weight with a proxy basket (if present).
+        # Key design: select up to BTC_PROXY_MAX_POSITIONS proxies by the same "vol chasing"
+        # idea (higher vol = higher weight), using BTC_PROXY_BASKET weights as a prior.
+        if 'BTC-USD' in final_weights and BTC_PROXY_BASKET:
+            btc_weight = final_weights.pop('BTC-USD')
+
+            # Compute vols for proxy tickers (pure volatility weighting, same as rest of portfolio)
+            proxy_vols = {}
+            for proxy_ticker in BTC_PROXY_BASKET.keys():
+                if proxy_ticker not in price_data.columns:
+                    continue
+                vol = volatility_data[proxy_ticker].iloc[-1] if proxy_ticker in volatility_data.columns else np.nan
+                if pd.isna(vol) or vol <= 0:
+                    continue
+
+                # Apply EMA filter at the proxy level
+                current_price = price_data[proxy_ticker].iloc[-1]
+                current_ema = ema_data[proxy_ticker].iloc[-1] if proxy_ticker in ema_data.columns else np.nan
+                if pd.isna(current_price) or pd.isna(current_ema) or current_price <= current_ema:
+                    continue
+
+                # Pure volatility weighting (volatility chasing within crypto bucket)
+                proxy_vols[proxy_ticker] = float(vol)
+
+            if not proxy_vols:
+                # No eligible proxies => BTC sleeve becomes cash
+                excluded_below_ema['BTC-USD'] = {
+                    'price': float(price_data['BTC-USD'].iloc[-1]) if 'BTC-USD' in price_data.columns else None,
+                    'ema': float(ema_data['BTC-USD'].iloc[-1]) if 'BTC-USD' in ema_data.columns else None,
+                    'quadrant': 'CRYPTO_PROXY',
+                    'would_be_weight': btc_weight,
+                    'reason': 'No eligible BTC proxies (data/vol/EMA)',
+                }
+            else:
+                # Keep only top N proxies (by volatility) to avoid fragmenting the portfolio
+                n = int(BTC_PROXY_MAX_POSITIONS) if BTC_PROXY_MAX_POSITIONS else 10
+                # Sort by volatility (highest first) and take top N
+                top_proxies = sorted(proxy_vols.items(), key=lambda x: x[1], reverse=True)[:n]
+                total_vol = sum(v for _, v in top_proxies)
+                
+                if total_vol <= 0:
+                    excluded_below_ema['BTC-USD'] = {
+                        'price': float(price_data['BTC-USD'].iloc[-1]) if 'BTC-USD' in price_data.columns else None,
+                        'ema': float(ema_data['BTC-USD'].iloc[-1]) if 'BTC-USD' in ema_data.columns else None,
+                        'quadrant': 'CRYPTO_PROXY',
+                        'would_be_weight': btc_weight,
+                        'reason': 'BTC proxy volatilities invalid',
+                    }
+                else:
+                    # Weight by volatility (volatility chasing within crypto bucket)
+                    for proxy_ticker, vol in top_proxies:
+                        proxy_weight = btc_weight * (vol / total_vol)
+                        final_weights[proxy_ticker] = final_weights.get(proxy_ticker, 0.0) + proxy_weight
         
         # Filter to top N positions if max_positions is set
         if self.max_positions and len(final_weights) > self.max_positions:

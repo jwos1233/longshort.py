@@ -106,6 +106,16 @@ Edit `config.py` for:
 - Quadrant allocations (`QUAD_ALLOCATIONS`)
 - Quadrant indicators (`QUAD_INDICATORS`)
 - Telegram credentials (`TELEGRAM_TOKEN`, `TELEGRAM_CHAT_ID`)
+- Crypto proxy execution (`BTC_PROXY_BASKET`, `BTC_PROXY_MAX_POSITIONS`)
+
+### Crypto proxy execution (BTC-USD → proxies)
+
+If your broker cannot trade spot crypto tickers like `BTC-USD`, the strategy can keep `BTC-USD` in the model universe but **execute that crypto sleeve using equity proxies**.
+
+- **Where it applies**: When the strategy would allocate to `BTC-USD` (most commonly in Q1), that weight is redistributed into the proxy universe.
+- **Selection**: Proxies must pass the same **50-day EMA filter** (only above EMA).
+- **Weighting inside the crypto sleeve**: **Volatility chasing** (higher volatility gets higher weight), capped to **`BTC_PROXY_MAX_POSITIONS` (default 10)**.
+- **Note**: If none of the proxy tickers have data or pass the EMA filter, the crypto sleeve becomes cash for that run.
 
 Edit `strategy_config.py` for:
 - Discretionary positions to ignore

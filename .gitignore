@@ -28,3 +28,4 @@ Thumbs.db
 
 # Logs
 *.log
+execution_log_*.txt
