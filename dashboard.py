@@ -998,13 +998,15 @@ DASHBOARD_HTML = """
 if __name__ == "__main__":
     import uvicorn
 
+    port = int(os.getenv("PORT", 8000))
+
     print("=" * 60)
     print("Trading Strategy Dashboard")
     print("=" * 60)
     print(f"Username: {USERNAME}")
     print(f"Password: {'*' * len(PASSWORD)}")
     print()
-    print("Starting server at http://0.0.0.0:8000")
+    print(f"Starting server at http://0.0.0.0:{port}")
     print("=" * 60)
 
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run(app, host="0.0.0.0", port=port)
