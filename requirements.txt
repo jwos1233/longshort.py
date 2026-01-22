@@ -13,3 +13,9 @@ schedule>=1.2.0
 
 # Optional: monitoring and notifications
 requests>=2.31.0
+
+# Web Dashboard
+fastapi>=0.109.0
+uvicorn[standard]>=0.27.0
+python-multipart>=0.0.6
+itsdangerous>=2.1.0
