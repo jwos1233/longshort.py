@@ -197,6 +197,27 @@ def _run_backtest_sync(months: int = 18) -> dict:
     }
 
 
+# ── Health check (no auth, responds instantly) ──────────────────────
+@app.get("/health")
+async def health():
+    return {"status": "ok"}
+
+
+# ── Background startup: pre-warm signal cache ───────────────────────
+@app.on_event("startup")
+async def startup_warm_cache():
+    """Pre-warm signal cache in background so first page load is fast."""
+    async def _warm():
+        loop = asyncio.get_event_loop()
+        try:
+            result = await loop.run_in_executor(None, _generate_signals_sync)
+            cache_set("signals", result, SIGNAL_CACHE_TTL)
+            print("[startup] Signal cache pre-warmed successfully")
+        except Exception as e:
+            print(f"[startup] Signal cache pre-warm failed: {e}")
+    asyncio.create_task(_warm())
+
+
 # ── API Routes ───────────────────────────────────────────────────────
 @app.get("/", response_class=HTMLResponse)
 async def root(request: Request):
