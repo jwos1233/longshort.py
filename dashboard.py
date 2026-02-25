@@ -85,10 +85,30 @@ def require_auth(request: Request):
 
 
 # ── Signal generation (runs in thread pool) ──────────────────────────
+def _build_ticker_to_quads() -> dict:
+    """Build ticker -> [quadrants] mapping including constituent stocks."""
+    from config import QUAD_ALLOCATIONS, EXPAND_TO_CONSTITUENTS, BTC_PROXY_BASKET
+    from etf_mapper import ETF_CONSTITUENTS
+
+    mapping: dict = {}
+    for quad, allocations in QUAD_ALLOCATIONS.items():
+        for etf in allocations.keys():
+            mapping.setdefault(etf, []).append(quad)
+            if EXPAND_TO_CONSTITUENTS and etf in ETF_CONSTITUENTS:
+                for stock in ETF_CONSTITUENTS[etf]:
+                    if quad not in mapping.get(stock, []):
+                        mapping.setdefault(stock, []).append(quad)
+    # BTC proxy tickers inherit Q1 (they replace BTC-USD which is Q1)
+    for proxy in BTC_PROXY_BASKET.keys():
+        if 'Q1' not in mapping.get(proxy, []):
+            mapping.setdefault(proxy, []).append('Q1')
+    return mapping
+
+
 def _generate_signals_sync() -> dict:
     """Run SignalGenerator and return JSON-safe result dict."""
     from signal_generator import SignalGenerator
-    from config import QUAD_ALLOCATIONS
+    from ticker_names import TICKER_NAMES
 
     sg = SignalGenerator(
         momentum_days=20,
@@ -105,13 +125,17 @@ def _generate_signals_sync() -> dict:
     quad_scores = {k: round(float(v), 4) for k, v in raw["quadrant_scores"].items()}
     top1, top2 = raw["top_quadrants"]
 
+    # Build full ticker → quadrant mapping (includes constituent stocks)
+    ticker_quads = _build_ticker_to_quads()
+
     # Target weights sorted by weight descending
     sorted_weights = sorted(raw["target_weights"].items(), key=lambda x: x[1], reverse=True)
     positions = []
     for ticker, weight in sorted_weights:
-        quads = [q for q, a in QUAD_ALLOCATIONS.items() if ticker in a]
+        quads = ticker_quads.get(ticker, [])
         positions.append({
             "ticker": ticker,
+            "name": TICKER_NAMES.get(ticker, ""),
             "weight": round(float(weight), 6),
             "weight_pct": round(float(weight) * 100, 2),
             "quadrants": quads,
@@ -121,6 +145,7 @@ def _generate_signals_sync() -> dict:
     for ticker, info in raw.get("excluded_below_ema", {}).items():
         excluded.append({
             "ticker": ticker,
+            "name": TICKER_NAMES.get(ticker, ""),
             "price": info.get("price"),
             "ema": info.get("ema"),
             "quadrant": info.get("quadrant", ""),
@@ -689,8 +714,9 @@ function renderOverview(d) {
   for (const p of d.positions) {
     const barW = (p.weight / maxW) * 100;
     const col = p.quadrants.length > 0 ? (QUAD_COLORS[p.quadrants[0]] || 'var(--accent)') : 'var(--accent)';
+    const nameSpan = p.name ? `<span style="color:var(--tx1);font-weight:400;margin-left:.4rem;font-size:.75rem">${p.name}</span>` : '';
     phtml += `<tr>
-      <td><strong>${p.ticker}</strong></td>
+      <td><strong>${p.ticker}</strong>${nameSpan}</td>
       <td>${p.weight_pct.toFixed(2)}%</td>
       <td><span class="weight-bar" style="width:${barW}%;background:${col}"></span></td>
       <td style="color:var(--tx1)">${p.quadrants.join(', ')}</td>
@@ -704,8 +730,9 @@ function renderOverview(d) {
     let ehtml = '';
     for (const e of d.excluded) {
       const gap = e.ema && e.price ? ((e.price - e.ema) / e.ema * 100).toFixed(2) : '-';
+      const eName = e.name ? `<span style="color:var(--tx1);font-weight:400;margin-left:.4rem;font-size:.75rem">${e.name}</span>` : '';
       ehtml += `<tr>
-        <td><strong>${e.ticker}</strong></td>
+        <td><strong>${e.ticker}</strong>${eName}</td>
         <td>${e.price ? '$'+e.price.toFixed(2) : '-'}</td>
         <td>${e.ema ? '$'+e.ema.toFixed(2) : '-'}</td>
         <td class="negative">${gap}%</td>
@@ -759,9 +786,10 @@ function renderAllocations(d) {
   d.positions.forEach((p, i) => {
     const barW = (p.weight / maxW) * 100;
     const col = p.quadrants.length > 0 ? (QUAD_COLORS[p.quadrants[0]] || 'var(--accent)') : 'var(--accent)';
+    const nameSpan = p.name ? `<span style="color:var(--tx1);font-weight:400;margin-left:.4rem;font-size:.75rem">${p.name}</span>` : '';
     fhtml += `<tr>
       <td>${i+1}</td>
-      <td><strong>${p.ticker}</strong></td>
+      <td><strong>${p.ticker}</strong>${nameSpan}</td>
       <td>${p.weight_pct.toFixed(2)}%</td>
       <td><div style="background:var(--bg0);border-radius:2px;height:16px;position:relative"><div style="height:100%;width:${barW}%;background:${col};border-radius:2px"></div></div></td>
       <td style="color:var(--tx1)">${p.quadrants.join(', ')}</td>
