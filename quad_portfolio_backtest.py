@@ -7,7 +7,12 @@ import json
 import numpy as np
 import pandas as pd
 import yfinance as yf
-import matplotlib.pyplot as plt
+try:
+    import matplotlib
+    matplotlib.use('Agg')  # Headless backend for Railway/servers
+    import matplotlib.pyplot as plt
+except Exception:
+    plt = None  # Plotting unavailable; run_backtest still works
 from datetime import datetime, timedelta
 from pathlib import Path
 from config import (
