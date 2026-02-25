@@ -18,13 +18,7 @@ import yfinance as yf
 from datetime import datetime, timedelta, date
 from typing import Dict, Tuple
 import sys
-from config import (
-    QUAD_ALLOCATIONS,
-    BTC_PROXY_BASKET,
-    BTC_PROXY_MAX_POSITIONS,
-    EXPAND_TO_CONSTITUENTS,
-    TOP_CONSTITUENTS_PER_ETF,
-)
+from config import QUAD_ALLOCATIONS, BTC_PROXY_BASKET, BTC_PROXY_MAX_POSITIONS
 
 # Windows consoles sometimes default to a legacy codepage (cp1252) that can't print
 # common Unicode symbols used in logs. Ensure UTF-8 output to avoid crashes.
@@ -88,13 +82,7 @@ class SignalGenerator:
 
         # Ensure BTC proxy basket tickers are fetched so we can replace BTC-USD at execution time
         all_tickers.update(BTC_PROXY_BASKET.keys())
-
-        # If expanding to constituents, add all constituent tickers for equity ETFs so we have price/vol data
-        if EXPAND_TO_CONSTITUENTS:
-            from etf_mapper import get_constituent_tickers_for_universe
-            constituent_tickers = get_constituent_tickers_for_universe(all_tickers)
-            all_tickers.update(constituent_tickers)
-
+        
         all_tickers = sorted(list(all_tickers))
         
         # Use yesterday's date to ensure consistent data availability
@@ -386,22 +374,9 @@ class SignalGenerator:
         
         print(f"\n🎯 Top 2 Quadrants: {top1}, {top2}")
         
-        # Calculate target weights (ETF-level)
+        # Calculate target weights
         target_weights, excluded_below_ema = self.calculate_target_weights(price_data, top1, top2)
-
-        # Optionally expand equity ETF weights to constituent stocks (vol chasing + top N per ETF)
-        if EXPAND_TO_CONSTITUENTS and target_weights:
-            from constituent_expander import expand_etf_weights_to_constituents
-            target_weights = expand_etf_weights_to_constituents(
-                target_weights,
-                price_data,
-                vol_lookback=self.vol_lookback,
-                ema_period=self.ema_period,
-                top_n_per_etf=TOP_CONSTITUENTS_PER_ETF,
-                as_of_date=None,
-                verbose=True,
-            )
-
+        
         # Calculate ATR for stop losses
         atr_data = {}
         if self.atr_stop_loss is not None and len(target_weights) > 0:

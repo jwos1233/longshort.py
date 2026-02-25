@@ -176,13 +176,12 @@ QUAD_ALLOCATIONS = {
         'VNQ': 0.10 * 0.50,      # 50% of 10% Real Assets
         'PAVE': 0.10 * 0.50,     # 50% of 10% Real Assets
         'VTV': 0.10 * 0.50,      # 50% of 10% Value
-        'EWX': 0.10 * 0.50,      # 50% of 10% Value
         'IWD': 0.10 * 0.50,      # 50% of 10% Value
-        'VWO': 0.25 * 0.333,     # 33% of 25% Energy
+        'EEM': 0.25 * 0.333,     # 33% of 25% Energy
     },
     'Q3': {
         'FCG': 0.25 * 0.333,     # 33% of 25% Energy
-        'VWO': 0.25 * 0.333,     # 33% of 25% Energy
+        'EEM': 0.25 * 0.333,     # 33% of 25% Energy
         'XLE': 0.25 * 0.333,     # 33% of 25% Energy
         'XOP': 0.25 * 0.334,     # 34% of 25% Energy
         'GLD': 0.30 * 0.12,      # 12% of 30% Commodities
@@ -192,7 +191,6 @@ QUAD_ALLOCATIONS = {
         'URA': 0.30 * 0.12,      # 12% of 30% Commodities (Uranium)
         'LIT': 0.30 * 0.10,      # 10% of 30% Commodities (Lithium)
         'TIP': 0.20 * 0.50,      # 50% of 20% TIPS
-        'EWX': 0.10 * 0.50,      # 50% of 10% Value
         'VTIP': 0.20 * 0.50,     # 50% of 20% TIPS
         'VNQ': 0.10 * 0.50,      # 50% of 10% Real Assets
         'PAVE': 0.10 * 0.50,     # 50% of 10% Real Assets
@@ -269,23 +267,3 @@ BTC_PROXY_BASKET = {
 }
 
 BTC_PROXY_MAX_POSITIONS = 10
-
-# === CONSTITUENT EXPANSION (LONGSHORT) ===
-# When True, equity ETF weights are expanded to underlying stocks:
-# same methodology (vol chasing + EMA filter), top N constituents per ETF get that ETF's weight.
-EXPAND_TO_CONSTITUENTS = True
-TOP_CONSTITUENTS_PER_ETF = 5
-
-# === HEDGING CONFIGURATION (SHORT LEGS) ===
-# When enabled, the backtest computes a separate hedged equity curve by adding
-# short hedges based on the dominant quadrant and portfolio beta.
-USE_SHORT_HEDGES = True
-
-# Lookback window (trading days) for estimating rolling betas vs SPY
-HEDGE_BETA_LOOKBACK_DAYS = 60
-
-# === CONSTITUENT EXPANSION (LONGSHORT) ===
-# When True, equity ETF weights are expanded to underlying stocks:
-# same methodology (vol chasing + EMA filter), top N constituents per ETF get that ETF's weight.
-EXPAND_TO_CONSTITUENTS = True
-TOP_CONSTITUENTS_PER_ETF = 5
