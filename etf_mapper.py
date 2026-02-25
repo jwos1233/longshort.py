@@ -136,10 +136,16 @@ ETF_CONSTITUENTS = {
         'TSN', 'HRL', 'ADM', 'KR', 'WBA', 'TAP', 'CPB', 'LW', 'EL', 'MNST',
         'KVUE', 'BG', 'FDP', 'CASY', 'USFD',
     ],
+    'IWM': [
+        'BE', 'SFM', 'FN', 'CRDO', 'NXT', 'KTOS', 'CDE', 'SATS', 'INSM', 'HL',
+        'FTAI', 'GH', 'IONQ', 'CRS', 'ATI', 'HIMS', 'STRL', 'AVAV', 'DRS', 'PLNT',
+        'CORT', 'EAT', 'MOD', 'DUOL', 'BOOT', 'CALM', 'SKY', 'PIPR', 'LNTH', 'PCVX',
+        'AIT', 'IESC', 'RHP', 'GKOS', 'NOVT', 'WDFC', 'MTH', 'FNB', 'RMBS', 'CSWI',
+    ],
 }
 
 # ETFs in QUAD_ALLOCATIONS that we don't have mappings for yet
-UNMAPPED_EQUITY_ETFS = {'IWM', 'IWD', 'EEM', 'VUG', 'EWX', 'VWO'}
+UNMAPPED_EQUITY_ETFS = {'IWD', 'EEM', 'VUG', 'EWX', 'VWO'}
 
 
 def get_stock_universe(etf_weights: dict, top_n: int = 4) -> set:
