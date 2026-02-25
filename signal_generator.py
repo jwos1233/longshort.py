@@ -114,10 +114,22 @@ class SignalGenerator:
             try:
                 # Use period='6mo' to get recent data, which is more reliable than start/end dates
                 # This ensures we get the most recent available finalized data
-                data = yf.download(ticker, period='6mo', 
+                data = yf.download(ticker, period='6mo',
                                  progress=False, auto_adjust=True)
-                if len(data) > 0 and 'Close' in data.columns:
-                    series = data['Close'].copy()
+                if len(data) > 0:
+                    # Handle MultiIndex columns from newer yfinance versions
+                    if isinstance(data.columns, pd.MultiIndex):
+                        if 'Close' not in data.columns.get_level_values(0):
+                            continue
+                        series = data['Close']
+                    elif 'Close' in data.columns:
+                        series = data['Close']
+                    else:
+                        continue
+                    # Squeeze DataFrame to Series if needed
+                    if isinstance(series, pd.DataFrame):
+                        series = series.iloc[:, 0]
+                    series = series.copy()
                     # Filter to our desired date range (but keep all recent data)
                     series = series[series.index.date >= start_date.date()]
                     # Only include data up to our target end_date (yesterday)
