@@ -163,6 +163,12 @@ Expected rejected: ~{expected_rejections} (28%)
         
         if trade_count == 0:
             message += "<i>No changes needed (positions within 5% threshold)</i>\n"
+
+        # Convenience line for TradingView: comma-separated list of tickers
+        all_tickers = sorted(set(list(confirmed.keys()) + list(rejected.keys())))
+        if all_tickers:
+            ticker_line = ",".join(all_tickers)
+            message += f"\n\n<b>Tickers (for TradingView):</b>\n<code>{ticker_line}</code>\n"
         
         message += f"\n<i>Full report: morning_report_{datetime.now().strftime('%Y%m%d')}.txt</i>"
         

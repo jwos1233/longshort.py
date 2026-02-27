@@ -27,7 +27,7 @@ class PositionManager:
     """
     
     def __init__(self, ib: IB, state_file='position_state.json', 
-                 trade_log='trade_history.csv'):
+                 trade_log='trade_history.csv', account: str | None = None):
         """
         Initialize Position Manager
         
@@ -39,6 +39,7 @@ class PositionManager:
         self.ib = ib
         self.state_file = state_file
         self.trade_log = trade_log
+        self.account = (account or "").strip()
         self.state = self.load_state()
         self.pending_orders = {}  # Track orders being placed
         
@@ -68,7 +69,9 @@ class PositionManager:
         Sync local state with IB positions
         Handles cases where positions were closed outside the system
         """
-        ib_positions = {p.contract.symbol: p.position for p in self.ib.positions()}
+        acct = self.account if getattr(self, "account", None) else ""
+        ib_positions_list = self.ib.positions(acct) if acct else self.ib.positions()
+        ib_positions = {p.contract.symbol: p.position for p in ib_positions_list}
         
         # Check for positions that exist in state but not in IB (were closed)
         closed_tickers = []
@@ -115,6 +118,8 @@ class PositionManager:
             entry_order.orderType = 'MKT'
             entry_order.totalQuantity = quantity
             entry_order.transmit = True  # Send immediately
+            if getattr(self, "account", None):
+                entry_order.account = self.account
             
             print(f"  📈 Placing BUY order: {quantity} {ticker} @ market")
             entry_trade = self.ib.placeOrder(contract, entry_order)
@@ -141,6 +146,8 @@ class PositionManager:
             stop_order.totalQuantity = quantity
             stop_order.tif = 'GTC'  # Good-Till-Cancelled (doesn't expire daily)
             stop_order.transmit = True
+            if getattr(self, "account", None):
+                stop_order.account = self.account
             
             print(f"  🛑 Placing STOP: Sell {quantity} {ticker} @ ${stop_price:.2f} (GTC)")
             stop_trade = self.ib.placeOrder(contract, stop_order)
@@ -231,6 +238,8 @@ class PositionManager:
             adjustment_order.orderType = 'MKT'
             adjustment_order.totalQuantity = abs_delta
             adjustment_order.transmit = True
+            if getattr(self, "account", None):
+                adjustment_order.account = self.account
             
             print(f"  🔄 Adjusting {ticker}: {old_quantity} → {new_quantity} ({action} {abs_delta})")
             adjust_trade = self.ib.placeOrder(contract, adjustment_order)
@@ -259,6 +268,8 @@ class PositionManager:
             new_stop_order.totalQuantity = new_quantity
             new_stop_order.tif = 'GTC'  # Good-Till-Cancelled (doesn't expire daily)
             new_stop_order.transmit = True
+            if getattr(self, "account", None):
+                new_stop_order.account = self.account
             
             print(f"  🛑 New STOP: Sell {new_quantity} {ticker} @ ${original_stop_price:.2f} (GTC, SAME price)")
             new_stop_trade = self.ib.placeOrder(contract, new_stop_order)
@@ -329,6 +340,8 @@ class PositionManager:
             exit_order.orderType = 'MKT'
             exit_order.totalQuantity = position['shares']
             exit_order.transmit = True
+            if getattr(self, "account", None):
+                exit_order.account = self.account
             
             print(f"  📉 Placing SELL order: {position['shares']} {ticker} @ market (reason: {reason})")
             exit_trade = self.ib.placeOrder(contract, exit_order)

@@ -1,0 +1,411 @@
+{
+  "meta": {
+    "start_date": "2026-01-01",
+    "end_date": "2026-01-31",
+    "initial_capital": 50000,
+    "period_return_pct": 38.8931,
+    "ytd_return_pct": 38.8931
+
+  "current_positions": {
+    "as_of_date": "2026-01-31",
+    "positions": [
+      {
+        "ticker": "LIT",
+        "weight_pct": 38.695,
+        "quadrant": "Q3"
+      },
+      {
+        "ticker": "URA",
+        "weight_pct": 34.3528,
+        "quadrant": "Q3"
+      },
+      {
+        "ticker": "XOP",
+        "weight_pct": 32.1329,
+        "quadrant": "Q3"
+      },
+      {
+        "ticker": "FCG",
+        "weight_pct": 30.4217,
+        "quadrant": "Q3"
+      },
+      {
+        "ticker": "XLE",
+        "weight_pct": 28.9742,
+        "quadrant": "Q3"
+      },
+      {
+        "ticker": "REMX",
+        "weight_pct": 28.7789,
+        "quadrant": "Q3"
+      },
+      {
+        "ticker": "PAVE",
+        "weight_pct": 25.735,
+        "quadrant": "Q3"
+      },
+      {
+        "ticker": "DBC",
+        "weight_pct": 24.6284,
+        "quadrant": "Q3"
+      }
+    ],
+    "total_exposure_pct": 243.72,
+    "dominant_quads": [
+      "Q3",
+      "Q2"
+    ]
+  },
+  "cumulative_pnl": [
+    {
+      "date": "2026-01-01",
+      "portfolio_value": 102645.15,
+      "cumulative_return_pct": 0.0
+    },
+    {
+      "date": "2026-01-02",
+      "portfolio_value": 105551.15,
+      "cumulative_return_pct": 2.8311
+    },
+    {
+      "date": "2026-01-03",
+      "portfolio_value": 105500.73,
+      "cumulative_return_pct": 2.782
+    },
+    {
+      "date": "2026-01-04",
+      "portfolio_value": 109586.6,
+      "cumulative_return_pct": 6.7626
+    },
+    {
+      "date": "2026-01-05",
+      "portfolio_value": 113735.32,
+      "cumulative_return_pct": 10.8044
+    },
+    {
+      "date": "2026-01-06",
+      "portfolio_value": 116413.55,
+      "cumulative_return_pct": 13.4136
+    },
+    {
+      "date": "2026-01-07",
+      "portfolio_value": 115587.92,
+      "cumulative_return_pct": 12.6092
+    },
+    {
+      "date": "2026-01-08",
+      "portfolio_value": 115760.4,
+      "cumulative_return_pct": 12.7773
+    },
+    {
+      "date": "2026-01-09",
+      "portfolio_value": 118208.18,
+      "cumulative_return_pct": 15.162
+    },
+    {
+      "date": "2026-01-10",
+      "portfolio_value": 118189.24,
+      "cumulative_return_pct": 15.1435
+    },
+    {
+      "date": "2026-01-11",
+      "portfolio_value": 118262.84,
+      "cumulative_return_pct": 15.2152
+    },
+    {
+      "date": "2026-01-12",
+      "portfolio_value": 123037.06,
+      "cumulative_return_pct": 19.8664
+    },
+    {
+      "date": "2026-01-13",
+      "portfolio_value": 124186.18,
+      "cumulative_return_pct": 20.9859
+    },
+    {
+      "date": "2026-01-14",
+      "portfolio_value": 127201.42,
+      "cumulative_return_pct": 23.9235
+    },
+    {
+      "date": "2026-01-15",
+      "portfolio_value": 126240.55,
+      "cumulative_return_pct": 22.9874
+    },
+    {
+      "date": "2026-01-16",
+      "portfolio_value": 126454.92,
+      "cumulative_return_pct": 23.1962
+    },
+    {
+      "date": "2026-01-17",
+      "portfolio_value": 126433.62,
+      "cumulative_return_pct": 23.1754
+    },
+    {
+      "date": "2026-01-18",
+      "portfolio_value": 126451.94,
+      "cumulative_return_pct": 23.1933
+    },
+    {
+      "date": "2026-01-19",
+      "portfolio_value": 126470.27,
+      "cumulative_return_pct": 23.2112
+    },
+    {
+      "date": "2026-01-20",
+      "portfolio_value": 126024.68,
+      "cumulative_return_pct": 22.777
+    },
+    {
+      "date": "2026-01-21",
+      "portfolio_value": 136301.41,
+      "cumulative_return_pct": 32.7889
+    },
+    {
+      "date": "2026-01-22",
+      "portfolio_value": 138249.06,
+      "cumulative_return_pct": 34.6864
+    },
+    {
+      "date": "2026-01-23",
+      "portfolio_value": 142854.43,
+      "cumulative_return_pct": 39.1731
+    },
+    {
+      "date": "2026-01-24",
+      "portfolio_value": 142877.29,
+      "cumulative_return_pct": 39.1954
+    },
+    {
+      "date": "2026-01-25",
+      "portfolio_value": 142900.16,
+      "cumulative_return_pct": 39.2176
+    },
+    {
+      "date": "2026-01-26",
+      "portfolio_value": 141067.33,
+      "cumulative_return_pct": 37.4321
+    },
+    {
+      "date": "2026-01-27",
+      "portfolio_value": 147165.56,
+      "cumulative_return_pct": 43.3731
+    },
+    {
+      "date": "2026-01-28",
+      "portfolio_value": 152769.53,
+      "cumulative_return_pct": 48.8327
+    },
+    {
+      "date": "2026-01-29",
+      "portfolio_value": 152813.44,
+      "cumulative_return_pct": 48.8755
+    },
+    {
+      "date": "2026-01-30",
+      "portfolio_value": 142933.21,
+      "cumulative_return_pct": 39.2498
+    },
+    {
+      "date": "2026-01-31",
+      "portfolio_value": 142567.02,
+      "cumulative_return_pct": 38.8931
+    }
+  ],
+  "monthly_returns": [
+    {
+      "month": "2026-01",
+      "return_pct": 38.8931,
+      "quadrant_attribution": {
+        "Q1": 0,
+        "Q2": 2.6343,
+        "Q3": 32.0707,
+        "Q4": 0
+      },
+      "tickers": [
+        {
+          "ticker": "URA",
+          "quadrant": "Q3",
+          "pnl_pct": 8.4527
+        },
+        {
+          "ticker": "XLE",
+          "quadrant": "Q3",
+          "pnl_pct": 4.5385
+        },
+        {
+          "ticker": "REMX",
+          "quadrant": "Q3",
+          "pnl_pct": 3.5165
+        },
+        {
+          "ticker": "GLD",
+          "quadrant": "Q3",
+          "pnl_pct": 3.3894
+        },
+        {
+          "ticker": "XOP",
+          "quadrant": "Q3",
+          "pnl_pct": 2.8625
+        },
+        {
+          "ticker": "LIT",
+          "quadrant": "Q3",
+          "pnl_pct": 2.8128
+        },
+        {
+          "ticker": "USO",
+          "quadrant": "Q2",
+          "pnl_pct": 2.4963
+        },
+        {
+          "ticker": "FCG",
+          "quadrant": "Q3",
+          "pnl_pct": 2.2653
+        },
+        {
+          "ticker": "PAVE",
+          "quadrant": "Q3",
+          "pnl_pct": 1.7405
+        },
+        {
+          "ticker": "DBC",
+          "quadrant": "Q3",
+          "pnl_pct": 1.4719
+        },
+        {
+          "ticker": "VWO",
+          "quadrant": "Q3",
+          "pnl_pct": 0.5759
+        },
+        {
+          "ticker": "EWX",
+          "quadrant": "Q3",
+          "pnl_pct": 0.4447
+        },
+        {
+          "ticker": "GCC",
+          "quadrant": "Q2",
+          "pnl_pct": 0.134
+        },
+        {
+          "ticker": "XLI",
+          "quadrant": "Q2",
+          "pnl_pct": 0.0022
+        },
+        {
+          "ticker": "XLB",
+          "quadrant": "Q2",
+          "pnl_pct": 0.0018
+        }
+      ],
+      "dominant_quads": [
+        "Q2",
+        "Q3"
+      ]
+    }
+  ],
+  "pl_attribution": {
+    "by_quadrant_full_period": {
+      "Q1": 0,
+      "Q2": 2.6343,
+      "Q3": 32.0707,
+      "Q4": 0
+    },
+    "by_ticker_full_period": [
+      {
+        "ticker": "URA",
+        "quadrant": "Q3",
+        "pnl_pct": 8.4527
+      },
+      {
+        "ticker": "XLE",
+        "quadrant": "Q3",
+        "pnl_pct": 4.5385
+      },
+      {
+        "ticker": "REMX",
+        "quadrant": "Q3",
+        "pnl_pct": 3.5165
+      },
+      {
+        "ticker": "GLD",
+        "quadrant": "Q3",
+        "pnl_pct": 3.3894
+      },
+      {
+        "ticker": "XOP",
+        "quadrant": "Q3",
+        "pnl_pct": 2.8625
+      },
+      {
+        "ticker": "LIT",
+        "quadrant": "Q3",
+        "pnl_pct": 2.8128
+      },
+      {
+        "ticker": "USO",
+        "quadrant": "Q2",
+        "pnl_pct": 2.4963
+      },
+      {
+        "ticker": "FCG",
+        "quadrant": "Q3",
+        "pnl_pct": 2.2653
+      },
+      {
+        "ticker": "PAVE",
+        "quadrant": "Q3",
+        "pnl_pct": 1.7405
+      },
+      {
+        "ticker": "DBC",
+        "quadrant": "Q3",
+        "pnl_pct": 1.4719
+      },
+      {
+        "ticker": "VWO",
+        "quadrant": "Q3",
+        "pnl_pct": 0.5759
+      },
+      {
+        "ticker": "EWX",
+        "quadrant": "Q3",
+        "pnl_pct": 0.4447
+      },
+      {
+        "ticker": "GCC",
+        "quadrant": "Q2",
+        "pnl_pct": 0.134
+      },
+      {
+        "ticker": "XLI",
+        "quadrant": "Q2",
+        "pnl_pct": 0.0022
+      },
+      {
+        "ticker": "XLB",
+        "quadrant": "Q2",
+        "pnl_pct": 0.0018
+      }
+    ]
+  },
+  "dominant_quadrants": {
+    "days_in_top2": {
+      "Q1": 163,
+      "Q2": 170,
+      "Q3": 324,
+      "Q4": 115
+    },
+    "regime_shifts": [],
+    "dominant_by_month": [
+      {
+        "month": "2026-01",
+        "top1": "Q2",
+        "top2": "Q3",
+        "days_in_month": 31
+      }
+    ]
+  }
+}

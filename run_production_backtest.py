@@ -2,7 +2,7 @@
 Run Production v3.0 Backtest - Top 10 + ATR 2.0x
 
 Usage:
-  python run_production_backtest.py                    # Default 5-year backtest
+  python run_production_backtest.py                    # Default: last 18 months
   python run_production_backtest.py --start 2025-01-01 --end 2025-11-30  # Custom period
   python run_production_backtest.py --start 2025-01-01 --end 2025-11-30 --report report.json  # Save LLM report
 """
@@ -13,13 +13,14 @@ from datetime import datetime, timedelta, date
 
 # Setup
 INITIAL_CAPITAL = 50000
-# Default horizon: last ~18 months for speed (can override via CLI)
-BACKTEST_YEARS = 1.5
+# Default: last 18 months (548 days). Override with --start / --end.
+BACKTEST_MONTHS = 18
 
 # Use yesterday's date to ensure finalized close prices (matches signal_generator.py)
 today = date.today()
 default_end = datetime.combine(today - timedelta(days=1), datetime.min.time())
-default_start = default_end - timedelta(days=BACKTEST_YEARS * 365 + 100)
+# Backtest window = last 18 months; fetch uses extra buffer for warmup (handled in backtest)
+default_start = default_end - timedelta(days=int(365 * BACKTEST_MONTHS / 12))
 
 
 def parse_args():
@@ -37,6 +38,10 @@ def main():
 
     start_date = datetime.strptime(args.start, "%Y-%m-%d") if args.start else default_start
     end_date = datetime.strptime(args.end, "%Y-%m-%d") if args.end else default_end
+
+    if start_date > end_date:
+        start_date, end_date = end_date, start_date
+        print("(Start was after end; swapped to use valid range.)")
 
     print("=" * 70)
     print("PRODUCTION v3.0: TOP 10 + ATR 2.0x STOP LOSS + EMA SMOOTHING")
@@ -102,6 +107,9 @@ def main():
     backtest.print_annual_breakdown()
     if getattr(backtest, "hedged_portfolio_value", None) is not None:
         backtest.print_annual_breakdown(pv=backtest.hedged_portfolio_value, label="Hedged (with shorts)")
+
+    # Console attribution by ticker (full-period)
+    backtest.print_ticker_attribution(top_n=30)
 
     if not args.no_chart:
         print("\nGenerating P/L Chart...")

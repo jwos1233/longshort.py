@@ -1,0 +1,8566 @@
+{
+  "meta": {
+    "start_date": "2024-05-17",
+    "end_date": "2026-02-23",
+    "initial_capital": 50000,
+    "period_return_pct": 11849.8887,
+    "ytd_return_pct": 45.1248
+  },
+  "summary": {
+    "total_return_pct": 66561.0066,
+    "annualized_return_pct": 528.5057,
+    "sharpe": 7.5486,
+    "max_drawdown_pct": -31.9692,
+    "final_value": 33330503.3
+  },
+  "current_positions": {
+    "as_of_date": "2026-02-23",
+    "positions": [
+      {
+        "ticker": "VGLT",
+        "weight_pct": 29.7139,
+        "quadrant": "Q4"
+      },
+      {
+        "ticker": "GCC",
+        "weight_pct": 21.8596,
+        "quadrant": "Q2"
+      },
+      {
+        "ticker": "USO",
+        "weight_pct": 18.8272,
+        "quadrant": "Q2"
+      },
+      {
+        "ticker": "DBC",
+        "weight_pct": 16.1441,
+        "quadrant": "Q2"
+      },
+      {
+        "ticker": "EL",
+        "weight_pct": 12.8054,
+        "quadrant": ""
+      },
+      {
+        "ticker": "MCK",
+        "weight_pct": 11.9035,
+        "quadrant": ""
+      },
+      {
+        "ticker": "NRG",
+        "weight_pct": 11.5571,
+        "quadrant": ""
+      },
+      {
+        "ticker": "AES",
+        "weight_pct": 11.5479,
+        "quadrant": ""
+      },
+      {
+        "ticker": "BAX",
+        "weight_pct": 11.4707,
+        "quadrant": ""
+      },
+      {
+        "ticker": "USFD",
+        "weight_pct": 10.5359,
+        "quadrant": ""
+      },
+      {
+        "ticker": "CNC",
+        "weight_pct": 8.6742,
+        "quadrant": ""
+      },
+      {
+        "ticker": "MUR",
+        "weight_pct": 8.5471,
+        "quadrant": ""
+      },
+      {
+        "ticker": "PCG",
+        "weight_pct": 8.5456,
+        "quadrant": ""
+      },
+      {
+        "ticker": "EXC",
+        "weight_pct": 8.3657,
+        "quadrant": ""
+      },
+      {
+        "ticker": "SYY",
+        "weight_pct": 8.1805,
+        "quadrant": ""
+      },
+      {
+        "ticker": "STZ",
+        "weight_pct": 7.4179,
+        "quadrant": ""
+      },
+      {
+        "ticker": "HSY",
+        "weight_pct": 7.3552,
+        "quadrant": ""
+      },
+      {
+        "ticker": "CAH",
+        "weight_pct": 7.2932,
+        "quadrant": ""
+      },
+      {
+        "ticker": "ENS",
+        "weight_pct": 6.8856,
+        "quadrant": ""
+      },
+      {
+        "ticker": "SM",
+        "weight_pct": 5.6688,
+        "quadrant": ""
+      },
+      {
+        "ticker": "DK",
+        "weight_pct": 4.9982,
+        "quadrant": ""
+      },
+      {
+        "ticker": "ALB",
+        "weight_pct": 4.5865,
+        "quadrant": ""
+      },
+      {
+        "ticker": "RIO",
+        "weight_pct": 4.3802,
+        "quadrant": ""
+      },
+      {
+        "ticker": "TPL",
+        "weight_pct": 3.6398,
+        "quadrant": ""
+      },
+      {
+        "ticker": "AR",
+        "weight_pct": 3.4032,
+        "quadrant": ""
+      },
+      {
+        "ticker": "OXY",
+        "weight_pct": 3.3723,
+        "quadrant": ""
+      },
+      {
+        "ticker": "OVV",
+        "weight_pct": 3.0765,
+        "quadrant": ""
+      }
+    ],
+    "total_exposure_pct": 260.76,
+    "dominant_quads": [
+      "Q2",
+      "Q4"
+    ]
+  },
+  "cumulative_pnl": [
+    {
+      "date": "2024-05-17",
+      "portfolio_value": 278918.94,
+      "cumulative_return_pct": 0.0
+    },
+    {
+      "date": "2024-05-18",
+      "portfolio_value": 277934.39,
+      "cumulative_return_pct": -0.353
+    },
+    {
+      "date": "2024-05-19",
+      "portfolio_value": 279711.0,
+      "cumulative_return_pct": 0.284
+    },
+    {
+      "date": "2024-05-20",
+      "portfolio_value": 282540.17,
+      "cumulative_return_pct": 1.2983
+    },
+    {
+      "date": "2024-05-21",
+      "portfolio_value": 284455.47,
+      "cumulative_return_pct": 1.985
+    },
+    {
+      "date": "2024-05-22",
+      "portfolio_value": 279476.88,
+      "cumulative_return_pct": 0.2
+    },
+    {
+      "date": "2024-05-23",
+      "portfolio_value": 273569.76,
+      "cumulative_return_pct": -1.9178
+    },
+    {
+      "date": "2024-05-24",
+      "portfolio_value": 283376.23,
+      "cumulative_return_pct": 1.5981
+    },
+    {
+      "date": "2024-05-25",
+      "portfolio_value": 283801.97,
+      "cumulative_return_pct": 1.7507
+    },
+    {
+      "date": "2024-05-26",
+      "portfolio_value": 285865.36,
+      "cumulative_return_pct": 2.4905
+    },
+    {
+      "date": "2024-05-27",
+      "portfolio_value": 286185.41,
+      "cumulative_return_pct": 2.6052
+    },
+    {
+      "date": "2024-05-28",
+      "portfolio_value": 285906.5,
+      "cumulative_return_pct": 2.5052
+    },
+    {
+      "date": "2024-05-29",
+      "portfolio_value": 279876.43,
+      "cumulative_return_pct": 0.3433
+    },
+    {
+      "date": "2024-05-30",
+      "portfolio_value": 280980.92,
+      "cumulative_return_pct": 0.7393
+    },
+    {
+      "date": "2024-05-31",
+      "portfolio_value": 272028.99,
+      "cumulative_return_pct": -2.4702
+    },
+    {
+      "date": "2024-06-01",
+      "portfolio_value": 276593.32,
+      "cumulative_return_pct": -0.8338
+    },
+    {
+      "date": "2024-06-02",
+      "portfolio_value": 276851.53,
+      "cumulative_return_pct": -0.7412
+    },
+    {
+      "date": "2024-06-03",
+      "portfolio_value": 272121.5,
+      "cumulative_return_pct": -2.4371
+    },
+    {
+      "date": "2024-06-04",
+      "portfolio_value": 270723.09,
+      "cumulative_return_pct": -2.9384
+    },
+    {
+      "date": "2024-06-05",
+      "portfolio_value": 275784.31,
+      "cumulative_return_pct": -1.1239
+    },
+    {
+      "date": "2024-06-06",
+      "portfolio_value": 272233.61,
+      "cumulative_return_pct": -2.3969
+    },
+    {
+      "date": "2024-06-07",
+      "portfolio_value": 266490.83,
+      "cumulative_return_pct": -4.4558
+    },
+    {
+      "date": "2024-06-08",
+      "portfolio_value": 265900.46,
+      "cumulative_return_pct": -4.6675
+    },
+    {
+      "date": "2024-06-09",
+      "portfolio_value": 265705.36,
+      "cumulative_return_pct": -4.7374
+    },
+    {
+      "date": "2024-06-10",
+      "portfolio_value": 267285.59,
+      "cumulative_return_pct": -4.1709
+    },
+    {
+      "date": "2024-06-11",
+      "portfolio_value": 266829.43,
+      "cumulative_return_pct": -4.3344
+    },
+    {
+      "date": "2024-06-12",
+      "portfolio_value": 271813.29,
+      "cumulative_return_pct": -2.5476
+    },
+    {
+      "date": "2024-06-13",
+      "portfolio_value": 274704.79,
+      "cumulative_return_pct": -1.5109
+    },
+    {
+      "date": "2024-06-14",
+      "portfolio_value": 274959.83,
+      "cumulative_return_pct": -1.4195
+    },
+    {
+      "date": "2024-06-15",
+      "portfolio_value": 275026.39,
+      "cumulative_return_pct": -1.3956
+    },
+    {
+      "date": "2024-06-16",
+      "portfolio_value": 275050.12,
+      "cumulative_return_pct": -1.3871
+    },
+    {
+      "date": "2024-06-17",
+      "portfolio_value": 274802.64,
+      "cumulative_return_pct": -1.4758
+    },
+    {
+      "date": "2024-06-18",
+      "portfolio_value": 277645.59,
+      "cumulative_return_pct": -0.4565
+    },
+    {
+      "date": "2024-06-19",
+      "portfolio_value": 277651.46,
+      "cumulative_return_pct": -0.4544
+    },
+    {
+      "date": "2024-06-20",
+      "portfolio_value": 274839.61,
+      "cumulative_return_pct": -1.4626
+    },
+    {
+      "date": "2024-06-21",
+      "portfolio_value": 275552.76,
+      "cumulative_return_pct": -1.2069
+    },
+    {
+      "date": "2024-06-22",
+      "portfolio_value": 275273.52,
+      "cumulative_return_pct": -1.307
+    },
+    {
+      "date": "2024-06-23",
+      "portfolio_value": 275621.02,
+      "cumulative_return_pct": -1.1824
+    },
+    {
+      "date": "2024-06-24",
+      "portfolio_value": 276994.9,
+      "cumulative_return_pct": -0.6898
+    },
+    {
+      "date": "2024-06-25",
+      "portfolio_value": 277329.54,
+      "cumulative_return_pct": -0.5698
+    },
+    {
+      "date": "2024-06-26",
+      "portfolio_value": 275413.21,
+      "cumulative_return_pct": -1.2569
+    },
+    {
+      "date": "2024-06-27",
+      "portfolio_value": 277138.44,
+      "cumulative_return_pct": -0.6384
+    },
+    {
+      "date": "2024-06-28",
+      "portfolio_value": 274731.62,
+      "cumulative_return_pct": -1.5013
+    },
+    {
+      "date": "2024-06-29",
+      "portfolio_value": 276468.24,
+      "cumulative_return_pct": -0.8786
+    },
+    {
+      "date": "2024-06-30",
+      "portfolio_value": 277140.87,
+      "cumulative_return_pct": -0.6375
+    },
+    {
+      "date": "2024-07-01",
+      "portfolio_value": 277735.87,
+      "cumulative_return_pct": -0.4242
+    },
+    {
+      "date": "2024-07-02",
+      "portfolio_value": 277952.82,
+      "cumulative_return_pct": -0.3464
+    },
+    {
+      "date": "2024-07-03",
+      "portfolio_value": 278905.24,
+      "cumulative_return_pct": -0.0049
+    },
+    {
+      "date": "2024-07-04",
+      "portfolio_value": 279292.2,
+      "cumulative_return_pct": 0.1338
+    },
+    {
+      "date": "2024-07-05",
+      "portfolio_value": 279554.05,
+      "cumulative_return_pct": 0.2277
+    },
+    {
+      "date": "2024-07-06",
+      "portfolio_value": 279472.05,
+      "cumulative_return_pct": 0.1983
+    },
+    {
+      "date": "2024-07-07",
+      "portfolio_value": 279934.68,
+      "cumulative_return_pct": 0.3642
+    },
+    {
+      "date": "2024-07-08",
+      "portfolio_value": 279088.61,
+      "cumulative_return_pct": 0.0608
+    },
+    {
+      "date": "2024-07-09",
+      "portfolio_value": 278142.2,
+      "cumulative_return_pct": -0.2785
+    },
+    {
+      "date": "2024-07-10",
+      "portfolio_value": 279700.74,
+      "cumulative_return_pct": 0.2803
+    },
+    {
+      "date": "2024-07-11",
+      "portfolio_value": 284869.01,
+      "cumulative_return_pct": 2.1333
+    },
+    {
+      "date": "2024-07-12",
+      "portfolio_value": 286367.52,
+      "cumulative_return_pct": 2.6705
+    },
+    {
+      "date": "2024-07-13",
+      "portfolio_value": 285746.12,
+      "cumulative_return_pct": 2.4477
+    },
+    {
+      "date": "2024-07-14",
+      "portfolio_value": 286822.63,
+      "cumulative_return_pct": 2.8337
+    },
+    {
+      "date": "2024-07-15",
+      "portfolio_value": 290593.47,
+      "cumulative_return_pct": 4.1856
+    },
+    {
+      "date": "2024-07-16",
+      "portfolio_value": 297656.1,
+      "cumulative_return_pct": 6.7178
+    },
+    {
+      "date": "2024-07-17",
+      "portfolio_value": 295593.07,
+      "cumulative_return_pct": 5.9781
+    },
+    {
+      "date": "2024-07-18",
+      "portfolio_value": 292983.74,
+      "cumulative_return_pct": 5.0426
+    },
+    {
+      "date": "2024-07-19",
+      "portfolio_value": 289752.26,
+      "cumulative_return_pct": 3.884
+    },
+    {
+      "date": "2024-07-20",
+      "portfolio_value": 287440.66,
+      "cumulative_return_pct": 3.0553
+    },
+    {
+      "date": "2024-07-21",
+      "portfolio_value": 288696.44,
+      "cumulative_return_pct": 3.5055
+    },
+    {
+      "date": "2024-07-22",
+      "portfolio_value": 293856.91,
+      "cumulative_return_pct": 5.3557
+    },
+    {
+      "date": "2024-07-23",
+      "portfolio_value": 290700.86,
+      "cumulative_return_pct": 4.2241
+    },
+    {
+      "date": "2024-07-24",
+      "portfolio_value": 283545.61,
+      "cumulative_return_pct": 1.6588
+    },
+    {
+      "date": "2024-07-25",
+      "portfolio_value": 283752.84,
+      "cumulative_return_pct": 1.7331
+    },
+    {
+      "date": "2024-07-26",
+      "portfolio_value": 285909.19,
+      "cumulative_return_pct": 2.5062
+    },
+    {
+      "date": "2024-07-27",
+      "portfolio_value": 286901.07,
+      "cumulative_return_pct": 2.8618
+    },
+    {
+      "date": "2024-07-28",
+      "portfolio_value": 292475.02,
+      "cumulative_return_pct": 4.8602
+    },
+    {
+      "date": "2024-07-29",
+      "portfolio_value": 291592.18,
+      "cumulative_return_pct": 4.5437
+    },
+    {
+      "date": "2024-07-30",
+      "portfolio_value": 297536.38,
+      "cumulative_return_pct": 6.6749
+    },
+    {
+      "date": "2024-07-31",
+      "portfolio_value": 300360.84,
+      "cumulative_return_pct": 7.6875
+    },
+    {
+      "date": "2024-08-01",
+      "portfolio_value": 301186.63,
+      "cumulative_return_pct": 7.9836
+    },
+    {
+      "date": "2024-08-02",
+      "portfolio_value": 304104.77,
+      "cumulative_return_pct": 9.0298
+    },
+    {
+      "date": "2024-08-03",
+      "portfolio_value": 304577.51,
+      "cumulative_return_pct": 9.1993
+    },
+    {
+      "date": "2024-08-04",
+      "portfolio_value": 304525.14,
+      "cumulative_return_pct": 9.1805
+    },
+    {
+      "date": "2024-08-05",
+      "portfolio_value": 299145.13,
+      "cumulative_return_pct": 7.2516
+    },
+    {
+      "date": "2024-08-06",
+      "portfolio_value": 296857.44,
+      "cumulative_return_pct": 6.4314
+    },
+    {
+      "date": "2024-08-07",
+      "portfolio_value": 296563.11,
+      "cumulative_return_pct": 6.3259
+    },
+    {
+      "date": "2024-08-08",
+      "portfolio_value": 296101.28,
+      "cumulative_return_pct": 6.1603
+    },
+    {
+      "date": "2024-08-09",
+      "portfolio_value": 296839.93,
+      "cumulative_return_pct": 6.4252
+    },
+    {
+      "date": "2024-08-10",
+      "portfolio_value": 298175.26,
+      "cumulative_return_pct": 6.9039
+    },
+    {
+      "date": "2024-08-11",
+      "portfolio_value": 300103.67,
+      "cumulative_return_pct": 7.5953
+    },
+    {
+      "date": "2024-08-12",
+      "portfolio_value": 299210.44,
+      "cumulative_return_pct": 7.2751
+    },
+    {
+      "date": "2024-08-13",
+      "portfolio_value": 303950.85,
+      "cumulative_return_pct": 8.9746
+    },
+    {
+      "date": "2024-08-14",
+      "portfolio_value": 305899.57,
+      "cumulative_return_pct": 9.6733
+    },
+    {
+      "date": "2024-08-15",
+      "portfolio_value": 306270.46,
+      "cumulative_return_pct": 9.8063
+    },
+    {
+      "date": "2024-08-16",
+      "portfolio_value": 307530.24,
+      "cumulative_return_pct": 10.2579
+    },
+    {
+      "date": "2024-08-17",
+      "portfolio_value": 307989.01,
+      "cumulative_return_pct": 10.4224
+    },
+    {
+      "date": "2024-08-18",
+      "portfolio_value": 308593.56,
+      "cumulative_return_pct": 10.6392
+    },
+    {
+      "date": "2024-08-19",
+      "portfolio_value": 311542.11,
+      "cumulative_return_pct": 11.6963
+    },
+    {
+      "date": "2024-08-20",
+      "portfolio_value": 311381.38,
+      "cumulative_return_pct": 11.6387
+    },
+    {
+      "date": "2024-08-21",
+      "portfolio_value": 317023.04,
+      "cumulative_return_pct": 13.6614
+    },
+    {
+      "date": "2024-08-22",
+      "portfolio_value": 312354.69,
+      "cumulative_return_pct": 11.9876
+    },
+    {
+      "date": "2024-08-23",
+      "portfolio_value": 318811.39,
+      "cumulative_return_pct": 14.3025
+    },
+    {
+      "date": "2024-08-24",
+      "portfolio_value": 318395.19,
+      "cumulative_return_pct": 14.1533
+    },
+    {
+      "date": "2024-08-25",
+      "portfolio_value": 322372.89,
+      "cumulative_return_pct": 15.5794
+    },
+    {
+      "date": "2024-08-26",
+      "portfolio_value": 323455.49,
+      "cumulative_return_pct": 15.9676
+    },
+    {
+      "date": "2024-08-27",
+      "portfolio_value": 330539.02,
+      "cumulative_return_pct": 18.5072
+    },
+    {
+      "date": "2024-08-28",
+      "portfolio_value": 317113.98,
+      "cumulative_return_pct": 13.694
+    },
+    {
+      "date": "2024-08-29",
+      "portfolio_value": 319493.94,
+      "cumulative_return_pct": 14.5472
+    },
+    {
+      "date": "2024-08-30",
+      "portfolio_value": 321361.73,
+      "cumulative_return_pct": 15.2169
+    },
+    {
+      "date": "2024-08-31",
+      "portfolio_value": 321055.6,
+      "cumulative_return_pct": 15.1071
+    },
+    {
+      "date": "2024-09-01",
+      "portfolio_value": 320835.29,
+      "cumulative_return_pct": 15.0281
+    },
+    {
+      "date": "2024-09-02",
+      "portfolio_value": 320685.58,
+      "cumulative_return_pct": 14.9745
+    },
+    {
+      "date": "2024-09-03",
+      "portfolio_value": 314583.48,
+      "cumulative_return_pct": 12.7867
+    },
+    {
+      "date": "2024-09-04",
+      "portfolio_value": 315855.32,
+      "cumulative_return_pct": 13.2427
+    },
+    {
+      "date": "2024-09-05",
+      "portfolio_value": 316169.38,
+      "cumulative_return_pct": 13.3553
+    },
+    {
+      "date": "2024-09-06",
+      "portfolio_value": 315281.03,
+      "cumulative_return_pct": 13.0368
+    },
+    {
+      "date": "2024-09-07",
+      "portfolio_value": 315194.16,
+      "cumulative_return_pct": 13.0056
+    },
+    {
+      "date": "2024-09-08",
+      "portfolio_value": 315547.88,
+      "cumulative_return_pct": 13.1325
+    },
+    {
+      "date": "2024-09-09",
+      "portfolio_value": 317798.7,
+      "cumulative_return_pct": 13.9394
+    },
+    {
+      "date": "2024-09-10",
+      "portfolio_value": 319538.75,
+      "cumulative_return_pct": 14.5633
+    },
+    {
+      "date": "2024-09-11",
+      "portfolio_value": 319355.12,
+      "cumulative_return_pct": 14.4975
+    },
+    {
+      "date": "2024-09-12",
+      "portfolio_value": 319865.62,
+      "cumulative_return_pct": 14.6805
+    },
+    {
+      "date": "2024-09-13",
+      "portfolio_value": 323458.87,
+      "cumulative_return_pct": 15.9688
+    },
+    {
+      "date": "2024-09-14",
+      "portfolio_value": 325484.71,
+      "cumulative_return_pct": 16.6951
+    },
+    {
+      "date": "2024-09-15",
+      "portfolio_value": 327609.25,
+      "cumulative_return_pct": 17.4568
+    },
+    {
+      "date": "2024-09-16",
+      "portfolio_value": 333692.63,
+      "cumulative_return_pct": 19.6379
+    },
+    {
+      "date": "2024-09-17",
+      "portfolio_value": 334597.18,
+      "cumulative_return_pct": 19.9622
+    },
+    {
+      "date": "2024-09-18",
+      "portfolio_value": 333371.62,
+      "cumulative_return_pct": 19.5228
+    },
+    {
+      "date": "2024-09-19",
+      "portfolio_value": 337477.64,
+      "cumulative_return_pct": 20.9949
+    },
+    {
+      "date": "2024-09-20",
+      "portfolio_value": 349322.43,
+      "cumulative_return_pct": 25.2416
+    },
+    {
+      "date": "2024-09-21",
+      "portfolio_value": 354872.93,
+      "cumulative_return_pct": 27.2316
+    },
+    {
+      "date": "2024-09-22",
+      "portfolio_value": 357530.75,
+      "cumulative_return_pct": 28.1845
+    },
+    {
+      "date": "2024-09-23",
+      "portfolio_value": 367742.12,
+      "cumulative_return_pct": 31.8455
+    },
+    {
+      "date": "2024-09-24",
+      "portfolio_value": 371090.41,
+      "cumulative_return_pct": 33.046
+    },
+    {
+      "date": "2024-09-25",
+      "portfolio_value": 373881.94,
+      "cumulative_return_pct": 34.0468
+    },
+    {
+      "date": "2024-09-26",
+      "portfolio_value": 377897.18,
+      "cumulative_return_pct": 35.4864
+    },
+    {
+      "date": "2024-09-27",
+      "portfolio_value": 382259.11,
+      "cumulative_return_pct": 37.0502
+    },
+    {
+      "date": "2024-09-28",
+      "portfolio_value": 381268.74,
+      "cumulative_return_pct": 36.6952
+    },
+    {
+      "date": "2024-09-29",
+      "portfolio_value": 383261.51,
+      "cumulative_return_pct": 37.4096
+    },
+    {
+      "date": "2024-09-30",
+      "portfolio_value": 378012.59,
+      "cumulative_return_pct": 35.5278
+    },
+    {
+      "date": "2024-10-01",
+      "portfolio_value": 383311.19,
+      "cumulative_return_pct": 37.4274
+    },
+    {
+      "date": "2024-10-02",
+      "portfolio_value": 389692.89,
+      "cumulative_return_pct": 39.7155
+    },
+    {
+      "date": "2024-10-03",
+      "portfolio_value": 389004.85,
+      "cumulative_return_pct": 39.4688
+    },
+    {
+      "date": "2024-10-04",
+      "portfolio_value": 411765.35,
+      "cumulative_return_pct": 47.629
+    },
+    {
+      "date": "2024-10-05",
+      "portfolio_value": 413384.57,
+      "cumulative_return_pct": 48.2096
+    },
+    {
+      "date": "2024-10-06",
+      "portfolio_value": 420366.85,
+      "cumulative_return_pct": 50.7129
+    },
+    {
+      "date": "2024-10-07",
+      "portfolio_value": 423408.26,
+      "cumulative_return_pct": 51.8033
+    },
+    {
+      "date": "2024-10-08",
+      "portfolio_value": 411369.81,
+      "cumulative_return_pct": 47.4872
+    },
+    {
+      "date": "2024-10-09",
+      "portfolio_value": 414017.47,
+      "cumulative_return_pct": 48.4365
+    },
+    {
+      "date": "2024-10-10",
+      "portfolio_value": 422611.38,
+      "cumulative_return_pct": 51.5176
+    },
+    {
+      "date": "2024-10-11",
+      "portfolio_value": 440086.05,
+      "cumulative_return_pct": 57.7828
+    },
+    {
+      "date": "2024-10-12",
+      "portfolio_value": 435471.31,
+      "cumulative_return_pct": 56.1283
+    },
+    {
+      "date": "2024-10-13",
+      "portfolio_value": 439892.75,
+      "cumulative_return_pct": 57.7135
+    },
+    {
+      "date": "2024-10-14",
+      "portfolio_value": 423374.99,
+      "cumulative_return_pct": 51.7914
+    },
+    {
+      "date": "2024-10-15",
+      "portfolio_value": 389447.98,
+      "cumulative_return_pct": 39.6277
+    },
+    {
+      "date": "2024-10-16",
+      "portfolio_value": 419930.54,
+      "cumulative_return_pct": 50.5565
+    },
+    {
+      "date": "2024-10-17",
+      "portfolio_value": 406983.57,
+      "cumulative_return_pct": 45.9146
+    },
+    {
+      "date": "2024-10-18",
+      "portfolio_value": 419284.45,
+      "cumulative_return_pct": 50.3248
+    },
+    {
+      "date": "2024-10-19",
+      "portfolio_value": 423345.53,
+      "cumulative_return_pct": 51.7808
+    },
+    {
+      "date": "2024-10-20",
+      "portfolio_value": 427113.29,
+      "cumulative_return_pct": 53.1317
+    },
+    {
+      "date": "2024-10-21",
+      "portfolio_value": 419486.43,
+      "cumulative_return_pct": 50.3973
+    },
+    {
+      "date": "2024-10-22",
+      "portfolio_value": 439078.3,
+      "cumulative_return_pct": 57.4215
+    },
+    {
+      "date": "2024-10-23",
+      "portfolio_value": 423670.18,
+      "cumulative_return_pct": 51.8972
+    },
+    {
+      "date": "2024-10-24",
+      "portfolio_value": 433205.34,
+      "cumulative_return_pct": 55.3159
+    },
+    {
+      "date": "2024-10-25",
+      "portfolio_value": 442400.73,
+      "cumulative_return_pct": 58.6127
+    },
+    {
+      "date": "2024-10-26",
+      "portfolio_value": 449145.75,
+      "cumulative_return_pct": 61.0309
+    },
+    {
+      "date": "2024-10-27",
+      "portfolio_value": 440751.17,
+      "cumulative_return_pct": 58.0212
+    },
+    {
+      "date": "2024-10-28",
+      "portfolio_value": 451084.37,
+      "cumulative_return_pct": 61.726
+    },
+    {
+      "date": "2024-10-29",
+      "portfolio_value": 497776.46,
+      "cumulative_return_pct": 78.4664
+    },
+    {
+      "date": "2024-10-30",
+      "portfolio_value": 473613.97,
+      "cumulative_return_pct": 69.8034
+    },
+    {
+      "date": "2024-10-31",
+      "portfolio_value": 458129.56,
+      "cumulative_return_pct": 64.2519
+    },
+    {
+      "date": "2024-11-01",
+      "portfolio_value": 461378.3,
+      "cumulative_return_pct": 65.4166
+    },
+    {
+      "date": "2024-11-02",
+      "portfolio_value": 463477.04,
+      "cumulative_return_pct": 66.1691
+    },
+    {
+      "date": "2024-11-03",
+      "portfolio_value": 465292.02,
+      "cumulative_return_pct": 66.8198
+    },
+    {
+      "date": "2024-11-04",
+      "portfolio_value": 456777.65,
+      "cumulative_return_pct": 63.7672
+    },
+    {
+      "date": "2024-11-05",
+      "portfolio_value": 453226.5,
+      "cumulative_return_pct": 62.494
+    },
+    {
+      "date": "2024-11-06",
+      "portfolio_value": 463841.81,
+      "cumulative_return_pct": 66.2999
+    },
+    {
+      "date": "2024-11-07",
+      "portfolio_value": 460719.69,
+      "cumulative_return_pct": 65.1805
+    },
+    {
+      "date": "2024-11-08",
+      "portfolio_value": 483159.54,
+      "cumulative_return_pct": 73.2258
+    },
+    {
+      "date": "2024-11-09",
+      "portfolio_value": 497371.25,
+      "cumulative_return_pct": 78.3211
+    },
+    {
+      "date": "2024-11-10",
+      "portfolio_value": 505883.34,
+      "cumulative_return_pct": 81.3729
+    },
+    {
+      "date": "2024-11-11",
+      "portfolio_value": 550629.69,
+      "cumulative_return_pct": 97.4157
+    },
+    {
+      "date": "2024-11-12",
+      "portfolio_value": 528510.95,
+      "cumulative_return_pct": 89.4855
+    },
+    {
+      "date": "2024-11-13",
+      "portfolio_value": 529183.19,
+      "cumulative_return_pct": 89.7265
+    },
+    {
+      "date": "2024-11-14",
+      "portfolio_value": 502480.89,
+      "cumulative_return_pct": 80.153
+    },
+    {
+      "date": "2024-11-15",
+      "portfolio_value": 506269.67,
+      "cumulative_return_pct": 81.5114
+    },
+    {
+      "date": "2024-11-16",
+      "portfolio_value": 503934.3,
+      "cumulative_return_pct": 80.6741
+    },
+    {
+      "date": "2024-11-17",
+      "portfolio_value": 506343.91,
+      "cumulative_return_pct": 81.538
+    },
+    {
+      "date": "2024-11-18",
+      "portfolio_value": 537246.79,
+      "cumulative_return_pct": 92.6175
+    },
+    {
+      "date": "2024-11-19",
+      "portfolio_value": 549628.76,
+      "cumulative_return_pct": 97.0568
+    },
+    {
+      "date": "2024-11-20",
+      "portfolio_value": 560121.25,
+      "cumulative_return_pct": 100.8186
+    },
+    {
+      "date": "2024-11-21",
+      "portfolio_value": 568687.72,
+      "cumulative_return_pct": 103.89
+    },
+    {
+      "date": "2024-11-22",
+      "portfolio_value": 596323.84,
+      "cumulative_return_pct": 113.7983
+    },
+    {
+      "date": "2024-11-23",
+      "portfolio_value": 610018.79,
+      "cumulative_return_pct": 118.7083
+    },
+    {
+      "date": "2024-11-24",
+      "portfolio_value": 625132.47,
+      "cumulative_return_pct": 124.1269
+    },
+    {
+      "date": "2024-11-25",
+      "portfolio_value": 646714.61,
+      "cumulative_return_pct": 131.8647
+    },
+    {
+      "date": "2024-11-26",
+      "portfolio_value": 623387.85,
+      "cumulative_return_pct": 123.5014
+    },
+    {
+      "date": "2024-11-27",
+      "portfolio_value": 641628.51,
+      "cumulative_return_pct": 130.0412
+    },
+    {
+      "date": "2024-11-28",
+      "portfolio_value": 642062.06,
+      "cumulative_return_pct": 130.1966
+    },
+    {
+      "date": "2024-11-29",
+      "portfolio_value": 657018.8,
+      "cumulative_return_pct": 135.559
+    },
+    {
+      "date": "2024-11-30",
+      "portfolio_value": 656492.52,
+      "cumulative_return_pct": 135.3704
+    },
+    {
+      "date": "2024-12-01",
+      "portfolio_value": 665724.62,
+      "cumulative_return_pct": 138.6803
+    },
+    {
+      "date": "2024-12-02",
+      "portfolio_value": 656606.45,
+      "cumulative_return_pct": 135.4112
+    },
+    {
+      "date": "2024-12-03",
+      "portfolio_value": 644103.81,
+      "cumulative_return_pct": 130.9287
+    },
+    {
+      "date": "2024-12-04",
+      "portfolio_value": 664019.19,
+      "cumulative_return_pct": 138.0689
+    },
+    {
+      "date": "2024-12-05",
+      "portfolio_value": 666878.25,
+      "cumulative_return_pct": 139.0939
+    },
+    {
+      "date": "2024-12-06",
+      "portfolio_value": 680144.26,
+      "cumulative_return_pct": 143.8502
+    },
+    {
+      "date": "2024-12-07",
+      "portfolio_value": 682564.82,
+      "cumulative_return_pct": 144.718
+    },
+    {
+      "date": "2024-12-08",
+      "portfolio_value": 697201.24,
+      "cumulative_return_pct": 149.9655
+    },
+    {
+      "date": "2024-12-09",
+      "portfolio_value": 686127.44,
+      "cumulative_return_pct": 145.9953
+    },
+    {
+      "date": "2024-12-10",
+      "portfolio_value": 681323.26,
+      "cumulative_return_pct": 144.2729
+    },
+    {
+      "date": "2024-12-11",
+      "portfolio_value": 681013.0,
+      "cumulative_return_pct": 144.1616
+    },
+    {
+      "date": "2024-12-12",
+      "portfolio_value": 661016.05,
+      "cumulative_return_pct": 136.9922
+    },
+    {
+      "date": "2024-12-13",
+      "portfolio_value": 677373.09,
+      "cumulative_return_pct": 142.8566
+    },
+    {
+      "date": "2024-12-14",
+      "portfolio_value": 683904.49,
+      "cumulative_return_pct": 145.1983
+    },
+    {
+      "date": "2024-12-15",
+      "portfolio_value": 686323.6,
+      "cumulative_return_pct": 146.0656
+    },
+    {
+      "date": "2024-12-16",
+      "portfolio_value": 710516.14,
+      "cumulative_return_pct": 154.7393
+    },
+    {
+      "date": "2024-12-17",
+      "portfolio_value": 703399.5,
+      "cumulative_return_pct": 152.1878
+    },
+    {
+      "date": "2024-12-18",
+      "portfolio_value": 660849.07,
+      "cumulative_return_pct": 136.9323
+    },
+    {
+      "date": "2024-12-19",
+      "portfolio_value": 654690.17,
+      "cumulative_return_pct": 134.7242
+    },
+    {
+      "date": "2024-12-20",
+      "portfolio_value": 688206.32,
+      "cumulative_return_pct": 146.7406
+    },
+    {
+      "date": "2024-12-21",
+      "portfolio_value": 689438.17,
+      "cumulative_return_pct": 147.1823
+    },
+    {
+      "date": "2024-12-22",
+      "portfolio_value": 708542.18,
+      "cumulative_return_pct": 154.0316
+    },
+    {
+      "date": "2024-12-23",
+      "portfolio_value": 686500.95,
+      "cumulative_return_pct": 146.1292
+    },
+    {
+      "date": "2024-12-24",
+      "portfolio_value": 722653.42,
+      "cumulative_return_pct": 159.0908
+    },
+    {
+      "date": "2024-12-25",
+      "portfolio_value": 725835.16,
+      "cumulative_return_pct": 160.2316
+    },
+    {
+      "date": "2024-12-26",
+      "portfolio_value": 742572.44,
+      "cumulative_return_pct": 166.2323
+    },
+    {
+      "date": "2024-12-27",
+      "portfolio_value": 720164.33,
+      "cumulative_return_pct": 158.1984
+    },
+    {
+      "date": "2024-12-28",
+      "portfolio_value": 722916.59,
+      "cumulative_return_pct": 159.1852
+    },
+    {
+      "date": "2024-12-29",
+      "portfolio_value": 725332.73,
+      "cumulative_return_pct": 160.0514
+    },
+    {
+      "date": "2024-12-30",
+      "portfolio_value": 699818.89,
+      "cumulative_return_pct": 150.904
+    },
+    {
+      "date": "2024-12-31",
+      "portfolio_value": 706574.27,
+      "cumulative_return_pct": 153.326
+    },
+    {
+      "date": "2025-01-01",
+      "portfolio_value": 708399.66,
+      "cumulative_return_pct": 153.9805
+    },
+    {
+      "date": "2025-01-02",
+      "portfolio_value": 741195.76,
+      "cumulative_return_pct": 165.7388
+    },
+    {
+      "date": "2025-01-03",
+      "portfolio_value": 758967.4,
+      "cumulative_return_pct": 172.1104
+    },
+    {
+      "date": "2025-01-04",
+      "portfolio_value": 744197.18,
+      "cumulative_return_pct": 166.8149
+    },
+    {
+      "date": "2025-01-05",
+      "portfolio_value": 782650.44,
+      "cumulative_return_pct": 180.6014
+    },
+    {
+      "date": "2025-01-06",
+      "portfolio_value": 785796.37,
+      "cumulative_return_pct": 181.7293
+    },
+    {
+      "date": "2025-01-07",
+      "portfolio_value": 773379.94,
+      "cumulative_return_pct": 177.2777
+    },
+    {
+      "date": "2025-01-08",
+      "portfolio_value": 769090.21,
+      "cumulative_return_pct": 175.7397
+    },
+    {
+      "date": "2025-01-09",
+      "portfolio_value": 771547.51,
+      "cumulative_return_pct": 176.6207
+    },
+    {
+      "date": "2025-01-10",
+      "portfolio_value": 758047.65,
+      "cumulative_return_pct": 171.7806
+    },
+    {
+      "date": "2025-01-11",
+      "portfolio_value": 764809.9,
+      "cumulative_return_pct": 174.2051
+    },
+    {
+      "date": "2025-01-12",
+      "portfolio_value": 772879.24,
+      "cumulative_return_pct": 177.0982
+    },
+    {
+      "date": "2025-01-13",
+      "portfolio_value": 773362.3,
+      "cumulative_return_pct": 177.2713
+    },
+    {
+      "date": "2025-01-14",
+      "portfolio_value": 784821.97,
+      "cumulative_return_pct": 181.3799
+    },
+    {
+      "date": "2025-01-15",
+      "portfolio_value": 799496.88,
+      "cumulative_return_pct": 186.6413
+    },
+    {
+      "date": "2025-01-16",
+      "portfolio_value": 803425.32,
+      "cumulative_return_pct": 188.0498
+    },
+    {
+      "date": "2025-01-17",
+      "portfolio_value": 803395.51,
+      "cumulative_return_pct": 188.0391
+    },
+    {
+      "date": "2025-01-18",
+      "portfolio_value": 804212.98,
+      "cumulative_return_pct": 188.3321
+    },
+    {
+      "date": "2025-01-19",
+      "portfolio_value": 806006.56,
+      "cumulative_return_pct": 188.9752
+    },
+    {
+      "date": "2025-01-20",
+      "portfolio_value": 806828.23,
+      "cumulative_return_pct": 189.2698
+    },
+    {
+      "date": "2025-01-21",
+      "portfolio_value": 824913.67,
+      "cumulative_return_pct": 195.7539
+    },
+    {
+      "date": "2025-01-22",
+      "portfolio_value": 823128.55,
+      "cumulative_return_pct": 195.1139
+    },
+    {
+      "date": "2025-01-23",
+      "portfolio_value": 801573.49,
+      "cumulative_return_pct": 187.3858
+    },
+    {
+      "date": "2025-01-24",
+      "portfolio_value": 801969.29,
+      "cumulative_return_pct": 187.5277
+    },
+    {
+      "date": "2025-01-25",
+      "portfolio_value": 797836.45,
+      "cumulative_return_pct": 186.046
+    },
+    {
+      "date": "2025-01-26",
+      "portfolio_value": 801038.96,
+      "cumulative_return_pct": 187.1942
+    },
+    {
+      "date": "2025-01-27",
+      "portfolio_value": 729583.61,
+      "cumulative_return_pct": 161.5755
+    },
+    {
+      "date": "2025-01-28",
+      "portfolio_value": 727577.03,
+      "cumulative_return_pct": 160.8561
+    },
+    {
+      "date": "2025-01-29",
+      "portfolio_value": 725303.76,
+      "cumulative_return_pct": 160.0411
+    },
+    {
+      "date": "2025-01-30",
+      "portfolio_value": 749603.8,
+      "cumulative_return_pct": 168.7533
+    },
+    {
+      "date": "2025-01-31",
+      "portfolio_value": 734763.51,
+      "cumulative_return_pct": 163.4326
+    },
+    {
+      "date": "2025-02-01",
+      "portfolio_value": 742534.91,
+      "cumulative_return_pct": 166.2189
+    },
+    {
+      "date": "2025-02-02",
+      "portfolio_value": 756431.26,
+      "cumulative_return_pct": 171.2011
+    },
+    {
+      "date": "2025-02-03",
+      "portfolio_value": 727842.33,
+      "cumulative_return_pct": 160.9512
+    },
+    {
+      "date": "2025-02-04",
+      "portfolio_value": 739866.51,
+      "cumulative_return_pct": 165.2622
+    },
+    {
+      "date": "2025-02-05",
+      "portfolio_value": 755042.86,
+      "cumulative_return_pct": 170.7033
+    },
+    {
+      "date": "2025-02-06",
+      "portfolio_value": 750596.5,
+      "cumulative_return_pct": 169.1092
+    },
+    {
+      "date": "2025-02-07",
+      "portfolio_value": 755787.72,
+      "cumulative_return_pct": 170.9704
+    },
+    {
+      "date": "2025-02-08",
+      "portfolio_value": 753722.94,
+      "cumulative_return_pct": 170.2301
+    },
+    {
+      "date": "2025-02-09",
+      "portfolio_value": 808378.77,
+      "cumulative_return_pct": 189.8257
+    },
+    {
+      "date": "2025-02-10",
+      "portfolio_value": 825979.18,
+      "cumulative_return_pct": 196.1359
+    },
+    {
+      "date": "2025-02-11",
+      "portfolio_value": 803285.32,
+      "cumulative_return_pct": 187.9996
+    },
+    {
+      "date": "2025-02-12",
+      "portfolio_value": 785619.8,
+      "cumulative_return_pct": 181.666
+    },
+    {
+      "date": "2025-02-13",
+      "portfolio_value": 793839.6,
+      "cumulative_return_pct": 184.613
+    },
+    {
+      "date": "2025-02-14",
+      "portfolio_value": 780770.69,
+      "cumulative_return_pct": 179.9275
+    },
+    {
+      "date": "2025-02-15",
+      "portfolio_value": 795015.93,
+      "cumulative_return_pct": 185.0348
+    },
+    {
+      "date": "2025-02-16",
+      "portfolio_value": 795406.36,
+      "cumulative_return_pct": 185.1747
+    },
+    {
+      "date": "2025-02-17",
+      "portfolio_value": 794143.2,
+      "cumulative_return_pct": 184.7219
+    },
+    {
+      "date": "2025-02-18",
+      "portfolio_value": 805668.04,
+      "cumulative_return_pct": 188.8538
+    },
+    {
+      "date": "2025-02-19",
+      "portfolio_value": 806817.83,
+      "cumulative_return_pct": 189.2661
+    },
+    {
+      "date": "2025-02-20",
+      "portfolio_value": 802929.42,
+      "cumulative_return_pct": 187.872
+    },
+    {
+      "date": "2025-02-21",
+      "portfolio_value": 804431.83,
+      "cumulative_return_pct": 188.4106
+    },
+    {
+      "date": "2025-02-22",
+      "portfolio_value": 802764.51,
+      "cumulative_return_pct": 187.8128
+    },
+    {
+      "date": "2025-02-23",
+      "portfolio_value": 806132.95,
+      "cumulative_return_pct": 189.0205
+    },
+    {
+      "date": "2025-02-24",
+      "portfolio_value": 812023.73,
+      "cumulative_return_pct": 191.1325
+    },
+    {
+      "date": "2025-02-25",
+      "portfolio_value": 822840.24,
+      "cumulative_return_pct": 195.0105
+    },
+    {
+      "date": "2025-02-26",
+      "portfolio_value": 820018.72,
+      "cumulative_return_pct": 193.9989
+    },
+    {
+      "date": "2025-02-27",
+      "portfolio_value": 808716.28,
+      "cumulative_return_pct": 189.9467
+    },
+    {
+      "date": "2025-02-28",
+      "portfolio_value": 813710.37,
+      "cumulative_return_pct": 191.7372
+    },
+    {
+      "date": "2025-03-01",
+      "portfolio_value": 816516.61,
+      "cumulative_return_pct": 192.7433
+    },
+    {
+      "date": "2025-03-02",
+      "portfolio_value": 828520.63,
+      "cumulative_return_pct": 197.0471
+    },
+    {
+      "date": "2025-03-03",
+      "portfolio_value": 823114.76,
+      "cumulative_return_pct": 195.1089
+    },
+    {
+      "date": "2025-03-04",
+      "portfolio_value": 805183.77,
+      "cumulative_return_pct": 188.6802
+    },
+    {
+      "date": "2025-03-05",
+      "portfolio_value": 803321.95,
+      "cumulative_return_pct": 188.0127
+    },
+    {
+      "date": "2025-03-06",
+      "portfolio_value": 806771.01,
+      "cumulative_return_pct": 189.2493
+    },
+    {
+      "date": "2025-03-07",
+      "portfolio_value": 816913.87,
+      "cumulative_return_pct": 192.8858
+    },
+    {
+      "date": "2025-03-08",
+      "portfolio_value": 820604.7,
+      "cumulative_return_pct": 194.209
+    },
+    {
+      "date": "2025-03-09",
+      "portfolio_value": 823160.32,
+      "cumulative_return_pct": 195.1253
+    },
+    {
+      "date": "2025-03-10",
+      "portfolio_value": 821808.87,
+      "cumulative_return_pct": 194.6408
+    },
+    {
+      "date": "2025-03-11",
+      "portfolio_value": 808195.77,
+      "cumulative_return_pct": 189.7601
+    },
+    {
+      "date": "2025-03-12",
+      "portfolio_value": 802259.07,
+      "cumulative_return_pct": 187.6316
+    },
+    {
+      "date": "2025-03-13",
+      "portfolio_value": 805688.95,
+      "cumulative_return_pct": 188.8613
+    },
+    {
+      "date": "2025-03-14",
+      "portfolio_value": 805404.62,
+      "cumulative_return_pct": 188.7594
+    },
+    {
+      "date": "2025-03-15",
+      "portfolio_value": 807891.29,
+      "cumulative_return_pct": 189.6509
+    },
+    {
+      "date": "2025-03-16",
+      "portfolio_value": 813875.04,
+      "cumulative_return_pct": 191.7963
+    },
+    {
+      "date": "2025-03-17",
+      "portfolio_value": 826922.05,
+      "cumulative_return_pct": 196.474
+    },
+    {
+      "date": "2025-03-18",
+      "portfolio_value": 826175.43,
+      "cumulative_return_pct": 196.2063
+    },
+    {
+      "date": "2025-03-19",
+      "portfolio_value": 825851.66,
+      "cumulative_return_pct": 196.0902
+    },
+    {
+      "date": "2025-03-20",
+      "portfolio_value": 824286.63,
+      "cumulative_return_pct": 195.5291
+    },
+    {
+      "date": "2025-03-21",
+      "portfolio_value": 814286.14,
+      "cumulative_return_pct": 191.9437
+    },
+    {
+      "date": "2025-03-22",
+      "portfolio_value": 817668.29,
+      "cumulative_return_pct": 193.1562
+    },
+    {
+      "date": "2025-03-23",
+      "portfolio_value": 818482.09,
+      "cumulative_return_pct": 193.448
+    },
+    {
+      "date": "2025-03-24",
+      "portfolio_value": 824635.79,
+      "cumulative_return_pct": 195.6543
+    },
+    {
+      "date": "2025-03-25",
+      "portfolio_value": 826281.0,
+      "cumulative_return_pct": 196.2441
+    },
+    {
+      "date": "2025-03-26",
+      "portfolio_value": 817793.64,
+      "cumulative_return_pct": 193.2012
+    },
+    {
+      "date": "2025-03-27",
+      "portfolio_value": 811987.49,
+      "cumulative_return_pct": 191.1195
+    },
+    {
+      "date": "2025-03-28",
+      "portfolio_value": 802828.09,
+      "cumulative_return_pct": 187.8356
+    },
+    {
+      "date": "2025-03-29",
+      "portfolio_value": 804977.67,
+      "cumulative_return_pct": 188.6063
+    },
+    {
+      "date": "2025-03-30",
+      "portfolio_value": 804687.51,
+      "cumulative_return_pct": 188.5023
+    },
+    {
+      "date": "2025-03-31",
+      "portfolio_value": 818004.78,
+      "cumulative_return_pct": 193.2769
+    },
+    {
+      "date": "2025-04-01",
+      "portfolio_value": 825200.66,
+      "cumulative_return_pct": 195.8568
+    },
+    {
+      "date": "2025-04-02",
+      "portfolio_value": 835602.96,
+      "cumulative_return_pct": 199.5863
+    },
+    {
+      "date": "2025-04-03",
+      "portfolio_value": 783004.48,
+      "cumulative_return_pct": 180.7283
+    },
+    {
+      "date": "2025-04-04",
+      "portfolio_value": 772031.37,
+      "cumulative_return_pct": 176.7942
+    },
+    {
+      "date": "2025-04-05",
+      "portfolio_value": 772604.15,
+      "cumulative_return_pct": 176.9995
+    },
+    {
+      "date": "2025-04-06",
+      "portfolio_value": 770184.7,
+      "cumulative_return_pct": 176.1321
+    },
+    {
+      "date": "2025-04-07",
+      "portfolio_value": 768095.5,
+      "cumulative_return_pct": 175.3831
+    },
+    {
+      "date": "2025-04-08",
+      "portfolio_value": 768032.91,
+      "cumulative_return_pct": 175.3606
+    },
+    {
+      "date": "2025-04-09",
+      "portfolio_value": 767784.85,
+      "cumulative_return_pct": 175.2717
+    },
+    {
+      "date": "2025-04-10",
+      "portfolio_value": 767613.47,
+      "cumulative_return_pct": 175.2102
+    },
+    {
+      "date": "2025-04-11",
+      "portfolio_value": 767613.47,
+      "cumulative_return_pct": 175.2102
+    },
+    {
+      "date": "2025-04-12",
+      "portfolio_value": 767582.83,
+      "cumulative_return_pct": 175.1992
+    },
+    {
+      "date": "2025-04-13",
+      "portfolio_value": 772593.21,
+      "cumulative_return_pct": 176.9956
+    },
+    {
+      "date": "2025-04-14",
+      "portfolio_value": 775111.7,
+      "cumulative_return_pct": 177.8985
+    },
+    {
+      "date": "2025-04-15",
+      "portfolio_value": 774281.36,
+      "cumulative_return_pct": 177.6009
+    },
+    {
+      "date": "2025-04-16",
+      "portfolio_value": 775800.63,
+      "cumulative_return_pct": 178.1456
+    },
+    {
+      "date": "2025-04-17",
+      "portfolio_value": 780975.1,
+      "cumulative_return_pct": 180.0007
+    },
+    {
+      "date": "2025-04-18",
+      "portfolio_value": 780460.11,
+      "cumulative_return_pct": 179.8161
+    },
+    {
+      "date": "2025-04-19",
+      "portfolio_value": 780867.16,
+      "cumulative_return_pct": 179.962
+    },
+    {
+      "date": "2025-04-20",
+      "portfolio_value": 780992.3,
+      "cumulative_return_pct": 180.0069
+    },
+    {
+      "date": "2025-04-21",
+      "portfolio_value": 777283.7,
+      "cumulative_return_pct": 178.6773
+    },
+    {
+      "date": "2025-04-22",
+      "portfolio_value": 781589.79,
+      "cumulative_return_pct": 180.2211
+    },
+    {
+      "date": "2025-04-23",
+      "portfolio_value": 779738.45,
+      "cumulative_return_pct": 179.5574
+    },
+    {
+      "date": "2025-04-24",
+      "portfolio_value": 786867.3,
+      "cumulative_return_pct": 182.1133
+    },
+    {
+      "date": "2025-04-25",
+      "portfolio_value": 787632.11,
+      "cumulative_return_pct": 182.3875
+    },
+    {
+      "date": "2025-04-26",
+      "portfolio_value": 785604.01,
+      "cumulative_return_pct": 181.6603
+    },
+    {
+      "date": "2025-04-27",
+      "portfolio_value": 806526.06,
+      "cumulative_return_pct": 189.1615
+    },
+    {
+      "date": "2025-04-28",
+      "portfolio_value": 844804.68,
+      "cumulative_return_pct": 202.8854
+    },
+    {
+      "date": "2025-04-29",
+      "portfolio_value": 870179.93,
+      "cumulative_return_pct": 211.9831
+    },
+    {
+      "date": "2025-04-30",
+      "portfolio_value": 854899.66,
+      "cumulative_return_pct": 206.5047
+    },
+    {
+      "date": "2025-05-01",
+      "portfolio_value": 879715.17,
+      "cumulative_return_pct": 215.4017
+    },
+    {
+      "date": "2025-05-02",
+      "portfolio_value": 907374.22,
+      "cumulative_return_pct": 225.3182
+    },
+    {
+      "date": "2025-05-03",
+      "portfolio_value": 919626.35,
+      "cumulative_return_pct": 229.711
+    },
+    {
+      "date": "2025-05-04",
+      "portfolio_value": 926577.08,
+      "cumulative_return_pct": 232.203
+    },
+    {
+      "date": "2025-05-05",
+      "portfolio_value": 899060.37,
+      "cumulative_return_pct": 222.3375
+    },
+    {
+      "date": "2025-05-06",
+      "portfolio_value": 896446.56,
+      "cumulative_return_pct": 221.4004
+    },
+    {
+      "date": "2025-05-07",
+      "portfolio_value": 885311.47,
+      "cumulative_return_pct": 217.4082
+    },
+    {
+      "date": "2025-05-08",
+      "portfolio_value": 913024.15,
+      "cumulative_return_pct": 227.3439
+    },
+    {
+      "date": "2025-05-09",
+      "portfolio_value": 911783.28,
+      "cumulative_return_pct": 226.899
+    },
+    {
+      "date": "2025-05-10",
+      "portfolio_value": 918553.12,
+      "cumulative_return_pct": 229.3262
+    },
+    {
+      "date": "2025-05-11",
+      "portfolio_value": 909293.01,
+      "cumulative_return_pct": 226.0062
+    },
+    {
+      "date": "2025-05-12",
+      "portfolio_value": 971205.27,
+      "cumulative_return_pct": 248.2034
+    },
+    {
+      "date": "2025-05-13",
+      "portfolio_value": 1001913.15,
+      "cumulative_return_pct": 259.213
+    },
+    {
+      "date": "2025-05-14",
+      "portfolio_value": 963437.94,
+      "cumulative_return_pct": 245.4186
+    },
+    {
+      "date": "2025-05-15",
+      "portfolio_value": 1034344.98,
+      "cumulative_return_pct": 270.8407
+    },
+    {
+      "date": "2025-05-16",
+      "portfolio_value": 1064130.46,
+      "cumulative_return_pct": 281.5196
+    },
+    {
+      "date": "2025-05-17",
+      "portfolio_value": 1068020.99,
+      "cumulative_return_pct": 282.9145
+    },
+    {
+      "date": "2025-05-18",
+      "portfolio_value": 1073732.45,
+      "cumulative_return_pct": 284.9622
+    },
+    {
+      "date": "2025-05-19",
+      "portfolio_value": 1079814.87,
+      "cumulative_return_pct": 287.1429
+    },
+    {
+      "date": "2025-05-20",
+      "portfolio_value": 1119534.3,
+      "cumulative_return_pct": 301.3834
+    },
+    {
+      "date": "2025-05-21",
+      "portfolio_value": 1114669.38,
+      "cumulative_return_pct": 299.6392
+    },
+    {
+      "date": "2025-05-22",
+      "portfolio_value": 1237269.23,
+      "cumulative_return_pct": 343.5946
+    },
+    {
+      "date": "2025-05-23",
+      "portfolio_value": 1226242.29,
+      "cumulative_return_pct": 339.6411
+    },
+    {
+      "date": "2025-05-24",
+      "portfolio_value": 1229838.4,
+      "cumulative_return_pct": 340.9304
+    },
+    {
+      "date": "2025-05-25",
+      "portfolio_value": 1244015.66,
+      "cumulative_return_pct": 346.0133
+    },
+    {
+      "date": "2025-05-26",
+      "portfolio_value": 1247991.41,
+      "cumulative_return_pct": 347.4387
+    },
+    {
+      "date": "2025-05-27",
+      "portfolio_value": 1307608.57,
+      "cumulative_return_pct": 368.8131
+    },
+    {
+      "date": "2025-05-28",
+      "portfolio_value": 1255684.4,
+      "cumulative_return_pct": 350.1969
+    },
+    {
+      "date": "2025-05-29",
+      "portfolio_value": 1554397.64,
+      "cumulative_return_pct": 457.2937
+    },
+    {
+      "date": "2025-05-30",
+      "portfolio_value": 1551935.7,
+      "cumulative_return_pct": 456.411
+    },
+    {
+      "date": "2025-05-31",
+      "portfolio_value": 1579186.54,
+      "cumulative_return_pct": 466.1812
+    },
+    {
+      "date": "2025-06-01",
+      "portfolio_value": 1605743.77,
+      "cumulative_return_pct": 475.7027
+    },
+    {
+      "date": "2025-06-02",
+      "portfolio_value": 1556414.87,
+      "cumulative_return_pct": 458.0169
+    },
+    {
+      "date": "2025-06-03",
+      "portfolio_value": 1599557.76,
+      "cumulative_return_pct": 473.4848
+    },
+    {
+      "date": "2025-06-04",
+      "portfolio_value": 1670432.26,
+      "cumulative_return_pct": 498.8952
+    },
+    {
+      "date": "2025-06-05",
+      "portfolio_value": 1502022.4,
+      "cumulative_return_pct": 438.5157
+    },
+    {
+      "date": "2025-06-06",
+      "portfolio_value": 1507642.9,
+      "cumulative_return_pct": 440.5308
+    },
+    {
+      "date": "2025-06-07",
+      "portfolio_value": 1550093.46,
+      "cumulative_return_pct": 455.7505
+    },
+    {
+      "date": "2025-06-08",
+      "portfolio_value": 1596016.88,
+      "cumulative_return_pct": 472.2153
+    },
+    {
+      "date": "2025-06-09",
+      "portfolio_value": 1588869.72,
+      "cumulative_return_pct": 469.6529
+    },
+    {
+      "date": "2025-06-10",
+      "portfolio_value": 1645470.6,
+      "cumulative_return_pct": 489.9458
+    },
+    {
+      "date": "2025-06-11",
+      "portfolio_value": 1684513.06,
+      "cumulative_return_pct": 503.9436
+    },
+    {
+      "date": "2025-06-12",
+      "portfolio_value": 1605943.66,
+      "cumulative_return_pct": 475.7743
+    },
+    {
+      "date": "2025-06-13",
+      "portfolio_value": 1376159.56,
+      "cumulative_return_pct": 393.3905
+    },
+    {
+      "date": "2025-06-14",
+      "portfolio_value": 1390836.79,
+      "cumulative_return_pct": 398.6527
+    },
+    {
+      "date": "2025-06-15",
+      "portfolio_value": 1394919.24,
+      "cumulative_return_pct": 400.1164
+    },
+    {
+      "date": "2025-06-16",
+      "portfolio_value": 1478941.6,
+      "cumulative_return_pct": 430.2406
+    },
+    {
+      "date": "2025-06-17",
+      "portfolio_value": 1522454.31,
+      "cumulative_return_pct": 445.8411
+    },
+    {
+      "date": "2025-06-18",
+      "portfolio_value": 1563015.47,
+      "cumulative_return_pct": 460.3834
+    },
+    {
+      "date": "2025-06-19",
+      "portfolio_value": 1603851.95,
+      "cumulative_return_pct": 475.0244
+    },
+    {
+      "date": "2025-06-20",
+      "portfolio_value": 1672893.87,
+      "cumulative_return_pct": 499.7778
+    },
+    {
+      "date": "2025-06-21",
+      "portfolio_value": 1682441.05,
+      "cumulative_return_pct": 503.2007
+    },
+    {
+      "date": "2025-06-22",
+      "portfolio_value": 1677698.81,
+      "cumulative_return_pct": 501.5005
+    },
+    {
+      "date": "2025-06-23",
+      "portfolio_value": 1635038.63,
+      "cumulative_return_pct": 486.2057
+    },
+    {
+      "date": "2025-06-24",
+      "portfolio_value": 1586929.21,
+      "cumulative_return_pct": 468.9571
+    },
+    {
+      "date": "2025-06-25",
+      "portfolio_value": 1513260.17,
+      "cumulative_return_pct": 442.5448
+    },
+    {
+      "date": "2025-06-26",
+      "portfolio_value": 1577004.57,
+      "cumulative_return_pct": 465.3989
+    },
+    {
+      "date": "2025-06-27",
+      "portfolio_value": 1526054.79,
+      "cumulative_return_pct": 447.132
+    },
+    {
+      "date": "2025-06-28",
+      "portfolio_value": 1539228.43,
+      "cumulative_return_pct": 451.8551
+    },
+    {
+      "date": "2025-06-29",
+      "portfolio_value": 1546031.24,
+      "cumulative_return_pct": 454.2941
+    },
+    {
+      "date": "2025-06-30",
+      "portfolio_value": 1548932.65,
+      "cumulative_return_pct": 455.3343
+    },
+    {
+      "date": "2025-07-01",
+      "portfolio_value": 1553019.85,
+      "cumulative_return_pct": 456.7997
+    },
+    {
+      "date": "2025-07-02",
+      "portfolio_value": 1703440.29,
+      "cumulative_return_pct": 510.7295
+    },
+    {
+      "date": "2025-07-03",
+      "portfolio_value": 2927097.29,
+      "cumulative_return_pct": 949.4437
+    },
+    {
+      "date": "2025-07-04",
+      "portfolio_value": 4149299.25,
+      "cumulative_return_pct": 1387.6362
+    },
+    {
+      "date": "2025-07-05",
+      "portfolio_value": 6176365.92,
+      "cumulative_return_pct": 2114.3946
+    },
+    {
+      "date": "2025-07-06",
+      "portfolio_value": 8998116.04,
+      "cumulative_return_pct": 3126.0685
+    },
+    {
+      "date": "2025-07-07",
+      "portfolio_value": 7854449.81,
+      "cumulative_return_pct": 2716.0331
+    },
+    {
+      "date": "2025-07-08",
+      "portfolio_value": 8137651.71,
+      "cumulative_return_pct": 2817.5687
+    },
+    {
+      "date": "2025-07-09",
+      "portfolio_value": 6857742.71,
+      "cumulative_return_pct": 2358.6866
+    },
+    {
+      "date": "2025-07-10",
+      "portfolio_value": 6451327.65,
+      "cumulative_return_pct": 2212.9758
+    },
+    {
+      "date": "2025-07-11",
+      "portfolio_value": 6121487.43,
+      "cumulative_return_pct": 2094.7191
+    },
+    {
+      "date": "2025-07-12",
+      "portfolio_value": 6314477.62,
+      "cumulative_return_pct": 2163.9114
+    },
+    {
+      "date": "2025-07-13",
+      "portfolio_value": 6519374.52,
+      "cumulative_return_pct": 2237.3725
+    },
+    {
+      "date": "2025-07-14",
+      "portfolio_value": 6941326.25,
+      "cumulative_return_pct": 2388.6536
+    },
+    {
+      "date": "2025-07-15",
+      "portfolio_value": 7092148.2,
+      "cumulative_return_pct": 2442.7273
+    },
+    {
+      "date": "2025-07-16",
+      "portfolio_value": 7838867.28,
+      "cumulative_return_pct": 2710.4464
+    },
+    {
+      "date": "2025-07-17",
+      "portfolio_value": 8570258.81,
+      "cumulative_return_pct": 2972.6701
+    },
+    {
+      "date": "2025-07-18",
+      "portfolio_value": 8367170.38,
+      "cumulative_return_pct": 2899.8573
+    },
+    {
+      "date": "2025-07-19",
+      "portfolio_value": 8377161.58,
+      "cumulative_return_pct": 2903.4395
+    },
+    {
+      "date": "2025-07-20",
+      "portfolio_value": 8425062.05,
+      "cumulative_return_pct": 2920.6131
+    },
+    {
+      "date": "2025-07-21",
+      "portfolio_value": 8350980.49,
+      "cumulative_return_pct": 2894.0528
+    },
+    {
+      "date": "2025-07-22",
+      "portfolio_value": 8473573.19,
+      "cumulative_return_pct": 2938.0056
+    },
+    {
+      "date": "2025-07-23",
+      "portfolio_value": 8561985.27,
+      "cumulative_return_pct": 2969.7038
+    },
+    {
+      "date": "2025-07-24",
+      "portfolio_value": 8908379.74,
+      "cumulative_return_pct": 3093.8956
+    },
+    {
+      "date": "2025-07-25",
+      "portfolio_value": 8722485.85,
+      "cumulative_return_pct": 3027.2476
+    },
+    {
+      "date": "2025-07-26",
+      "portfolio_value": 8708512.13,
+      "cumulative_return_pct": 3022.2376
+    },
+    {
+      "date": "2025-07-27",
+      "portfolio_value": 8715453.14,
+      "cumulative_return_pct": 3024.7262
+    },
+    {
+      "date": "2025-07-28",
+      "portfolio_value": 8796580.62,
+      "cumulative_return_pct": 3053.8126
+    },
+    {
+      "date": "2025-07-29",
+      "portfolio_value": 8250247.89,
+      "cumulative_return_pct": 2857.9375
+    },
+    {
+      "date": "2025-07-30",
+      "portfolio_value": 7940485.71,
+      "cumulative_return_pct": 2746.8793
+    },
+    {
+      "date": "2025-07-31",
+      "portfolio_value": 7718403.43,
+      "cumulative_return_pct": 2667.2568
+    },
+    {
+      "date": "2025-08-01",
+      "portfolio_value": 7696261.2,
+      "cumulative_return_pct": 2659.3182
+    },
+    {
+      "date": "2025-08-02",
+      "portfolio_value": 7618926.86,
+      "cumulative_return_pct": 2631.5918
+    },
+    {
+      "date": "2025-08-03",
+      "portfolio_value": 7608732.81,
+      "cumulative_return_pct": 2627.9369
+    },
+    {
+      "date": "2025-08-04",
+      "portfolio_value": 7807254.49,
+      "cumulative_return_pct": 2699.1123
+    },
+    {
+      "date": "2025-08-05",
+      "portfolio_value": 7929030.55,
+      "cumulative_return_pct": 2742.7723
+    },
+    {
+      "date": "2025-08-06",
+      "portfolio_value": 7896479.78,
+      "cumulative_return_pct": 2731.102
+    },
+    {
+      "date": "2025-08-07",
+      "portfolio_value": 8023789.96,
+      "cumulative_return_pct": 2776.7462
+    },
+    {
+      "date": "2025-08-08",
+      "portfolio_value": 8037588.12,
+      "cumulative_return_pct": 2781.6932
+    },
+    {
+      "date": "2025-08-09",
+      "portfolio_value": 8131160.49,
+      "cumulative_return_pct": 2815.2414
+    },
+    {
+      "date": "2025-08-10",
+      "portfolio_value": 8147635.15,
+      "cumulative_return_pct": 2821.148
+    },
+    {
+      "date": "2025-08-11",
+      "portfolio_value": 8234707.72,
+      "cumulative_return_pct": 2852.3659
+    },
+    {
+      "date": "2025-08-12",
+      "portfolio_value": 8314399.43,
+      "cumulative_return_pct": 2880.9375
+    },
+    {
+      "date": "2025-08-13",
+      "portfolio_value": 8185761.21,
+      "cumulative_return_pct": 2834.8172
+    },
+    {
+      "date": "2025-08-14",
+      "portfolio_value": 8063649.7,
+      "cumulative_return_pct": 2791.037
+    },
+    {
+      "date": "2025-08-15",
+      "portfolio_value": 8004909.38,
+      "cumulative_return_pct": 2769.977
+    },
+    {
+      "date": "2025-08-16",
+      "portfolio_value": 8027116.52,
+      "cumulative_return_pct": 2777.9388
+    },
+    {
+      "date": "2025-08-17",
+      "portfolio_value": 8173506.37,
+      "cumulative_return_pct": 2830.4235
+    },
+    {
+      "date": "2025-08-18",
+      "portfolio_value": 8239112.08,
+      "cumulative_return_pct": 2853.945
+    },
+    {
+      "date": "2025-08-19",
+      "portfolio_value": 8154004.16,
+      "cumulative_return_pct": 2823.4315
+    },
+    {
+      "date": "2025-08-20",
+      "portfolio_value": 7978126.16,
+      "cumulative_return_pct": 2760.3744
+    },
+    {
+      "date": "2025-08-21",
+      "portfolio_value": 7950821.35,
+      "cumulative_return_pct": 2750.5849
+    },
+    {
+      "date": "2025-08-22",
+      "portfolio_value": 8240022.99,
+      "cumulative_return_pct": 2854.2716
+    },
+    {
+      "date": "2025-08-23",
+      "portfolio_value": 8141870.1,
+      "cumulative_return_pct": 2819.0811
+    },
+    {
+      "date": "2025-08-24",
+      "portfolio_value": 9018868.84,
+      "cumulative_return_pct": 3133.5089
+    },
+    {
+      "date": "2025-08-25",
+      "portfolio_value": 8939969.99,
+      "cumulative_return_pct": 3105.2215
+    },
+    {
+      "date": "2025-08-26",
+      "portfolio_value": 9190323.35,
+      "cumulative_return_pct": 3194.98
+    },
+    {
+      "date": "2025-08-27",
+      "portfolio_value": 9237807.48,
+      "cumulative_return_pct": 3212.0043
+    },
+    {
+      "date": "2025-08-28",
+      "portfolio_value": 9303761.15,
+      "cumulative_return_pct": 3235.6505
+    },
+    {
+      "date": "2025-08-29",
+      "portfolio_value": 9265581.46,
+      "cumulative_return_pct": 3221.9621
+    },
+    {
+      "date": "2025-08-30",
+      "portfolio_value": 9298776.12,
+      "cumulative_return_pct": 3233.8632
+    },
+    {
+      "date": "2025-08-31",
+      "portfolio_value": 9340722.67,
+      "cumulative_return_pct": 3248.9022
+    },
+    {
+      "date": "2025-09-01",
+      "portfolio_value": 9359595.14,
+      "cumulative_return_pct": 3255.6685
+    },
+    {
+      "date": "2025-09-02",
+      "portfolio_value": 9131583.38,
+      "cumulative_return_pct": 3173.9201
+    },
+    {
+      "date": "2025-09-03",
+      "portfolio_value": 9060138.37,
+      "cumulative_return_pct": 3148.3051
+    },
+    {
+      "date": "2025-09-04",
+      "portfolio_value": 9207653.91,
+      "cumulative_return_pct": 3201.1935
+    },
+    {
+      "date": "2025-09-05",
+      "portfolio_value": 9393982.22,
+      "cumulative_return_pct": 3267.9972
+    },
+    {
+      "date": "2025-09-06",
+      "portfolio_value": 9463164.86,
+      "cumulative_return_pct": 3292.8011
+    },
+    {
+      "date": "2025-09-07",
+      "portfolio_value": 9493536.27,
+      "cumulative_return_pct": 3303.69
+    },
+    {
+      "date": "2025-09-08",
+      "portfolio_value": 9461628.28,
+      "cumulative_return_pct": 3292.2502
+    },
+    {
+      "date": "2025-09-09",
+      "portfolio_value": 9130191.84,
+      "cumulative_return_pct": 3173.4212
+    },
+    {
+      "date": "2025-09-10",
+      "portfolio_value": 9157275.85,
+      "cumulative_return_pct": 3183.1316
+    },
+    {
+      "date": "2025-09-11",
+      "portfolio_value": 9345621.12,
+      "cumulative_return_pct": 3250.6585
+    },
+    {
+      "date": "2025-09-12",
+      "portfolio_value": 9258943.77,
+      "cumulative_return_pct": 3219.5823
+    },
+    {
+      "date": "2025-09-13",
+      "portfolio_value": 9341716.04,
+      "cumulative_return_pct": 3249.2584
+    },
+    {
+      "date": "2025-09-14",
+      "portfolio_value": 9359756.67,
+      "cumulative_return_pct": 3255.7264
+    },
+    {
+      "date": "2025-09-15",
+      "portfolio_value": 10354137.29,
+      "cumulative_return_pct": 3612.2388
+    },
+    {
+      "date": "2025-09-16",
+      "portfolio_value": 10522747.08,
+      "cumulative_return_pct": 3672.69
+    },
+    {
+      "date": "2025-09-17",
+      "portfolio_value": 10508686.32,
+      "cumulative_return_pct": 3667.6488
+    },
+    {
+      "date": "2025-09-18",
+      "portfolio_value": 10613447.01,
+      "cumulative_return_pct": 3705.2084
+    },
+    {
+      "date": "2025-09-19",
+      "portfolio_value": 10897967.83,
+      "cumulative_return_pct": 3807.2168
+    },
+    {
+      "date": "2025-09-20",
+      "portfolio_value": 11088727.36,
+      "cumulative_return_pct": 3875.6093
+    },
+    {
+      "date": "2025-09-21",
+      "portfolio_value": 11255941.65,
+      "cumulative_return_pct": 3935.5601
+    },
+    {
+      "date": "2025-09-22",
+      "portfolio_value": 11584754.38,
+      "cumulative_return_pct": 4053.4484
+    },
+    {
+      "date": "2025-09-23",
+      "portfolio_value": 11600416.41,
+      "cumulative_return_pct": 4059.0637
+    },
+    {
+      "date": "2025-09-24",
+      "portfolio_value": 12584254.96,
+      "cumulative_return_pct": 4411.7965
+    },
+    {
+      "date": "2025-09-25",
+      "portfolio_value": 13059694.46,
+      "cumulative_return_pct": 4582.2544
+    },
+    {
+      "date": "2025-09-26",
+      "portfolio_value": 12614893.07,
+      "cumulative_return_pct": 4422.781
+    },
+    {
+      "date": "2025-09-27",
+      "portfolio_value": 12713198.3,
+      "cumulative_return_pct": 4458.0261
+    },
+    {
+      "date": "2025-09-28",
+      "portfolio_value": 12912612.54,
+      "cumulative_return_pct": 4529.5215
+    },
+    {
+      "date": "2025-09-29",
+      "portfolio_value": 12877100.63,
+      "cumulative_return_pct": 4516.7896
+    },
+    {
+      "date": "2025-09-30",
+      "portfolio_value": 12472423.51,
+      "cumulative_return_pct": 4371.7019
+    },
+    {
+      "date": "2025-10-01",
+      "portfolio_value": 13741769.04,
+      "cumulative_return_pct": 4826.7966
+    },
+    {
+      "date": "2025-10-02",
+      "portfolio_value": 14051073.75,
+      "cumulative_return_pct": 4937.6907
+    },
+    {
+      "date": "2025-10-03",
+      "portfolio_value": 15391262.61,
+      "cumulative_return_pct": 5418.1848
+    },
+    {
+      "date": "2025-10-04",
+      "portfolio_value": 15952708.32,
+      "cumulative_return_pct": 5619.4783
+    },
+    {
+      "date": "2025-10-05",
+      "portfolio_value": 16277664.15,
+      "cumulative_return_pct": 5735.9837
+    },
+    {
+      "date": "2025-10-06",
+      "portfolio_value": 16625962.61,
+      "cumulative_return_pct": 5860.8582
+    },
+    {
+      "date": "2025-10-07",
+      "portfolio_value": 16150295.9,
+      "cumulative_return_pct": 5690.3188
+    },
+    {
+      "date": "2025-10-08",
+      "portfolio_value": 16303715.66,
+      "cumulative_return_pct": 5745.3239
+    },
+    {
+      "date": "2025-10-09",
+      "portfolio_value": 16711206.65,
+      "cumulative_return_pct": 5891.4205
+    },
+    {
+      "date": "2025-10-10",
+      "portfolio_value": 15886067.39,
+      "cumulative_return_pct": 5595.5857
+    },
+    {
+      "date": "2025-10-11",
+      "portfolio_value": 16319535.81,
+      "cumulative_return_pct": 5750.9959
+    },
+    {
+      "date": "2025-10-12",
+      "portfolio_value": 16096584.89,
+      "cumulative_return_pct": 5671.0619
+    },
+    {
+      "date": "2025-10-13",
+      "portfolio_value": 17916768.03,
+      "cumulative_return_pct": 6323.6469
+    },
+    {
+      "date": "2025-10-14",
+      "portfolio_value": 19107002.63,
+      "cumulative_return_pct": 6750.3783
+    },
+    {
+      "date": "2025-10-15",
+      "portfolio_value": 19380115.21,
+      "cumulative_return_pct": 6848.2965
+    },
+    {
+      "date": "2025-10-16",
+      "portfolio_value": 17806692.12,
+      "cumulative_return_pct": 6284.1817
+    },
+    {
+      "date": "2025-10-17",
+      "portfolio_value": 16875964.39,
+      "cumulative_return_pct": 5950.4906
+    },
+    {
+      "date": "2025-10-18",
+      "portfolio_value": 16873403.75,
+      "cumulative_return_pct": 5949.5725
+    },
+    {
+      "date": "2025-10-19",
+      "portfolio_value": 17062834.06,
+      "cumulative_return_pct": 6017.4884
+    },
+    {
+      "date": "2025-10-20",
+      "portfolio_value": 17766550.81,
+      "cumulative_return_pct": 6269.79
+    },
+    {
+      "date": "2025-10-21",
+      "portfolio_value": 16988550.18,
+      "cumulative_return_pct": 5990.8557
+    },
+    {
+      "date": "2025-10-22",
+      "portfolio_value": 16704615.43,
+      "cumulative_return_pct": 5889.0574
+    },
+    {
+      "date": "2025-10-23",
+      "portfolio_value": 16757928.41,
+      "cumulative_return_pct": 5908.1715
+    },
+    {
+      "date": "2025-10-24",
+      "portfolio_value": 17369755.45,
+      "cumulative_return_pct": 6127.5281
+    },
+    {
+      "date": "2025-10-25",
+      "portfolio_value": 17479899.11,
+      "cumulative_return_pct": 6167.0176
+    },
+    {
+      "date": "2025-10-26",
+      "portfolio_value": 17470210.74,
+      "cumulative_return_pct": 6163.544
+    },
+    {
+      "date": "2025-10-27",
+      "portfolio_value": 16517774.9,
+      "cumulative_return_pct": 5822.07
+    },
+    {
+      "date": "2025-10-28",
+      "portfolio_value": 16426275.54,
+      "cumulative_return_pct": 5789.265
+    },
+    {
+      "date": "2025-10-29",
+      "portfolio_value": 16567336.07,
+      "cumulative_return_pct": 5839.839
+    },
+    {
+      "date": "2025-10-30",
+      "portfolio_value": 16678836.41,
+      "cumulative_return_pct": 5879.8149
+    },
+    {
+      "date": "2025-10-31",
+      "portfolio_value": 16449186.95,
+      "cumulative_return_pct": 5797.4793
+    },
+    {
+      "date": "2025-11-01",
+      "portfolio_value": 16520493.42,
+      "cumulative_return_pct": 5823.0446
+    },
+    {
+      "date": "2025-11-02",
+      "portfolio_value": 16582173.33,
+      "cumulative_return_pct": 5845.1585
+    },
+    {
+      "date": "2025-11-03",
+      "portfolio_value": 15981779.86,
+      "cumulative_return_pct": 5629.9012
+    },
+    {
+      "date": "2025-11-04",
+      "portfolio_value": 15012293.08,
+      "cumulative_return_pct": 5282.3139
+    },
+    {
+      "date": "2025-11-05",
+      "portfolio_value": 15170419.08,
+      "cumulative_return_pct": 5339.0064
+    },
+    {
+      "date": "2025-11-06",
+      "portfolio_value": 15107755.66,
+      "cumulative_return_pct": 5316.5398
+    },
+    {
+      "date": "2025-11-07",
+      "portfolio_value": 15186887.57,
+      "cumulative_return_pct": 5344.9108
+    },
+    {
+      "date": "2025-11-08",
+      "portfolio_value": 15222697.75,
+      "cumulative_return_pct": 5357.7497
+    },
+    {
+      "date": "2025-11-09",
+      "portfolio_value": 15612300.76,
+      "cumulative_return_pct": 5497.4329
+    },
+    {
+      "date": "2025-11-10",
+      "portfolio_value": 16261900.3,
+      "cumulative_return_pct": 5730.332
+    },
+    {
+      "date": "2025-11-11",
+      "portfolio_value": 16599782.42,
+      "cumulative_return_pct": 5851.4719
+    },
+    {
+      "date": "2025-11-12",
+      "portfolio_value": 16899949.73,
+      "cumulative_return_pct": 5959.09
+    },
+    {
+      "date": "2025-11-13",
+      "portfolio_value": 17055112.56,
+      "cumulative_return_pct": 6014.7201
+    },
+    {
+      "date": "2025-11-14",
+      "portfolio_value": 17247725.71,
+      "cumulative_return_pct": 6083.7771
+    },
+    {
+      "date": "2025-11-15",
+      "portfolio_value": 17060499.86,
+      "cumulative_return_pct": 6016.6516
+    },
+    {
+      "date": "2025-11-16",
+      "portfolio_value": 17425856.39,
+      "cumulative_return_pct": 6147.6418
+    },
+    {
+      "date": "2025-11-17",
+      "portfolio_value": 18907837.87,
+      "cumulative_return_pct": 6678.9723
+    },
+    {
+      "date": "2025-11-18",
+      "portfolio_value": 19121767.5,
+      "cumulative_return_pct": 6755.6719
+    },
+    {
+      "date": "2025-11-19",
+      "portfolio_value": 20833279.17,
+      "cumulative_return_pct": 7369.2952
+    },
+    {
+      "date": "2025-11-20",
+      "portfolio_value": 19648221.19,
+      "cumulative_return_pct": 6944.4198
+    },
+    {
+      "date": "2025-11-21",
+      "portfolio_value": 20005793.5,
+      "cumulative_return_pct": 7072.6192
+    },
+    {
+      "date": "2025-11-22",
+      "portfolio_value": 20051180.21,
+      "cumulative_return_pct": 7088.8915
+    },
+    {
+      "date": "2025-11-23",
+      "portfolio_value": 20246011.52,
+      "cumulative_return_pct": 7158.7438
+    },
+    {
+      "date": "2025-11-24",
+      "portfolio_value": 20484465.41,
+      "cumulative_return_pct": 7244.236
+    },
+    {
+      "date": "2025-11-25",
+      "portfolio_value": 20665732.93,
+      "cumulative_return_pct": 7309.2253
+    },
+    {
+      "date": "2025-11-26",
+      "portfolio_value": 21477861.8,
+      "cumulative_return_pct": 7600.3955
+    },
+    {
+      "date": "2025-11-27",
+      "portfolio_value": 21739522.41,
+      "cumulative_return_pct": 7694.208
+    },
+    {
+      "date": "2025-11-28",
+      "portfolio_value": 22679792.73,
+      "cumulative_return_pct": 8031.3204
+    },
+    {
+      "date": "2025-11-29",
+      "portfolio_value": 22755847.7,
+      "cumulative_return_pct": 8058.5881
+    },
+    {
+      "date": "2025-11-30",
+      "portfolio_value": 23011235.27,
+      "cumulative_return_pct": 8150.1515
+    },
+    {
+      "date": "2025-12-01",
+      "portfolio_value": 22932250.05,
+      "cumulative_return_pct": 8121.8331
+    },
+    {
+      "date": "2025-12-02",
+      "portfolio_value": 22055815.65,
+      "cumulative_return_pct": 7807.6077
+    },
+    {
+      "date": "2025-12-03",
+      "portfolio_value": 22243731.77,
+      "cumulative_return_pct": 7874.9807
+    },
+    {
+      "date": "2025-12-04",
+      "portfolio_value": 21862014.52,
+      "cumulative_return_pct": 7738.1247
+    },
+    {
+      "date": "2025-12-05",
+      "portfolio_value": 21761550.41,
+      "cumulative_return_pct": 7702.1056
+    },
+    {
+      "date": "2025-12-06",
+      "portfolio_value": 21707018.21,
+      "cumulative_return_pct": 7682.5543
+    },
+    {
+      "date": "2025-12-07",
+      "portfolio_value": 21802521.83,
+      "cumulative_return_pct": 7716.795
+    },
+    {
+      "date": "2025-12-08",
+      "portfolio_value": 21973173.12,
+      "cumulative_return_pct": 7777.9781
+    },
+    {
+      "date": "2025-12-09",
+      "portfolio_value": 22977928.9,
+      "cumulative_return_pct": 8138.2102
+    },
+    {
+      "date": "2025-12-10",
+      "portfolio_value": 23086539.14,
+      "cumulative_return_pct": 8177.15
+    },
+    {
+      "date": "2025-12-11",
+      "portfolio_value": 23496142.86,
+      "cumulative_return_pct": 8324.004
+    },
+    {
+      "date": "2025-12-12",
+      "portfolio_value": 22455454.3,
+      "cumulative_return_pct": 7950.8889
+    },
+    {
+      "date": "2025-12-13",
+      "portfolio_value": 22744227.51,
+      "cumulative_return_pct": 8054.422
+    },
+    {
+      "date": "2025-12-14",
+      "portfolio_value": 22744420.89,
+      "cumulative_return_pct": 8054.4913
+    },
+    {
+      "date": "2025-12-15",
+      "portfolio_value": 22443687.44,
+      "cumulative_return_pct": 7946.6702
+    },
+    {
+      "date": "2025-12-16",
+      "portfolio_value": 22194532.77,
+      "cumulative_return_pct": 7857.3415
+    },
+    {
+      "date": "2025-12-17",
+      "portfolio_value": 22228887.8,
+      "cumulative_return_pct": 7869.6587
+    },
+    {
+      "date": "2025-12-18",
+      "portfolio_value": 22634854.01,
+      "cumulative_return_pct": 8015.2086
+    },
+    {
+      "date": "2025-12-19",
+      "portfolio_value": 22865658.39,
+      "cumulative_return_pct": 8097.9582
+    },
+    {
+      "date": "2025-12-20",
+      "portfolio_value": 22948149.28,
+      "cumulative_return_pct": 8127.5334
+    },
+    {
+      "date": "2025-12-21",
+      "portfolio_value": 22912554.88,
+      "cumulative_return_pct": 8114.7719
+    },
+    {
+      "date": "2025-12-22",
+      "portfolio_value": 23621867.55,
+      "cumulative_return_pct": 8369.0797
+    },
+    {
+      "date": "2025-12-23",
+      "portfolio_value": 23583409.28,
+      "cumulative_return_pct": 8355.2914
+    },
+    {
+      "date": "2025-12-24",
+      "portfolio_value": 23658946.63,
+      "cumulative_return_pct": 8382.3736
+    },
+    {
+      "date": "2025-12-25",
+      "portfolio_value": 23680361.13,
+      "cumulative_return_pct": 8390.0512
+    },
+    {
+      "date": "2025-12-26",
+      "portfolio_value": 23633502.41,
+      "cumulative_return_pct": 8373.2511
+    },
+    {
+      "date": "2025-12-27",
+      "portfolio_value": 23813365.38,
+      "cumulative_return_pct": 8437.7369
+    },
+    {
+      "date": "2025-12-28",
+      "portfolio_value": 23809440.37,
+      "cumulative_return_pct": 8436.3296
+    },
+    {
+      "date": "2025-12-29",
+      "portfolio_value": 23282957.23,
+      "cumulative_return_pct": 8247.5712
+    },
+    {
+      "date": "2025-12-30",
+      "portfolio_value": 23240372.84,
+      "cumulative_return_pct": 8232.3035
+    },
+    {
+      "date": "2025-12-31",
+      "portfolio_value": 22966783.31,
+      "cumulative_return_pct": 8134.2143
+    },
+    {
+      "date": "2026-01-01",
+      "portfolio_value": 23002188.72,
+      "cumulative_return_pct": 8146.9081
+    },
+    {
+      "date": "2026-01-02",
+      "portfolio_value": 23884657.92,
+      "cumulative_return_pct": 8463.2972
+    },
+    {
+      "date": "2026-01-03",
+      "portfolio_value": 24004297.95,
+      "cumulative_return_pct": 8506.1914
+    },
+    {
+      "date": "2026-01-04",
+      "portfolio_value": 25901614.59,
+      "cumulative_return_pct": 9186.4308
+    },
+    {
+      "date": "2026-01-05",
+      "portfolio_value": 27322699.42,
+      "cumulative_return_pct": 9695.9282
+    },
+    {
+      "date": "2026-01-06",
+      "portfolio_value": 28138551.65,
+      "cumulative_return_pct": 9988.4334
+    },
+    {
+      "date": "2026-01-07",
+      "portfolio_value": 28113676.51,
+      "cumulative_return_pct": 9979.515
+    },
+    {
+      "date": "2026-01-08",
+      "portfolio_value": 27098550.6,
+      "cumulative_return_pct": 9615.5648
+    },
+    {
+      "date": "2026-01-09",
+      "portfolio_value": 27552682.73,
+      "cumulative_return_pct": 9778.3835
+    },
+    {
+      "date": "2026-01-10",
+      "portfolio_value": 27511131.17,
+      "cumulative_return_pct": 9763.4861
+    },
+    {
+      "date": "2026-01-11",
+      "portfolio_value": 27573523.03,
+      "cumulative_return_pct": 9785.8553
+    },
+    {
+      "date": "2026-01-12",
+      "portfolio_value": 29497841.48,
+      "cumulative_return_pct": 10475.7756
+    },
+    {
+      "date": "2026-01-13",
+      "portfolio_value": 29988748.85,
+      "cumulative_return_pct": 10651.7792
+    },
+    {
+      "date": "2026-01-14",
+      "portfolio_value": 31928063.63,
+      "cumulative_return_pct": 11347.0761
+    },
+    {
+      "date": "2026-01-15",
+      "portfolio_value": 30525932.77,
+      "cumulative_return_pct": 10844.3742
+    },
+    {
+      "date": "2026-01-16",
+      "portfolio_value": 30473043.74,
+      "cumulative_return_pct": 10825.412
+    },
+    {
+      "date": "2026-01-17",
+      "portfolio_value": 30749303.79,
+      "cumulative_return_pct": 10924.4588
+    },
+    {
+      "date": "2026-01-18",
+      "portfolio_value": 30887414.07,
+      "cumulative_return_pct": 10973.975
+    },
+    {
+      "date": "2026-01-19",
+      "portfolio_value": 30957172.44,
+      "cumulative_return_pct": 10998.9853
+    },
+    {
+      "date": "2026-01-20",
+      "portfolio_value": 30625213.82,
+      "cumulative_return_pct": 10879.9691
+    },
+    {
+      "date": "2026-01-21",
+      "portfolio_value": 32438020.15,
+      "cumulative_return_pct": 11529.9093
+    },
+    {
+      "date": "2026-01-22",
+      "portfolio_value": 33576545.35,
+      "cumulative_return_pct": 11938.1015
+    },
+    {
+      "date": "2026-01-23",
+      "portfolio_value": 34475303.1,
+      "cumulative_return_pct": 12260.3305
+    },
+    {
+      "date": "2026-01-24",
+      "portfolio_value": 34490300.41,
+      "cumulative_return_pct": 12265.7074
+    },
+    {
+      "date": "2026-01-25",
+      "portfolio_value": 34652388.56,
+      "cumulative_return_pct": 12323.8204
+    },
+    {
+      "date": "2026-01-26",
+      "portfolio_value": 32359878.76,
+      "cumulative_return_pct": 11501.8935
+    },
+    {
+      "date": "2026-01-27",
+      "portfolio_value": 33941965.63,
+      "cumulative_return_pct": 12069.1146
+    },
+    {
+      "date": "2026-01-28",
+      "portfolio_value": 34659671.17,
+      "cumulative_return_pct": 12326.4314
+    },
+    {
+      "date": "2026-01-29",
+      "portfolio_value": 33707748.0,
+      "cumulative_return_pct": 11985.1412
+    },
+    {
+      "date": "2026-01-30",
+      "portfolio_value": 32145718.08,
+      "cumulative_return_pct": 11425.1111
+    },
+    {
+      "date": "2026-01-31",
+      "portfolio_value": 31950249.93,
+      "cumulative_return_pct": 11355.0305
+    },
+    {
+      "date": "2026-02-01",
+      "portfolio_value": 31313375.96,
+      "cumulative_return_pct": 11126.6939
+    },
+    {
+      "date": "2026-02-02",
+      "portfolio_value": 29314474.25,
+      "cumulative_return_pct": 10410.0335
+    },
+    {
+      "date": "2026-02-03",
+      "portfolio_value": 32081557.17,
+      "cumulative_return_pct": 11402.1077
+    },
+    {
+      "date": "2026-02-04",
+      "portfolio_value": 31465505.16,
+      "cumulative_return_pct": 11181.2364
+    },
+    {
+      "date": "2026-02-05",
+      "portfolio_value": 29029097.01,
+      "cumulative_return_pct": 10307.718
+    },
+    {
+      "date": "2026-02-06",
+      "portfolio_value": 30898390.55,
+      "cumulative_return_pct": 10977.9104
+    },
+    {
+      "date": "2026-02-07",
+      "portfolio_value": 30848700.81,
+      "cumulative_return_pct": 10960.0953
+    },
+    {
+      "date": "2026-02-08",
+      "portfolio_value": 32383441.02,
+      "cumulative_return_pct": 11510.3412
+    },
+    {
+      "date": "2026-02-09",
+      "portfolio_value": 34551632.2,
+      "cumulative_return_pct": 12287.6965
+    },
+    {
+      "date": "2026-02-10",
+      "portfolio_value": 33442063.27,
+      "cumulative_return_pct": 11889.886
+    },
+    {
+      "date": "2026-02-11",
+      "portfolio_value": 35465677.63,
+      "cumulative_return_pct": 12615.4066
+    },
+    {
+      "date": "2026-02-12",
+      "portfolio_value": 32588692.9,
+      "cumulative_return_pct": 11583.9296
+    },
+    {
+      "date": "2026-02-13",
+      "portfolio_value": 33204207.98,
+      "cumulative_return_pct": 11804.6084
+    },
+    {
+      "date": "2026-02-14",
+      "portfolio_value": 33321678.21,
+      "cumulative_return_pct": 11846.7247
+    },
+    {
+      "date": "2026-02-15",
+      "portfolio_value": 33567445.43,
+      "cumulative_return_pct": 11934.8389
+    },
+    {
+      "date": "2026-02-16",
+      "portfolio_value": 33615532.72,
+      "cumulative_return_pct": 11952.0795
+    },
+    {
+      "date": "2026-02-17",
+      "portfolio_value": 32105257.19,
+      "cumulative_return_pct": 11410.6048
+    },
+    {
+      "date": "2026-02-18",
+      "portfolio_value": 32976697.24,
+      "cumulative_return_pct": 11723.0397
+    },
+    {
+      "date": "2026-02-19",
+      "portfolio_value": 33248087.8,
+      "cumulative_return_pct": 11820.3406
+    },
+    {
+      "date": "2026-02-20",
+      "portfolio_value": 33514939.78,
+      "cumulative_return_pct": 11916.0142
+    },
+    {
+      "date": "2026-02-21",
+      "portfolio_value": 33587951.23,
+      "cumulative_return_pct": 11942.1908
+    },
+    {
+      "date": "2026-02-22",
+      "portfolio_value": 33648348.0,
+      "cumulative_return_pct": 11963.8447
+    },
+    {
+      "date": "2026-02-23",
+      "portfolio_value": 33330503.3,
+      "cumulative_return_pct": 11849.8887
+    }
+  ],
+  "monthly_returns": [
+    {
+      "month": "2024-05",
+      "return_pct": -2.4702,
+      "quadrant_attribution": {
+        "Q1": -1.3441,
+        "Q2": -1.2713,
+        "Q3": 4.3104,
+        "Q4": 0.0955
+      },
+      "tickers": [
+        {
+          "ticker": "VST",
+          "quadrant": "Q4",
+          "pnl_pct": 1.2322
+        },
+        {
+          "ticker": "LTBR",
+          "quadrant": "Q3",
+          "pnl_pct": 1.0548
+        },
+        {
+          "ticker": "SMR",
+          "quadrant": "Q3",
+          "pnl_pct": 1.037
+        },
+        {
+          "ticker": "UUUU",
+          "quadrant": "Q3",
+          "pnl_pct": 0.781
+        },
+        {
+          "ticker": "MTD",
+          "quadrant": "Q4",
+          "pnl_pct": -0.5213
+        },
+        {
+          "ticker": "TECH",
+          "quadrant": "Q4",
+          "pnl_pct": -0.451
+        },
+        {
+          "ticker": "MSTR",
+          "quadrant": "Q1",
+          "pnl_pct": -0.4248
+        },
+        {
+          "ticker": "ALB",
+          "quadrant": "Q3",
+          "pnl_pct": -0.4144
+        },
+        {
+          "ticker": "DNN",
+          "quadrant": "Q3",
+          "pnl_pct": 0.3756
+        },
+        {
+          "ticker": "LQD",
+          "quadrant": "Q4",
+          "pnl_pct": -0.3729
+        },
+        {
+          "ticker": "RMD",
+          "quadrant": "Q4",
+          "pnl_pct": -0.3384
+        },
+        {
+          "ticker": "SGML",
+          "quadrant": "Q3",
+          "pnl_pct": -0.317
+        },
+        {
+          "ticker": "CENX",
+          "quadrant": "Q3",
+          "pnl_pct": 0.2991
+        },
+        {
+          "ticker": "IEF",
+          "quadrant": "Q4",
+          "pnl_pct": -0.2667
+        },
+        {
+          "ticker": "AMGN",
+          "quadrant": "Q4",
+          "pnl_pct": -0.2246
+        },
+        {
+          "ticker": "NXE",
+          "quadrant": "Q3",
+          "pnl_pct": 0.2242
+        },
+        {
+          "ticker": "NEE",
+          "quadrant": "Q4",
+          "pnl_pct": 0.2105
+        },
+        {
+          "ticker": "IWM",
+          "quadrant": "Q1",
+          "pnl_pct": -0.191
+        },
+        {
+          "ticker": "NRG",
+          "quadrant": "Q4",
+          "pnl_pct": -0.1446
+        },
+        {
+          "ticker": "BG",
+          "quadrant": "Q4",
+          "pnl_pct": 0.1053
+        }
+      ],
+      "dominant_quads": [
+        "Q4",
+        "Q1"
+      ]
+    },
+    {
+      "month": "2024-06",
+      "return_pct": 1.8792,
+      "quadrant_attribution": {
+        "Q1": 3.1678,
+        "Q2": 0.1162,
+        "Q3": 0,
+        "Q4": 0.8764
+      },
+      "tickers": [
+        {
+          "ticker": "VST",
+          "quadrant": "Q4",
+          "pnl_pct": -2.4138
+        },
+        {
+          "ticker": "VGLT",
+          "quadrant": "Q4",
+          "pnl_pct": 1.3163
+        },
+        {
+          "ticker": "PODD",
+          "quadrant": "Q4",
+          "pnl_pct": 1.0584
+        },
+        {
+          "ticker": "ARM",
+          "quadrant": "Q1",
+          "pnl_pct": 0.9009
+        },
+        {
+          "ticker": "CASY",
+          "quadrant": "Q4",
+          "pnl_pct": 0.8244
+        },
+        {
+          "ticker": "MSTR",
+          "quadrant": "Q1",
+          "pnl_pct": 0.5445
+        },
+        {
+          "ticker": "NRG",
+          "quadrant": "Q4",
+          "pnl_pct": -0.5288
+        },
+        {
+          "ticker": "CEG",
+          "quadrant": "Q4",
+          "pnl_pct": -0.5244
+        },
+        {
+          "ticker": "LQD",
+          "quadrant": "Q4",
+          "pnl_pct": 0.4238
+        },
+        {
+          "ticker": "CCL",
+          "quadrant": "Q1",
+          "pnl_pct": 0.4056
+        },
+        {
+          "ticker": "CRWD",
+          "quadrant": "Q1",
+          "pnl_pct": 0.3631
+        },
+        {
+          "ticker": "MTD",
+          "quadrant": "Q4",
+          "pnl_pct": 0.3289
+        },
+        {
+          "ticker": "AES",
+          "quadrant": "Q4",
+          "pnl_pct": -0.3076
+        },
+        {
+          "ticker": "NVDA",
+          "quadrant": "Q1",
+          "pnl_pct": 0.2976
+        },
+        {
+          "ticker": "INCY",
+          "quadrant": "Q4",
+          "pnl_pct": 0.296
+        },
+        {
+          "ticker": "IEF",
+          "quadrant": "Q4",
+          "pnl_pct": 0.2406
+        },
+        {
+          "ticker": "TTD",
+          "quadrant": "Q1",
+          "pnl_pct": 0.2389
+        },
+        {
+          "ticker": "WMT",
+          "quadrant": "Q4",
+          "pnl_pct": 0.221
+        },
+        {
+          "ticker": "TLT",
+          "quadrant": "Q1",
+          "pnl_pct": 0.1734
+        },
+        {
+          "ticker": "IWM",
+          "quadrant": "Q1",
+          "pnl_pct": -0.1507
+        }
+      ],
+      "dominant_quads": [
+        "Q4",
+        "Q1"
+      ]
+    },
+    {
+      "month": "2024-07",
+      "return_pct": 8.3784,
+      "quadrant_attribution": {
+        "Q1": 1.2725,
+        "Q2": 4.4765,
+        "Q3": -1.1649,
+        "Q4": 5.5358
+      },
+      "tickers": [
+        {
+          "ticker": "VGLT",
+          "quadrant": "Q4",
+          "pnl_pct": 1.1974
+        },
+        {
+          "ticker": "PACB",
+          "quadrant": "Q1",
+          "pnl_pct": 1.1865
+        },
+        {
+          "ticker": "TEM",
+          "quadrant": "Q1",
+          "pnl_pct": 0.9506
+        },
+        {
+          "ticker": "IWM",
+          "quadrant": "Q1",
+          "pnl_pct": 0.9067
+        },
+        {
+          "ticker": "SLB",
+          "quadrant": "Q2",
+          "pnl_pct": 0.6577
+        },
+        {
+          "ticker": "CNC",
+          "quadrant": "Q4",
+          "pnl_pct": 0.65
+        },
+        {
+          "ticker": "APA",
+          "quadrant": "Q2",
+          "pnl_pct": 0.629
+        },
+        {
+          "ticker": "SMR",
+          "quadrant": "Q3",
+          "pnl_pct": -0.6277
+        },
+        {
+          "ticker": "COIN",
+          "quadrant": "Q1",
+          "pnl_pct": 0.6112
+        },
+        {
+          "ticker": "MSTR",
+          "quadrant": "Q1",
+          "pnl_pct": -0.586
+        },
+        {
+          "ticker": "ACHR",
+          "quadrant": "Q1",
+          "pnl_pct": -0.5492
+        },
+        {
+          "ticker": "URI",
+          "quadrant": "Q2",
+          "pnl_pct": 0.5296
+        },
+        {
+          "ticker": "CRL",
+          "quadrant": "Q4",
+          "pnl_pct": 0.5171
+        },
+        {
+          "ticker": "CASY",
+          "quadrant": "Q4",
+          "pnl_pct": 0.5102
+        },
+        {
+          "ticker": "MOH",
+          "quadrant": "Q4",
+          "pnl_pct": 0.4509
+        },
+        {
+          "ticker": "TPL",
+          "quadrant": "Q3",
+          "pnl_pct": 0.399
+        },
+        {
+          "ticker": "LQD",
+          "quadrant": "Q4",
+          "pnl_pct": 0.3863
+        },
+        {
+          "ticker": "MTDR",
+          "quadrant": "Q2",
+          "pnl_pct": 0.3724
+        },
+        {
+          "ticker": "BKR",
+          "quadrant": "Q2",
+          "pnl_pct": 0.3337
+        },
+        {
+          "ticker": "IEF",
+          "quadrant": "Q4",
+          "pnl_pct": 0.3229
+        }
+      ],
+      "dominant_quads": [
+        "Q4",
+        "Q2"
+      ]
+    },
+    {
+      "month": "2024-08",
+      "return_pct": 6.89,
+      "quadrant_attribution": {
+        "Q1": -1.1829,
+        "Q2": 0.7671,
+        "Q3": 1.9034,
+        "Q4": 6.5521
+      },
+      "tickers": [
+        {
+          "ticker": "IWM",
+          "quadrant": "Q1",
+          "pnl_pct": -1.408
+        },
+        {
+          "ticker": "NRG",
+          "quadrant": "Q4",
+          "pnl_pct": 0.9133
+        },
+        {
+          "ticker": "FDP",
+          "quadrant": "Q4",
+          "pnl_pct": 0.8371
+        },
+        {
+          "ticker": "LLY",
+          "quadrant": "Q4",
+          "pnl_pct": 0.8038
+        },
+        {
+          "ticker": "UEC",
+          "quadrant": "Q3",
+          "pnl_pct": 0.8006
+        },
+        {
+          "ticker": "VGLT",
+          "quadrant": "Q4",
+          "pnl_pct": 0.7129
+        },
+        {
+          "ticker": "RMD",
+          "quadrant": "Q4",
+          "pnl_pct": 0.5403
+        },
+        {
+          "ticker": "TGT",
+          "quadrant": "Q4",
+          "pnl_pct": 0.5316
+        },
+        {
+          "ticker": "KVUE",
+          "quadrant": "Q4",
+          "pnl_pct": 0.5094
+        },
+        {
+          "ticker": "TEM",
+          "quadrant": "Q1",
+          "pnl_pct": 0.5081
+        },
+        {
+          "ticker": "CERS",
+          "quadrant": "Q1",
+          "pnl_pct": -0.4734
+        },
+        {
+          "ticker": "CRL",
+          "quadrant": "Q4",
+          "pnl_pct": -0.3928
+        },
+        {
+          "ticker": "NXE",
+          "quadrant": "Q3",
+          "pnl_pct": 0.3718
+        },
+        {
+          "ticker": "MOH",
+          "quadrant": "Q4",
+          "pnl_pct": 0.3716
+        },
+        {
+          "ticker": "LQD",
+          "quadrant": "Q4",
+          "pnl_pct": 0.3631
+        },
+        {
+          "ticker": "TTD",
+          "quadrant": "Q1",
+          "pnl_pct": 0.3378
+        },
+        {
+          "ticker": "NEE",
+          "quadrant": "Q4",
+          "pnl_pct": 0.3112
+        },
+        {
+          "ticker": "CLX",
+          "quadrant": "Q4",
+          "pnl_pct": 0.3104
+        },
+        {
+          "ticker": "CEG",
+          "quadrant": "Q4",
+          "pnl_pct": 0.2977
+        },
+        {
+          "ticker": "EWX",
+          "quadrant": "Q2",
+          "pnl_pct": 0.2597
+        }
+      ],
+      "dominant_quads": [
+        "Q4",
+        "Q1"
+      ]
+    },
+    {
+      "month": "2024-09",
+      "return_pct": 17.7405,
+      "quadrant_attribution": {
+        "Q1": -1.7243,
+        "Q2": 0,
+        "Q3": 5.7729,
+        "Q4": 13.7979
+      },
+      "tickers": [
+        {
+          "ticker": "VST",
+          "quadrant": "Q4",
+          "pnl_pct": 4.4447
+        },
+        {
+          "ticker": "CEG",
+          "quadrant": "Q4",
+          "pnl_pct": 3.4857
+        },
+        {
+          "ticker": "PODD",
+          "quadrant": "Q4",
+          "pnl_pct": 1.3657
+        },
+        {
+          "ticker": "LEU",
+          "quadrant": "Q3",
+          "pnl_pct": 1.2636
+        },
+        {
+          "ticker": "SMR",
+          "quadrant": "Q3",
+          "pnl_pct": 1.025
+        },
+        {
+          "ticker": "VGLT",
+          "quadrant": "Q4",
+          "pnl_pct": 0.841
+        },
+        {
+          "ticker": "DNN",
+          "quadrant": "Q3",
+          "pnl_pct": 0.7348
+        },
+        {
+          "ticker": "UEC",
+          "quadrant": "Q3",
+          "pnl_pct": 0.6327
+        },
+        {
+          "ticker": "AES",
+          "quadrant": "Q4",
+          "pnl_pct": 0.6027
+        },
+        {
+          "ticker": "SQM",
+          "quadrant": "Q3",
+          "pnl_pct": 0.5213
+        },
+        {
+          "ticker": "PACB",
+          "quadrant": "Q1",
+          "pnl_pct": -0.4414
+        },
+        {
+          "ticker": "CENX",
+          "quadrant": "Q3",
+          "pnl_pct": 0.3948
+        },
+        {
+          "ticker": "LQD",
+          "quadrant": "Q4",
+          "pnl_pct": 0.3884
+        },
+        {
+          "ticker": "NRG",
+          "quadrant": "Q4",
+          "pnl_pct": 0.3872
+        },
+        {
+          "ticker": "SHOP",
+          "quadrant": "Q1",
+          "pnl_pct": -0.3814
+        },
+        {
+          "ticker": "WGS",
+          "quadrant": "Q1",
+          "pnl_pct": 0.3737
+        },
+        {
+          "ticker": "ALGN",
+          "quadrant": "Q4",
+          "pnl_pct": 0.3599
+        },
+        {
+          "ticker": "ALB",
+          "quadrant": "Q3",
+          "pnl_pct": -0.3506
+        },
+        {
+          "ticker": "TEM",
+          "quadrant": "Q1",
+          "pnl_pct": -0.3246
+        },
+        {
+          "ticker": "LLY",
+          "quadrant": "Q4",
+          "pnl_pct": -0.3084
+        }
+      ],
+      "dominant_quads": [
+        "Q3",
+        "Q4"
+      ]
+    },
+    {
+      "month": "2024-10",
+      "return_pct": 21.1943,
+      "quadrant_attribution": {
+        "Q1": 5.9947,
+        "Q2": -0.5599,
+        "Q3": 19.705,
+        "Q4": 0
+      },
+      "tickers": [
+        {
+          "ticker": "LAC",
+          "quadrant": "Q3",
+          "pnl_pct": 11.252
+        },
+        {
+          "ticker": "LTBR",
+          "quadrant": "Q3",
+          "pnl_pct": 5.334
+        },
+        {
+          "ticker": "WGS",
+          "quadrant": "Q1",
+          "pnl_pct": 3.7965
+        },
+        {
+          "ticker": "SGML",
+          "quadrant": "Q3",
+          "pnl_pct": 2.0973
+        },
+        {
+          "ticker": "MSTR",
+          "quadrant": "Q1",
+          "pnl_pct": 1.3337
+        },
+        {
+          "ticker": "TSLA",
+          "quadrant": "Q3",
+          "pnl_pct": -1.2932
+        },
+        {
+          "ticker": "TPL",
+          "quadrant": "Q3",
+          "pnl_pct": 1.2585
+        },
+        {
+          "ticker": "LEU",
+          "quadrant": "Q3",
+          "pnl_pct": 1.1837
+        },
+        {
+          "ticker": "PACB",
+          "quadrant": "Q1",
+          "pnl_pct": 0.8214
+        },
+        {
+          "ticker": "TEM",
+          "quadrant": "Q1",
+          "pnl_pct": -0.7118
+        },
+        {
+          "ticker": "UEC",
+          "quadrant": "Q3",
+          "pnl_pct": 0.6755
+        },
+        {
+          "ticker": "SMR",
+          "quadrant": "Q3",
+          "pnl_pct": 0.6687
+        },
+        {
+          "ticker": "MP",
+          "quadrant": "Q3",
+          "pnl_pct": 0.5955
+        },
+        {
+          "ticker": "USO",
+          "quadrant": "Q2",
+          "pnl_pct": -0.4924
+        },
+        {
+          "ticker": "ALB",
+          "quadrant": "Q3",
+          "pnl_pct": -0.4574
+        },
+        {
+          "ticker": "FANG",
+          "quadrant": "Q2",
+          "pnl_pct": -0.4545
+        },
+        {
+          "ticker": "SQM",
+          "quadrant": "Q3",
+          "pnl_pct": -0.4349
+        },
+        {
+          "ticker": "APP",
+          "quadrant": "Q1",
+          "pnl_pct": 0.4268
+        },
+        {
+          "ticker": "PDD",
+          "quadrant": "Q1",
+          "pnl_pct": 0.415
+        },
+        {
+          "ticker": "PLTR",
+          "quadrant": "Q1",
+          "pnl_pct": 0.3347
+        }
+      ],
+      "dominant_quads": [
+        "Q3",
+        "Q1"
+      ]
+    },
+    {
+      "month": "2024-11",
+      "return_pct": 43.2984,
+      "quadrant_attribution": {
+        "Q1": 33.2086,
+        "Q2": 4.1438,
+        "Q3": 3.5057,
+        "Q4": 0
+      },
+      "tickers": [
+        {
+          "ticker": "TSLA",
+          "quadrant": "Q3",
+          "pnl_pct": 7.7741
+        },
+        {
+          "ticker": "ACHR",
+          "quadrant": "Q1",
+          "pnl_pct": 5.8655
+        },
+        {
+          "ticker": "TEM",
+          "quadrant": "Q1",
+          "pnl_pct": 3.8627
+        },
+        {
+          "ticker": "APP",
+          "quadrant": "Q1",
+          "pnl_pct": 2.4573
+        },
+        {
+          "ticker": "MSTR",
+          "quadrant": "Q1",
+          "pnl_pct": 2.332
+        },
+        {
+          "ticker": "WGS",
+          "quadrant": "Q1",
+          "pnl_pct": 1.9909
+        },
+        {
+          "ticker": "PLTR",
+          "quadrant": "Q1",
+          "pnl_pct": 1.8453
+        },
+        {
+          "ticker": "COIN",
+          "quadrant": "Q1",
+          "pnl_pct": 1.8078
+        },
+        {
+          "ticker": "SMR",
+          "quadrant": "Q3",
+          "pnl_pct": 1.3112
+        },
+        {
+          "ticker": "LEU",
+          "quadrant": "Q3",
+          "pnl_pct": -1.1783
+        },
+        {
+          "ticker": "AR",
+          "quadrant": "Q3",
+          "pnl_pct": 1.1193
+        },
+        {
+          "ticker": "TPR",
+          "quadrant": "Q1",
+          "pnl_pct": 1.0524
+        },
+        {
+          "ticker": "PACB",
+          "quadrant": "Q1",
+          "pnl_pct": -1.0133
+        },
+        {
+          "ticker": "ALB",
+          "quadrant": "Q3",
+          "pnl_pct": 0.9841
+        },
+        {
+          "ticker": "HOOD",
+          "quadrant": "Q1",
+          "pnl_pct": 0.9744
+        },
+        {
+          "ticker": "CENX",
+          "quadrant": "Q3",
+          "pnl_pct": 0.8537
+        },
+        {
+          "ticker": "EQT",
+          "quadrant": "Q3",
+          "pnl_pct": 0.826
+        },
+        {
+          "ticker": "UUUU",
+          "quadrant": "Q3",
+          "pnl_pct": 0.8099
+        },
+        {
+          "ticker": "AXON",
+          "quadrant": "Q2",
+          "pnl_pct": 0.7604
+        },
+        {
+          "ticker": "CHTR",
+          "quadrant": "Q1",
+          "pnl_pct": 0.6662
+        }
+      ],
+      "dominant_quads": [
+        "Q1",
+        "Q3"
+      ]
+    },
+    {
+      "month": "2024-12",
+      "return_pct": 7.6287,
+      "quadrant_attribution": {
+        "Q1": 7.3149,
+        "Q2": -0.0359,
+        "Q3": 0.0422,
+        "Q4": -0.1152
+      },
+      "tickers": [
+        {
+          "ticker": "ACHR",
+          "quadrant": "Q1",
+          "pnl_pct": 3.7552
+        },
+        {
+          "ticker": "HOOD",
+          "quadrant": "Q1",
+          "pnl_pct": 0.9716
+        },
+        {
+          "ticker": "TEM",
+          "quadrant": "Q1",
+          "pnl_pct": -0.9232
+        },
+        {
+          "ticker": "PACB",
+          "quadrant": "Q1",
+          "pnl_pct": 0.7885
+        },
+        {
+          "ticker": "PLTR",
+          "quadrant": "Q1",
+          "pnl_pct": 0.7511
+        },
+        {
+          "ticker": "COIN",
+          "quadrant": "Q1",
+          "pnl_pct": 0.6822
+        },
+        {
+          "ticker": "IWM",
+          "quadrant": "Q1",
+          "pnl_pct": -0.6747
+        },
+        {
+          "ticker": "TSLA",
+          "quadrant": "Q3",
+          "pnl_pct": 0.5667
+        },
+        {
+          "ticker": "BEAM",
+          "quadrant": "Q1",
+          "pnl_pct": 0.5594
+        },
+        {
+          "ticker": "TWST",
+          "quadrant": "Q1",
+          "pnl_pct": 0.5166
+        },
+        {
+          "ticker": "LW",
+          "quadrant": "Q4",
+          "pnl_pct": 0.4755
+        },
+        {
+          "ticker": "MSTR",
+          "quadrant": "Q1",
+          "pnl_pct": 0.4297
+        },
+        {
+          "ticker": "RXRX",
+          "quadrant": "Q1",
+          "pnl_pct": -0.4051
+        },
+        {
+          "ticker": "AVGO",
+          "quadrant": "Q1",
+          "pnl_pct": 0.3477
+        },
+        {
+          "ticker": "VGLT",
+          "quadrant": "Q4",
+          "pnl_pct": -0.3352
+        },
+        {
+          "ticker": "TLT",
+          "quadrant": "Q1",
+          "pnl_pct": -0.2823
+        },
+        {
+          "ticker": "HSY",
+          "quadrant": "Q4",
+          "pnl_pct": -0.2321
+        },
+        {
+          "ticker": "DK",
+          "quadrant": "Q3",
+          "pnl_pct": 0.2253
+        },
+        {
+          "ticker": "WSM",
+          "quadrant": "Q1",
+          "pnl_pct": 0.2197
+        },
+        {
+          "ticker": "ALB",
+          "quadrant": "Q3",
+          "pnl_pct": 0.2113
+        }
+      ],
+      "dominant_quads": [
+        "Q1",
+        "Q3"
+      ]
+    },
+    {
+      "month": "2025-01",
+      "return_pct": 3.9896,
+      "quadrant_attribution": {
+        "Q1": 3.2992,
+        "Q2": 2.1828,
+        "Q3": 0.4024,
+        "Q4": 0
+      },
+      "tickers": [
+        {
+          "ticker": "TEM",
+          "quadrant": "Q1",
+          "pnl_pct": 2.5518
+        },
+        {
+          "ticker": "HOOD",
+          "quadrant": "Q1",
+          "pnl_pct": 1.1705
+        },
+        {
+          "ticker": "USO",
+          "quadrant": "Q2",
+          "pnl_pct": -0.9385
+        },
+        {
+          "ticker": "CEG",
+          "quadrant": "Q4",
+          "pnl_pct": -0.8935
+        },
+        {
+          "ticker": "PACB",
+          "quadrant": "Q1",
+          "pnl_pct": 0.8864
+        },
+        {
+          "ticker": "RXRX",
+          "quadrant": "Q1",
+          "pnl_pct": -0.7907
+        },
+        {
+          "ticker": "RRC",
+          "quadrant": "Q3",
+          "pnl_pct": 0.6576
+        },
+        {
+          "ticker": "TPL",
+          "quadrant": "Q3",
+          "pnl_pct": 0.6405
+        },
+        {
+          "ticker": "COIN",
+          "quadrant": "Q1",
+          "pnl_pct": -0.6341
+        },
+        {
+          "ticker": "EQT",
+          "quadrant": "Q3",
+          "pnl_pct": 0.5661
+        },
+        {
+          "ticker": "META",
+          "quadrant": "Q1",
+          "pnl_pct": 0.5222
+        },
+        {
+          "ticker": "ARM",
+          "quadrant": "Q1",
+          "pnl_pct": 0.4841
+        },
+        {
+          "ticker": "PWR",
+          "quadrant": "Q2",
+          "pnl_pct": -0.4185
+        },
+        {
+          "ticker": "DVN",
+          "quadrant": "Q3",
+          "pnl_pct": 0.4096
+        },
+        {
+          "ticker": "MU",
+          "quadrant": "Q1",
+          "pnl_pct": -0.3936
+        },
+        {
+          "ticker": "MP",
+          "quadrant": "Q3",
+          "pnl_pct": 0.3763
+        },
+        {
+          "ticker": "TSLA",
+          "quadrant": "Q3",
+          "pnl_pct": -0.345
+        },
+        {
+          "ticker": "DLR",
+          "quadrant": "Q2",
+          "pnl_pct": -0.3316
+        },
+        {
+          "ticker": "SOFI",
+          "quadrant": "Q1",
+          "pnl_pct": -0.295
+        },
+        {
+          "ticker": "DK",
+          "quadrant": "Q3",
+          "pnl_pct": 0.2808
+        }
+      ],
+      "dominant_quads": [
+        "Q2",
+        "Q1"
+      ]
+    },
+    {
+      "month": "2025-02",
+      "return_pct": 10.7445,
+      "quadrant_attribution": {
+        "Q1": 4.5679,
+        "Q2": -0.2407,
+        "Q3": 5.7272,
+        "Q4": 3.6468
+      },
+      "tickers": [
+        {
+          "ticker": "LTBR",
+          "quadrant": "Q3",
+          "pnl_pct": 3.0708
+        },
+        {
+          "ticker": "PLTR",
+          "quadrant": "Q1",
+          "pnl_pct": 2.5825
+        },
+        {
+          "ticker": "TEM",
+          "quadrant": "Q1",
+          "pnl_pct": 2.4576
+        },
+        {
+          "ticker": "LEU",
+          "quadrant": "Q3",
+          "pnl_pct": 1.6343
+        },
+        {
+          "ticker": "PM",
+          "quadrant": "Q4",
+          "pnl_pct": 0.8474
+        },
+        {
+          "ticker": "VGLT",
+          "quadrant": "Q4",
+          "pnl_pct": 0.8407
+        },
+        {
+          "ticker": "CERS",
+          "quadrant": "Q1",
+          "pnl_pct": -0.8326
+        },
+        {
+          "ticker": "IWM",
+          "quadrant": "Q1",
+          "pnl_pct": -0.6475
+        },
+        {
+          "ticker": "SMR",
+          "quadrant": "Q3",
+          "pnl_pct": 0.6235
+        },
+        {
+          "ticker": "COIN",
+          "quadrant": "Q1",
+          "pnl_pct": 0.5702
+        },
+        {
+          "ticker": "MP",
+          "quadrant": "Q3",
+          "pnl_pct": 0.5557
+        },
+        {
+          "ticker": "AWK",
+          "quadrant": "Q4",
+          "pnl_pct": 0.5328
+        },
+        {
+          "ticker": "EQT",
+          "quadrant": "Q3",
+          "pnl_pct": -0.496
+        },
+        {
+          "ticker": "IDXX",
+          "quadrant": "Q3",
+          "pnl_pct": -0.4566
+        },
+        {
+          "ticker": "SOFI",
+          "quadrant": "Q1",
+          "pnl_pct": 0.4305
+        },
+        {
+          "ticker": "CI",
+          "quadrant": "Q3",
+          "pnl_pct": 0.413
+        },
+        {
+          "ticker": "HSY",
+          "quadrant": "Q4",
+          "pnl_pct": 0.4109
+        },
+        {
+          "ticker": "TSLA",
+          "quadrant": "Q3",
+          "pnl_pct": -0.3511
+        },
+        {
+          "ticker": "RXRX",
+          "quadrant": "Q1",
+          "pnl_pct": 0.351
+        },
+        {
+          "ticker": "TAP",
+          "quadrant": "Q4",
+          "pnl_pct": 0.3464
+        }
+      ],
+      "dominant_quads": [
+        "Q3",
+        "Q4"
+      ]
+    },
+    {
+      "month": "2025-03",
+      "return_pct": 0.5278,
+      "quadrant_attribution": {
+        "Q1": -0.0141,
+        "Q2": -0.7905,
+        "Q3": 2.9609,
+        "Q4": -0.3184
+      },
+      "tickers": [
+        {
+          "ticker": "MOH",
+          "quadrant": "Q4",
+          "pnl_pct": 0.8929
+        },
+        {
+          "ticker": "TPL",
+          "quadrant": "Q3",
+          "pnl_pct": -0.7153
+        },
+        {
+          "ticker": "GLD",
+          "quadrant": "Q3",
+          "pnl_pct": 0.6149
+        },
+        {
+          "ticker": "VGLT",
+          "quadrant": "Q4",
+          "pnl_pct": -0.4479
+        },
+        {
+          "ticker": "EQT",
+          "quadrant": "Q3",
+          "pnl_pct": 0.4093
+        },
+        {
+          "ticker": "USO",
+          "quadrant": "Q2",
+          "pnl_pct": 0.3812
+        },
+        {
+          "ticker": "HSY",
+          "quadrant": "Q4",
+          "pnl_pct": 0.3097
+        },
+        {
+          "ticker": "AR",
+          "quadrant": "Q3",
+          "pnl_pct": 0.2668
+        },
+        {
+          "ticker": "PODD",
+          "quadrant": "Q4",
+          "pnl_pct": 0.25
+        },
+        {
+          "ticker": "MTDR",
+          "quadrant": "Q2",
+          "pnl_pct": -0.2487
+        },
+        {
+          "ticker": "COP",
+          "quadrant": "Q3",
+          "pnl_pct": 0.2395
+        },
+        {
+          "ticker": "AES",
+          "quadrant": "Q4",
+          "pnl_pct": 0.2368
+        },
+        {
+          "ticker": "PR",
+          "quadrant": "Q2",
+          "pnl_pct": -0.2265
+        },
+        {
+          "ticker": "FE",
+          "quadrant": "Q4",
+          "pnl_pct": 0.2221
+        },
+        {
+          "ticker": "MRK",
+          "quadrant": "Q3",
+          "pnl_pct": 0.2215
+        },
+        {
+          "ticker": "CRL",
+          "quadrant": "Q4",
+          "pnl_pct": -0.2139
+        },
+        {
+          "ticker": "MP",
+          "quadrant": "Q3",
+          "pnl_pct": 0.2113
+        },
+        {
+          "ticker": "MUR",
+          "quadrant": "Q2",
+          "pnl_pct": 0.1981
+        },
+        {
+          "ticker": "BAX",
+          "quadrant": "Q3",
+          "pnl_pct": 0.1914
+        },
+        {
+          "ticker": "TAP",
+          "quadrant": "Q4",
+          "pnl_pct": -0.1886
+        }
+      ],
+      "dominant_quads": [
+        "Q3",
+        "Q4"
+      ]
+    },
+    {
+      "month": "2025-04",
+      "return_pct": 4.5104,
+      "quadrant_attribution": {
+        "Q1": 1.0492,
+        "Q2": -5.2332,
+        "Q3": 2.6818,
+        "Q4": 1.2288
+      },
+      "tickers": [
+        {
+          "ticker": "TSLA",
+          "quadrant": "Q3",
+          "pnl_pct": 1.5634
+        },
+        {
+          "ticker": "EQT",
+          "quadrant": "Q3",
+          "pnl_pct": -0.9788
+        },
+        {
+          "ticker": "USO",
+          "quadrant": "Q2",
+          "pnl_pct": -0.9491
+        },
+        {
+          "ticker": "AR",
+          "quadrant": "Q3",
+          "pnl_pct": -0.9061
+        },
+        {
+          "ticker": "NRG",
+          "quadrant": "Q4",
+          "pnl_pct": 0.7177
+        },
+        {
+          "ticker": "OVV",
+          "quadrant": "Q3",
+          "pnl_pct": -0.6938
+        },
+        {
+          "ticker": "BG",
+          "quadrant": "Q4",
+          "pnl_pct": 0.5555
+        },
+        {
+          "ticker": "MUR",
+          "quadrant": "Q2",
+          "pnl_pct": -0.555
+        },
+        {
+          "ticker": "CHTR",
+          "quadrant": "Q1",
+          "pnl_pct": 0.4778
+        },
+        {
+          "ticker": "PR",
+          "quadrant": "Q2",
+          "pnl_pct": -0.4297
+        },
+        {
+          "ticker": "MSTR",
+          "quadrant": "Q1",
+          "pnl_pct": 0.429
+        },
+        {
+          "ticker": "WMT",
+          "quadrant": "Q4",
+          "pnl_pct": 0.372
+        },
+        {
+          "ticker": "AMD",
+          "quadrant": "Q1",
+          "pnl_pct": 0.3467
+        },
+        {
+          "ticker": "DBC",
+          "quadrant": "Q2",
+          "pnl_pct": -0.3333
+        },
+        {
+          "ticker": "ADM",
+          "quadrant": "Q4",
+          "pnl_pct": 0.3279
+        },
+        {
+          "ticker": "VGLT",
+          "quadrant": "Q4",
+          "pnl_pct": -0.2616
+        },
+        {
+          "ticker": "TEM",
+          "quadrant": "Q1",
+          "pnl_pct": -0.2221
+        },
+        {
+          "ticker": "CCI",
+          "quadrant": "Q2",
+          "pnl_pct": 0.219
+        },
+        {
+          "ticker": "APA",
+          "quadrant": "Q2",
+          "pnl_pct": -0.2151
+        },
+        {
+          "ticker": "STZ",
+          "quadrant": "Q4",
+          "pnl_pct": 0.2138
+        }
+      ],
+      "dominant_quads": [
+        "Q3",
+        "Q4"
+      ]
+    },
+    {
+      "month": "2025-05",
+      "return_pct": 84.7219,
+      "quadrant_attribution": {
+        "Q1": 23.7109,
+        "Q2": 0.2922,
+        "Q3": 9.5442,
+        "Q4": 0
+      },
+      "tickers": [
+        {
+          "ticker": "CRWV",
+          "quadrant": "Q1",
+          "pnl_pct": 10.7573
+        },
+        {
+          "ticker": "SMR",
+          "quadrant": "Q3",
+          "pnl_pct": 2.4211
+        },
+        {
+          "ticker": "LTBR",
+          "quadrant": "Q3",
+          "pnl_pct": 2.2104
+        },
+        {
+          "ticker": "PLTR",
+          "quadrant": "Q1",
+          "pnl_pct": 2.1344
+        },
+        {
+          "ticker": "LEU",
+          "quadrant": "Q3",
+          "pnl_pct": 1.858
+        },
+        {
+          "ticker": "TTD",
+          "quadrant": "Q1",
+          "pnl_pct": 1.8233
+        },
+        {
+          "ticker": "MCHP",
+          "quadrant": "Q1",
+          "pnl_pct": 1.6375
+        },
+        {
+          "ticker": "TSLA",
+          "quadrant": "Q3",
+          "pnl_pct": 1.5281
+        },
+        {
+          "ticker": "APP",
+          "quadrant": "Q1",
+          "pnl_pct": 1.4055
+        },
+        {
+          "ticker": "ACHR",
+          "quadrant": "Q1",
+          "pnl_pct": -1.2506
+        },
+        {
+          "ticker": "DK",
+          "quadrant": "Q3",
+          "pnl_pct": 1.1904
+        },
+        {
+          "ticker": "TEM",
+          "quadrant": "Q1",
+          "pnl_pct": 1.1691
+        },
+        {
+          "ticker": "GLD",
+          "quadrant": "Q3",
+          "pnl_pct": -0.9225
+        },
+        {
+          "ticker": "IWM",
+          "quadrant": "Q1",
+          "pnl_pct": 0.8844
+        },
+        {
+          "ticker": "HOOD",
+          "quadrant": "Q1",
+          "pnl_pct": 0.7654
+        },
+        {
+          "ticker": "URG",
+          "quadrant": "Q3",
+          "pnl_pct": 0.7595
+        },
+        {
+          "ticker": "META",
+          "quadrant": "Q1",
+          "pnl_pct": 0.6662
+        },
+        {
+          "ticker": "MSTR",
+          "quadrant": "Q1",
+          "pnl_pct": 0.6065
+        },
+        {
+          "ticker": "NTLA",
+          "quadrant": "Q1",
+          "pnl_pct": -0.5477
+        },
+        {
+          "ticker": "UEC",
+          "quadrant": "Q3",
+          "pnl_pct": 0.5067
+        }
+      ],
+      "dominant_quads": [
+        "Q1",
+        "Q3"
+      ]
+    },
+    {
+      "month": "2025-06",
+      "return_pct": -1.9158,
+      "quadrant_attribution": {
+        "Q1": 27.6081,
+        "Q2": -0.2232,
+        "Q3": 0.0131,
+        "Q4": 0.3083
+      },
+      "tickers": [
+        {
+          "ticker": "CRCL",
+          "quadrant": "Q1",
+          "pnl_pct": 11.5238
+        },
+        {
+          "ticker": "CRWV",
+          "quadrant": "Q1",
+          "pnl_pct": 5.5829
+        },
+        {
+          "ticker": "TSLA",
+          "quadrant": "Q3",
+          "pnl_pct": -2.2236
+        },
+        {
+          "ticker": "NTLA",
+          "quadrant": "Q1",
+          "pnl_pct": 1.6161
+        },
+        {
+          "ticker": "RXRX",
+          "quadrant": "Q1",
+          "pnl_pct": 1.4549
+        },
+        {
+          "ticker": "PACB",
+          "quadrant": "Q1",
+          "pnl_pct": 1.4429
+        },
+        {
+          "ticker": "CCL",
+          "quadrant": "Q1",
+          "pnl_pct": 1.213
+        },
+        {
+          "ticker": "IWM",
+          "quadrant": "Q1",
+          "pnl_pct": 1.1033
+        },
+        {
+          "ticker": "WBD",
+          "quadrant": "Q1",
+          "pnl_pct": 1.0551
+        },
+        {
+          "ticker": "USO",
+          "quadrant": "Q2",
+          "pnl_pct": -0.8721
+        },
+        {
+          "ticker": "TEM",
+          "quadrant": "Q1",
+          "pnl_pct": 0.8594
+        },
+        {
+          "ticker": "MCHP",
+          "quadrant": "Q1",
+          "pnl_pct": 0.843
+        },
+        {
+          "ticker": "SM",
+          "quadrant": "Q3",
+          "pnl_pct": 0.5854
+        },
+        {
+          "ticker": "TTD",
+          "quadrant": "Q1",
+          "pnl_pct": -0.4215
+        },
+        {
+          "ticker": "VG",
+          "quadrant": "Q3",
+          "pnl_pct": -0.4117
+        },
+        {
+          "ticker": "NRG",
+          "quadrant": "Q4",
+          "pnl_pct": -0.4093
+        },
+        {
+          "ticker": "DK",
+          "quadrant": "Q3",
+          "pnl_pct": 0.3871
+        },
+        {
+          "ticker": "PSX",
+          "quadrant": "Q2",
+          "pnl_pct": 0.3745
+        },
+        {
+          "ticker": "ETSY",
+          "quadrant": "Q1",
+          "pnl_pct": -0.3699
+        },
+        {
+          "ticker": "PLTR",
+          "quadrant": "Q1",
+          "pnl_pct": 0.3655
+        }
+      ],
+      "dominant_quads": [
+        "Q1",
+        "Q2"
+      ]
+    },
+    {
+      "month": "2025-07",
+      "return_pct": 398.3046,
+      "quadrant_attribution": {
+        "Q1": 185.9646,
+        "Q2": 1.9753,
+        "Q3": 20.9963,
+        "Q4": 0
+      },
+      "tickers": [
+        {
+          "ticker": "BMNR",
+          "quadrant": "Q1",
+          "pnl_pct": 184.2725
+        },
+        {
+          "ticker": "MP",
+          "quadrant": "Q3",
+          "pnl_pct": 8.8522
+        },
+        {
+          "ticker": "UUUU",
+          "quadrant": "Q3",
+          "pnl_pct": 4.8115
+        },
+        {
+          "ticker": "SMR",
+          "quadrant": "Q3",
+          "pnl_pct": 3.7636
+        },
+        {
+          "ticker": "URG",
+          "quadrant": "Q3",
+          "pnl_pct": 1.8256
+        },
+        {
+          "ticker": "TSLA",
+          "quadrant": "Q3",
+          "pnl_pct": -1.6304
+        },
+        {
+          "ticker": "PACB",
+          "quadrant": "Q1",
+          "pnl_pct": -1.4528
+        },
+        {
+          "ticker": "SGML",
+          "quadrant": "Q3",
+          "pnl_pct": 1.2037
+        },
+        {
+          "ticker": "LEU",
+          "quadrant": "Q3",
+          "pnl_pct": 1.134
+        },
+        {
+          "ticker": "TTD",
+          "quadrant": "Q1",
+          "pnl_pct": 1.0925
+        },
+        {
+          "ticker": "ALB",
+          "quadrant": "Q3",
+          "pnl_pct": 1.0139
+        },
+        {
+          "ticker": "WBD",
+          "quadrant": "Q1",
+          "pnl_pct": 0.8335
+        },
+        {
+          "ticker": "NKE",
+          "quadrant": "Q1",
+          "pnl_pct": 0.6881
+        },
+        {
+          "ticker": "NTLA",
+          "quadrant": "Q1",
+          "pnl_pct": -0.6447
+        },
+        {
+          "ticker": "PBF",
+          "quadrant": "Q2",
+          "pnl_pct": 0.6428
+        },
+        {
+          "ticker": "AMD",
+          "quadrant": "Q1",
+          "pnl_pct": 0.6011
+        },
+        {
+          "ticker": "CRSP",
+          "quadrant": "Q1",
+          "pnl_pct": -0.6005
+        },
+        {
+          "ticker": "MUR",
+          "quadrant": "Q2",
+          "pnl_pct": -0.5786
+        },
+        {
+          "ticker": "DK",
+          "quadrant": "Q3",
+          "pnl_pct": 0.5284
+        },
+        {
+          "ticker": "CRCL",
+          "quadrant": "Q1",
+          "pnl_pct": 0.4399
+        }
+      ],
+      "dominant_quads": [
+        "Q1",
+        "Q3"
+      ]
+    },
+    {
+      "month": "2025-08",
+      "return_pct": 21.0188,
+      "quadrant_attribution": {
+        "Q1": 4.4192,
+        "Q2": 0.0012,
+        "Q3": 17.8407,
+        "Q4": -0.4134
+      },
+      "tickers": [
+        {
+          "ticker": "UUUU",
+          "quadrant": "Q3",
+          "pnl_pct": 3.787
+        },
+        {
+          "ticker": "MP",
+          "quadrant": "Q3",
+          "pnl_pct": 3.782
+        },
+        {
+          "ticker": "SGML",
+          "quadrant": "Q3",
+          "pnl_pct": 1.9138
+        },
+        {
+          "ticker": "ALB",
+          "quadrant": "Q3",
+          "pnl_pct": 1.8349
+        },
+        {
+          "ticker": "DK",
+          "quadrant": "Q3",
+          "pnl_pct": 1.0295
+        },
+        {
+          "ticker": "PBF",
+          "quadrant": "Q2",
+          "pnl_pct": 1.0171
+        },
+        {
+          "ticker": "SQM",
+          "quadrant": "Q3",
+          "pnl_pct": 1.013
+        },
+        {
+          "ticker": "SMR",
+          "quadrant": "Q3",
+          "pnl_pct": -0.8988
+        },
+        {
+          "ticker": "IWM",
+          "quadrant": "Q1",
+          "pnl_pct": 0.8052
+        },
+        {
+          "ticker": "TER",
+          "quadrant": "Q1",
+          "pnl_pct": 0.7898
+        },
+        {
+          "ticker": "SM",
+          "quadrant": "Q3",
+          "pnl_pct": 0.7785
+        },
+        {
+          "ticker": "ENS",
+          "quadrant": "Q2",
+          "pnl_pct": 0.736
+        },
+        {
+          "ticker": "APP",
+          "quadrant": "Q1",
+          "pnl_pct": 0.7016
+        },
+        {
+          "ticker": "LEU",
+          "quadrant": "Q3",
+          "pnl_pct": -0.6815
+        },
+        {
+          "ticker": "UEC",
+          "quadrant": "Q3",
+          "pnl_pct": 0.6543
+        },
+        {
+          "ticker": "LIT",
+          "quadrant": "Q3",
+          "pnl_pct": 0.5894
+        },
+        {
+          "ticker": "PACB",
+          "quadrant": "Q1",
+          "pnl_pct": 0.5483
+        },
+        {
+          "ticker": "PSKY",
+          "quadrant": "Q1",
+          "pnl_pct": -0.5206
+        },
+        {
+          "ticker": "SHOP",
+          "quadrant": "Q1",
+          "pnl_pct": 0.5127
+        },
+        {
+          "ticker": "URG",
+          "quadrant": "Q3",
+          "pnl_pct": 0.4857
+        }
+      ],
+      "dominant_quads": [
+        "Q3",
+        "Q4"
+      ]
+    },
+    {
+      "month": "2025-09",
+      "return_pct": 33.5274,
+      "quadrant_attribution": {
+        "Q1": 2.8382,
+        "Q2": -0.427,
+        "Q3": 29.9952,
+        "Q4": 0
+      },
+      "tickers": [
+        {
+          "ticker": "LAC",
+          "quadrant": "Q3",
+          "pnl_pct": 7.6179
+        },
+        {
+          "ticker": "UUUU",
+          "quadrant": "Q3",
+          "pnl_pct": 5.8091
+        },
+        {
+          "ticker": "TSLA",
+          "quadrant": "Q3",
+          "pnl_pct": 5.6106
+        },
+        {
+          "ticker": "SGML",
+          "quadrant": "Q3",
+          "pnl_pct": -3.6307
+        },
+        {
+          "ticker": "LEU",
+          "quadrant": "Q3",
+          "pnl_pct": 2.9492
+        },
+        {
+          "ticker": "LTBR",
+          "quadrant": "Q3",
+          "pnl_pct": 2.5159
+        },
+        {
+          "ticker": "DK",
+          "quadrant": "Q3",
+          "pnl_pct": 1.043
+        },
+        {
+          "ticker": "ALB",
+          "quadrant": "Q3",
+          "pnl_pct": -1.0371
+        },
+        {
+          "ticker": "URG",
+          "quadrant": "Q3",
+          "pnl_pct": 0.9914
+        },
+        {
+          "ticker": "EA",
+          "quadrant": "Q1",
+          "pnl_pct": 0.9508
+        },
+        {
+          "ticker": "EWX",
+          "quadrant": "Q2",
+          "pnl_pct": 0.8451
+        },
+        {
+          "ticker": "ENS",
+          "quadrant": "Q2",
+          "pnl_pct": 0.8384
+        },
+        {
+          "ticker": "PBF",
+          "quadrant": "Q2",
+          "pnl_pct": 0.8378
+        },
+        {
+          "ticker": "VWO",
+          "quadrant": "Q2",
+          "pnl_pct": 0.771
+        },
+        {
+          "ticker": "BMNR",
+          "quadrant": "Q1",
+          "pnl_pct": -0.7597
+        },
+        {
+          "ticker": "UEC",
+          "quadrant": "Q3",
+          "pnl_pct": 0.7331
+        },
+        {
+          "ticker": "CRWV",
+          "quadrant": "Q1",
+          "pnl_pct": -0.7015
+        },
+        {
+          "ticker": "ETSY",
+          "quadrant": "Q1",
+          "pnl_pct": 0.6695
+        },
+        {
+          "ticker": "INTC",
+          "quadrant": "Q2",
+          "pnl_pct": 0.66
+        },
+        {
+          "ticker": "WBD",
+          "quadrant": "Q1",
+          "pnl_pct": 0.6404
+        }
+      ],
+      "dominant_quads": [
+        "Q3",
+        "Q2"
+      ]
+    },
+    {
+      "month": "2025-10",
+      "return_pct": 31.8844,
+      "quadrant_attribution": {
+        "Q1": 5.618,
+        "Q2": 0,
+        "Q3": 25.9165,
+        "Q4": 0.7605
+      },
+      "tickers": [
+        {
+          "ticker": "LAC",
+          "quadrant": "Q3",
+          "pnl_pct": 12.3152
+        },
+        {
+          "ticker": "UUUU",
+          "quadrant": "Q3",
+          "pnl_pct": 4.6308
+        },
+        {
+          "ticker": "NTLA",
+          "quadrant": "Q1",
+          "pnl_pct": 4.3066
+        },
+        {
+          "ticker": "LTBR",
+          "quadrant": "Q3",
+          "pnl_pct": 2.4846
+        },
+        {
+          "ticker": "SGML",
+          "quadrant": "Q3",
+          "pnl_pct": 1.5054
+        },
+        {
+          "ticker": "ALB",
+          "quadrant": "Q3",
+          "pnl_pct": 1.3383
+        },
+        {
+          "ticker": "BMNR",
+          "quadrant": "Q1",
+          "pnl_pct": 1.1033
+        },
+        {
+          "ticker": "UEC",
+          "quadrant": "Q3",
+          "pnl_pct": 1.0081
+        },
+        {
+          "ticker": "SQM",
+          "quadrant": "Q3",
+          "pnl_pct": 0.9017
+        },
+        {
+          "ticker": "ETSY",
+          "quadrant": "Q1",
+          "pnl_pct": 0.7314
+        },
+        {
+          "ticker": "LEU",
+          "quadrant": "Q3",
+          "pnl_pct": 0.5803
+        },
+        {
+          "ticker": "TMO",
+          "quadrant": "Q3",
+          "pnl_pct": 0.5271
+        },
+        {
+          "ticker": "BEAM",
+          "quadrant": "Q1",
+          "pnl_pct": 0.492
+        },
+        {
+          "ticker": "CRL",
+          "quadrant": "Q4",
+          "pnl_pct": 0.4623
+        },
+        {
+          "ticker": "BLSH",
+          "quadrant": "Q1",
+          "pnl_pct": -0.4619
+        },
+        {
+          "ticker": "IWM",
+          "quadrant": "Q1",
+          "pnl_pct": 0.458
+        },
+        {
+          "ticker": "HUM",
+          "quadrant": "Q3",
+          "pnl_pct": 0.4139
+        },
+        {
+          "ticker": "TECH",
+          "quadrant": "Q4",
+          "pnl_pct": 0.3786
+        },
+        {
+          "ticker": "WBD",
+          "quadrant": "Q1",
+          "pnl_pct": -0.3709
+        },
+        {
+          "ticker": "WYNN",
+          "quadrant": "Q1",
+          "pnl_pct": -0.3659
+        }
+      ],
+      "dominant_quads": [
+        "Q3",
+        "Q4"
+      ]
+    },
+    {
+      "month": "2025-11",
+      "return_pct": 39.8928,
+      "quadrant_attribution": {
+        "Q1": 0,
+        "Q2": 0.5384,
+        "Q3": 35.967,
+        "Q4": -0.0975
+      },
+      "tickers": [
+        {
+          "ticker": "SGML",
+          "quadrant": "Q3",
+          "pnl_pct": 24.4723
+        },
+        {
+          "ticker": "ALB",
+          "quadrant": "Q3",
+          "pnl_pct": 6.9784
+        },
+        {
+          "ticker": "UUUU",
+          "quadrant": "Q3",
+          "pnl_pct": -3.9346
+        },
+        {
+          "ticker": "SQM",
+          "quadrant": "Q3",
+          "pnl_pct": 3.6029
+        },
+        {
+          "ticker": "MUR",
+          "quadrant": "Q2",
+          "pnl_pct": 1.5507
+        },
+        {
+          "ticker": "AR",
+          "quadrant": "Q3",
+          "pnl_pct": 1.3705
+        },
+        {
+          "ticker": "LTBR",
+          "quadrant": "Q3",
+          "pnl_pct": -1.0589
+        },
+        {
+          "ticker": "LEU",
+          "quadrant": "Q3",
+          "pnl_pct": -0.7948
+        },
+        {
+          "ticker": "LAC",
+          "quadrant": "Q3",
+          "pnl_pct": 0.7427
+        },
+        {
+          "ticker": "ENS",
+          "quadrant": "Q2",
+          "pnl_pct": 0.7301
+        },
+        {
+          "ticker": "EQT",
+          "quadrant": "Q3",
+          "pnl_pct": 0.7258
+        },
+        {
+          "ticker": "SMR",
+          "quadrant": "Q3",
+          "pnl_pct": -0.6058
+        },
+        {
+          "ticker": "APA",
+          "quadrant": "Q2",
+          "pnl_pct": 0.5337
+        },
+        {
+          "ticker": "EXE",
+          "quadrant": "Q3",
+          "pnl_pct": 0.4446
+        },
+        {
+          "ticker": "CAH",
+          "quadrant": "Q3",
+          "pnl_pct": 0.3878
+        },
+        {
+          "ticker": "HUM",
+          "quadrant": "Q3",
+          "pnl_pct": 0.3708
+        },
+        {
+          "ticker": "AES",
+          "quadrant": "Q4",
+          "pnl_pct": -0.348
+        },
+        {
+          "ticker": "CEG",
+          "quadrant": "Q4",
+          "pnl_pct": -0.3249
+        },
+        {
+          "ticker": "CLF",
+          "quadrant": "Q3",
+          "pnl_pct": 0.305
+        },
+        {
+          "ticker": "CCJ",
+          "quadrant": "Q3",
+          "pnl_pct": -0.2979
+        }
+      ],
+      "dominant_quads": [
+        "Q3",
+        "Q2"
+      ]
+    },
+    {
+      "month": "2025-12",
+      "return_pct": -0.1932,
+      "quadrant_attribution": {
+        "Q1": -0.221,
+        "Q2": -0.4176,
+        "Q3": 2.4877,
+        "Q4": 0
+      },
+      "tickers": [
+        {
+          "ticker": "SGML",
+          "quadrant": "Q3",
+          "pnl_pct": 2.2648
+        },
+        {
+          "ticker": "EQT",
+          "quadrant": "Q3",
+          "pnl_pct": -1.2349
+        },
+        {
+          "ticker": "ALB",
+          "quadrant": "Q3",
+          "pnl_pct": 0.9192
+        },
+        {
+          "ticker": "UEC",
+          "quadrant": "Q3",
+          "pnl_pct": 0.8933
+        },
+        {
+          "ticker": "LAC",
+          "quadrant": "Q3",
+          "pnl_pct": -0.8669
+        },
+        {
+          "ticker": "CENX",
+          "quadrant": "Q3",
+          "pnl_pct": 0.8499
+        },
+        {
+          "ticker": "MUR",
+          "quadrant": "Q2",
+          "pnl_pct": 0.5519
+        },
+        {
+          "ticker": "IWM",
+          "quadrant": "Q1",
+          "pnl_pct": -0.5411
+        },
+        {
+          "ticker": "AR",
+          "quadrant": "Q3",
+          "pnl_pct": -0.5247
+        },
+        {
+          "ticker": "LULU",
+          "quadrant": "Q1",
+          "pnl_pct": 0.3898
+        },
+        {
+          "ticker": "CCJ",
+          "quadrant": "Q3",
+          "pnl_pct": 0.3057
+        },
+        {
+          "ticker": "TSLA",
+          "quadrant": "Q3",
+          "pnl_pct": 0.276
+        },
+        {
+          "ticker": "MU",
+          "quadrant": "Q1",
+          "pnl_pct": 0.2703
+        },
+        {
+          "ticker": "CLF",
+          "quadrant": "Q3",
+          "pnl_pct": 0.2649
+        },
+        {
+          "ticker": "USO",
+          "quadrant": "Q2",
+          "pnl_pct": -0.2536
+        },
+        {
+          "ticker": "GLD",
+          "quadrant": "Q3",
+          "pnl_pct": -0.2533
+        },
+        {
+          "ticker": "APA",
+          "quadrant": "Q2",
+          "pnl_pct": 0.2504
+        },
+        {
+          "ticker": "MTDR",
+          "quadrant": "Q2",
+          "pnl_pct": 0.2401
+        },
+        {
+          "ticker": "CTRA",
+          "quadrant": "Q2",
+          "pnl_pct": -0.2135
+        },
+        {
+          "ticker": "EXE",
+          "quadrant": "Q3",
+          "pnl_pct": -0.2096
+        }
+      ],
+      "dominant_quads": [
+        "Q3",
+        "Q2"
+      ]
+    },
+    {
+      "month": "2026-01",
+      "return_pct": 39.115,
+      "quadrant_attribution": {
+        "Q1": 0,
+        "Q2": 2.635,
+        "Q3": 33.7429,
+        "Q4": 0
+      },
+      "tickers": [
+        {
+          "ticker": "UUUU",
+          "quadrant": "Q3",
+          "pnl_pct": 6.803
+        },
+        {
+          "ticker": "GLD",
+          "quadrant": "Q3",
+          "pnl_pct": 3.3894
+        },
+        {
+          "ticker": "UEC",
+          "quadrant": "Q3",
+          "pnl_pct": 2.5287
+        },
+        {
+          "ticker": "USO",
+          "quadrant": "Q2",
+          "pnl_pct": 2.4963
+        },
+        {
+          "ticker": "ALB",
+          "quadrant": "Q3",
+          "pnl_pct": 2.3196
+        },
+        {
+          "ticker": "TPL",
+          "quadrant": "Q3",
+          "pnl_pct": 2.1809
+        },
+        {
+          "ticker": "VG",
+          "quadrant": "Q3",
+          "pnl_pct": 2.0035
+        },
+        {
+          "ticker": "DNN",
+          "quadrant": "Q3",
+          "pnl_pct": 1.9221
+        },
+        {
+          "ticker": "SLB",
+          "quadrant": "Q2",
+          "pnl_pct": 1.7842
+        },
+        {
+          "ticker": "FIX",
+          "quadrant": "Q2",
+          "pnl_pct": 1.4921
+        },
+        {
+          "ticker": "DBC",
+          "quadrant": "Q2",
+          "pnl_pct": 1.4719
+        },
+        {
+          "ticker": "COP",
+          "quadrant": "Q3",
+          "pnl_pct": 1.3786
+        },
+        {
+          "ticker": "SGML",
+          "quadrant": "Q3",
+          "pnl_pct": -1.206
+        },
+        {
+          "ticker": "NXE",
+          "quadrant": "Q3",
+          "pnl_pct": 0.8568
+        },
+        {
+          "ticker": "MUR",
+          "quadrant": "Q2",
+          "pnl_pct": -0.8041
+        },
+        {
+          "ticker": "HAL",
+          "quadrant": "Q3",
+          "pnl_pct": 0.728
+        },
+        {
+          "ticker": "MTDR",
+          "quadrant": "Q2",
+          "pnl_pct": 0.6587
+        },
+        {
+          "ticker": "MTZ",
+          "quadrant": "Q3",
+          "pnl_pct": 0.5797
+        },
+        {
+          "ticker": "VWO",
+          "quadrant": "Q2",
+          "pnl_pct": 0.5759
+        },
+        {
+          "ticker": "CENX",
+          "quadrant": "Q3",
+          "pnl_pct": 0.5542
+        }
+      ],
+      "dominant_quads": [
+        "Q2",
+        "Q3"
+      ]
+    },
+    {
+      "month": "2026-02",
+      "return_pct": 4.32,
+      "quadrant_attribution": {
+        "Q1": 0,
+        "Q2": 7.555,
+        "Q3": 0.2996,
+        "Q4": 0.2877
+      },
+      "tickers": [
+        {
+          "ticker": "GLD",
+          "quadrant": "Q3",
+          "pnl_pct": -1.8833
+        },
+        {
+          "ticker": "SM",
+          "quadrant": "Q3",
+          "pnl_pct": 1.3752
+        },
+        {
+          "ticker": "TPL",
+          "quadrant": "Q3",
+          "pnl_pct": 1.3681
+        },
+        {
+          "ticker": "ALB",
+          "quadrant": "Q3",
+          "pnl_pct": 1.2175
+        },
+        {
+          "ticker": "MUR",
+          "quadrant": "Q2",
+          "pnl_pct": 1.1942
+        },
+        {
+          "ticker": "USO",
+          "quadrant": "Q2",
+          "pnl_pct": 1.0947
+        },
+        {
+          "ticker": "FIX",
+          "quadrant": "Q2",
+          "pnl_pct": 0.8958
+        },
+        {
+          "ticker": "VG",
+          "quadrant": "Q3",
+          "pnl_pct": -0.8025
+        },
+        {
+          "ticker": "GCC",
+          "quadrant": "Q2",
+          "pnl_pct": -0.7756
+        },
+        {
+          "ticker": "VLO",
+          "quadrant": "Q3",
+          "pnl_pct": 0.7698
+        },
+        {
+          "ticker": "RIO",
+          "quadrant": "Q3",
+          "pnl_pct": 0.7341
+        },
+        {
+          "ticker": "UUUU",
+          "quadrant": "Q3",
+          "pnl_pct": -0.6148
+        },
+        {
+          "ticker": "APA",
+          "quadrant": "Q2",
+          "pnl_pct": 0.6019
+        },
+        {
+          "ticker": "SLB",
+          "quadrant": "Q2",
+          "pnl_pct": 0.5852
+        },
+        {
+          "ticker": "SQM",
+          "quadrant": "Q3",
+          "pnl_pct": -0.5797
+        },
+        {
+          "ticker": "ENS",
+          "quadrant": "Q2",
+          "pnl_pct": 0.5471
+        },
+        {
+          "ticker": "DVN",
+          "quadrant": "Q3",
+          "pnl_pct": 0.4992
+        },
+        {
+          "ticker": "GNRC",
+          "quadrant": "Q3",
+          "pnl_pct": 0.4879
+        },
+        {
+          "ticker": "URG",
+          "quadrant": "Q3",
+          "pnl_pct": -0.4593
+        },
+        {
+          "ticker": "NXE",
+          "quadrant": "Q3",
+          "pnl_pct": -0.4257
+        }
+      ],
+      "dominant_quads": [
+        "Q2",
+        "Q3"
+      ]
+    }
+  ],
+  "pl_attribution": {
+    "by_quadrant_full_period": {
+      "Q1": 305.5474,
+      "Q2": 15.4842,
+      "Q3": 222.6502,
+      "Q4": 32.1453
+    },
+    "by_ticker_full_period": [
+      {
+        "ticker": "BMNR",
+        "quadrant": "Q1",
+        "pnl_pct": 184.5291
+      },
+      {
+        "ticker": "LAC",
+        "quadrant": "Q3",
+        "pnl_pct": 30.7795
+      },
+      {
+        "ticker": "SGML",
+        "quadrant": "Q2",
+        "pnl_pct": 27.3905
+      },
+      {
+        "ticker": "UUUU",
+        "quadrant": "Q3",
+        "pnl_pct": 22.9418
+      },
+      {
+        "ticker": "LTBR",
+        "quadrant": "Q3",
+        "pnl_pct": 15.9134
+      },
+      {
+        "ticker": "CRWV",
+        "quadrant": "Q1",
+        "pnl_pct": 15.4624
+      },
+      {
+        "ticker": "MP",
+        "quadrant": "Q3",
+        "pnl_pct": 14.901
+      },
+      {
+        "ticker": "ALB",
+        "quadrant": "Q2",
+        "pnl_pct": 14.3069
+      },
+      {
+        "ticker": "TSLA",
+        "quadrant": "Q3",
+        "pnl_pct": 12.3594
+      },
+      {
+        "ticker": "CRCL",
+        "quadrant": "Q1",
+        "pnl_pct": 11.7924
+      },
+      {
+        "ticker": "TEM",
+        "quadrant": "Q1",
+        "pnl_pct": 9.9224
+      },
+      {
+        "ticker": "SMR",
+        "quadrant": "Q3",
+        "pnl_pct": 8.7011
+      },
+      {
+        "ticker": "UEC",
+        "quadrant": "Q3",
+        "pnl_pct": 8.6856
+      },
+      {
+        "ticker": "PLTR",
+        "quadrant": "Q1",
+        "pnl_pct": 8.4292
+      },
+      {
+        "ticker": "LEU",
+        "quadrant": "Q3",
+        "pnl_pct": 8.3806
+      },
+      {
+        "ticker": "ACHR",
+        "quadrant": "Q1",
+        "pnl_pct": 7.1583
+      },
+      {
+        "ticker": "WGS",
+        "quadrant": "Q1",
+        "pnl_pct": 5.8548
+      },
+      {
+        "ticker": "DK",
+        "quadrant": "Q2",
+        "pnl_pct": 5.5858
+      },
+      {
+        "ticker": "NTLA",
+        "quadrant": "Q1",
+        "pnl_pct": 5.3515
+      },
+      {
+        "ticker": "APP",
+        "quadrant": "Q1",
+        "pnl_pct": 5.2695
+      },
+      {
+        "ticker": "SQM",
+        "quadrant": "Q2",
+        "pnl_pct": 5.1461
+      },
+      {
+        "ticker": "TPL",
+        "quadrant": "Q2",
+        "pnl_pct": 4.9931
+      },
+      {
+        "ticker": "MSTR",
+        "quadrant": "Q1",
+        "pnl_pct": 4.6369
+      },
+      {
+        "ticker": "CENX",
+        "quadrant": "Q3",
+        "pnl_pct": 4.2442
+      },
+      {
+        "ticker": "DNN",
+        "quadrant": "Q3",
+        "pnl_pct": 4.1297
+      },
+      {
+        "ticker": "HOOD",
+        "quadrant": "Q1",
+        "pnl_pct": 4.1167
+      },
+      {
+        "ticker": "FIX",
+        "quadrant": "Q2",
+        "pnl_pct": 3.6636
+      },
+      {
+        "ticker": "VGLT",
+        "quadrant": "Q4",
+        "pnl_pct": 3.4478
+      },
+      {
+        "ticker": "ENS",
+        "quadrant": "Q2",
+        "pnl_pct": 3.4181
+      },
+      {
+        "ticker": "SLB",
+        "quadrant": "Q2",
+        "pnl_pct": 3.4073
+      },
+      {
+        "ticker": "APA",
+        "quadrant": "Q2",
+        "pnl_pct": 3.3003
+      },
+      {
+        "ticker": "URG",
+        "quadrant": "Q3",
+        "pnl_pct": 3.298
+      },
+      {
+        "ticker": "TTD",
+        "quadrant": "Q1",
+        "pnl_pct": 3.2387
+      },
+      {
+        "ticker": "PBF",
+        "quadrant": "Q2",
+        "pnl_pct": 2.9138
+      },
+      {
+        "ticker": "COIN",
+        "quadrant": "Q1",
+        "pnl_pct": 2.8194
+      },
+      {
+        "ticker": "PACB",
+        "quadrant": "Q1",
+        "pnl_pct": 2.7665
+      },
+      {
+        "ticker": "VST",
+        "quadrant": "Q4",
+        "pnl_pct": 2.7012
+      },
+      {
+        "ticker": "PODD",
+        "quadrant": "Q3",
+        "pnl_pct": 2.5123
+      },
+      {
+        "ticker": "MUR",
+        "quadrant": "Q2",
+        "pnl_pct": 2.4397
+      },
+      {
+        "ticker": "MCHP",
+        "quadrant": "Q1",
+        "pnl_pct": 2.3986
+      },
+      {
+        "ticker": "WBD",
+        "quadrant": "Q1",
+        "pnl_pct": 2.123
+      },
+      {
+        "ticker": "CEG",
+        "quadrant": "Q3",
+        "pnl_pct": 2.092
+      },
+      {
+        "ticker": "CCL",
+        "quadrant": "Q1",
+        "pnl_pct": 2.0753
+      },
+      {
+        "ticker": "MTZ",
+        "quadrant": "Q3",
+        "pnl_pct": 1.9976
+      },
+      {
+        "ticker": "SM",
+        "quadrant": "Q2",
+        "pnl_pct": 1.9744
+      },
+      {
+        "ticker": "DBC",
+        "quadrant": "Q2",
+        "pnl_pct": 1.9326
+      },
+      {
+        "ticker": "EWX",
+        "quadrant": "Q3",
+        "pnl_pct": 1.8527
+      },
+      {
+        "ticker": "META",
+        "quadrant": "Q1",
+        "pnl_pct": 1.7874
+      },
+      {
+        "ticker": "IWM",
+        "quadrant": "Q1",
+        "pnl_pct": 1.6458
+      },
+      {
+        "ticker": "NXE",
+        "quadrant": "Q3",
+        "pnl_pct": 1.6284
+      },
+      {
+        "ticker": "MOH",
+        "quadrant": "Q3",
+        "pnl_pct": 1.6158
+      },
+      {
+        "ticker": "AR",
+        "quadrant": "Q2",
+        "pnl_pct": 1.6069
+      },
+      {
+        "ticker": "MTDR",
+        "quadrant": "Q2",
+        "pnl_pct": 1.4711
+      },
+      {
+        "ticker": "ARM",
+        "quadrant": "Q1",
+        "pnl_pct": 1.4564
+      },
+      {
+        "ticker": "CHTR",
+        "quadrant": "Q1",
+        "pnl_pct": 1.4272
+      },
+      {
+        "ticker": "AMD",
+        "quadrant": "Q1",
+        "pnl_pct": 1.3972
+      },
+      {
+        "ticker": "COP",
+        "quadrant": "Q3",
+        "pnl_pct": 1.3944
+      },
+      {
+        "ticker": "GLD",
+        "quadrant": "Q3",
+        "pnl_pct": 1.3801
+      },
+      {
+        "ticker": "NEE",
+        "quadrant": "Q3",
+        "pnl_pct": 1.2813
+      },
+      {
+        "ticker": "CASY",
+        "quadrant": "Q4",
+        "pnl_pct": 1.2295
+      },
+      {
+        "ticker": "EA",
+        "quadrant": "Q1",
+        "pnl_pct": 1.2095
+      },
+      {
+        "ticker": "ETSY",
+        "quadrant": "Q1",
+        "pnl_pct": 1.1615
+      },
+      {
+        "ticker": "URI",
+        "quadrant": "Q2",
+        "pnl_pct": 1.1464
+      },
+      {
+        "ticker": "CERS",
+        "quadrant": "Q1",
+        "pnl_pct": -1.1141
+      },
+      {
+        "ticker": "BG",
+        "quadrant": "Q4",
+        "pnl_pct": 1.0763
+      },
+      {
+        "ticker": "CLF",
+        "quadrant": "Q2",
+        "pnl_pct": 1.0298
+      },
+      {
+        "ticker": "INTC",
+        "quadrant": "Q1",
+        "pnl_pct": 1.0076
+      },
+      {
+        "ticker": "LQD",
+        "quadrant": "Q4",
+        "pnl_pct": 1.0018
+      },
+      {
+        "ticker": "FDP",
+        "quadrant": "Q4",
+        "pnl_pct": 0.9958
+      },
+      {
+        "ticker": "TGT",
+        "quadrant": "Q4",
+        "pnl_pct": 0.9727
+      },
+      {
+        "ticker": "GNRC",
+        "quadrant": "Q2",
+        "pnl_pct": 0.9631
+      },
+      {
+        "ticker": "AXON",
+        "quadrant": "Q1",
+        "pnl_pct": 0.9554
+      },
+      {
+        "ticker": "BKR",
+        "quadrant": "Q2",
+        "pnl_pct": 0.9528
+      },
+      {
+        "ticker": "EL",
+        "quadrant": "Q4",
+        "pnl_pct": 0.9432
+      },
+      {
+        "ticker": "NKE",
+        "quadrant": "Q1",
+        "pnl_pct": 0.9306
+      },
+      {
+        "ticker": "HSY",
+        "quadrant": "Q4",
+        "pnl_pct": 0.9285
+      },
+      {
+        "ticker": "TPR",
+        "quadrant": "Q1",
+        "pnl_pct": 0.927
+      },
+      {
+        "ticker": "VG",
+        "quadrant": "Q2",
+        "pnl_pct": 0.9162
+      },
+      {
+        "ticker": "VWO",
+        "quadrant": "Q3",
+        "pnl_pct": 0.9065
+      },
+      {
+        "ticker": "IDXX",
+        "quadrant": "Q3",
+        "pnl_pct": -0.8668
+      },
+      {
+        "ticker": "KVUE",
+        "quadrant": "Q4",
+        "pnl_pct": 0.8501
+      },
+      {
+        "ticker": "RIO",
+        "quadrant": "Q2",
+        "pnl_pct": 0.8179
+      },
+      {
+        "ticker": "IEF",
+        "quadrant": "Q4",
+        "pnl_pct": 0.8117
+      },
+      {
+        "ticker": "PM",
+        "quadrant": "Q4",
+        "pnl_pct": 0.8061
+      },
+      {
+        "ticker": "TER",
+        "quadrant": "Q1",
+        "pnl_pct": 0.7898
+      },
+      {
+        "ticker": "NRG",
+        "quadrant": "Q4",
+        "pnl_pct": 0.7662
+      },
+      {
+        "ticker": "DASH",
+        "quadrant": "Q1",
+        "pnl_pct": 0.7631
+      },
+      {
+        "ticker": "SWK",
+        "quadrant": "Q3",
+        "pnl_pct": 0.7557
+      },
+      {
+        "ticker": "RRC",
+        "quadrant": "Q3",
+        "pnl_pct": 0.751
+      },
+      {
+        "ticker": "AWK",
+        "quadrant": "Q3",
+        "pnl_pct": 0.7493
+      },
+      {
+        "ticker": "LW",
+        "quadrant": "Q4",
+        "pnl_pct": 0.7454
+      },
+      {
+        "ticker": "DVN",
+        "quadrant": "Q2",
+        "pnl_pct": 0.7282
+      },
+      {
+        "ticker": "RXRX",
+        "quadrant": "Q1",
+        "pnl_pct": 0.7258
+      },
+      {
+        "ticker": "HUM",
+        "quadrant": "Q3",
+        "pnl_pct": 0.7153
+      },
+      {
+        "ticker": "OVV",
+        "quadrant": "Q2",
+        "pnl_pct": -0.7111
+      },
+      {
+        "ticker": "PSX",
+        "quadrant": "Q3",
+        "pnl_pct": 0.7055
+      },
+      {
+        "ticker": "PR",
+        "quadrant": "Q3",
+        "pnl_pct": -0.6861
+      },
+      {
+        "ticker": "CNC",
+        "quadrant": "Q4",
+        "pnl_pct": 0.673
+      },
+      {
+        "ticker": "INCY",
+        "quadrant": "Q3",
+        "pnl_pct": 0.6562
+      },
+      {
+        "ticker": "LULU",
+        "quadrant": "Q1",
+        "pnl_pct": 0.6552
+      },
+      {
+        "ticker": "SRUUF",
+        "quadrant": "Q3",
+        "pnl_pct": 0.6414
+      },
+      {
+        "ticker": "BEAM",
+        "quadrant": "Q1",
+        "pnl_pct": 0.63
+      },
+      {
+        "ticker": "WMS",
+        "quadrant": "Q3",
+        "pnl_pct": 0.6055
+      },
+      {
+        "ticker": "SHOP",
+        "quadrant": "Q1",
+        "pnl_pct": 0.5917
+      },
+      {
+        "ticker": "CRSP",
+        "quadrant": "Q1",
+        "pnl_pct": -0.5894
+      },
+      {
+        "ticker": "LIT",
+        "quadrant": "Q3",
+        "pnl_pct": 0.5894
+      },
+      {
+        "ticker": "WMT",
+        "quadrant": "Q2",
+        "pnl_pct": 0.5717
+      },
+      {
+        "ticker": "TKO",
+        "quadrant": "Q1",
+        "pnl_pct": 0.5654
+      },
+      {
+        "ticker": "SYF",
+        "quadrant": "Q2",
+        "pnl_pct": 0.5502
+      },
+      {
+        "ticker": "BXP",
+        "quadrant": "Q3",
+        "pnl_pct": 0.541
+      },
+      {
+        "ticker": "TMO",
+        "quadrant": "Q3",
+        "pnl_pct": 0.5271
+      },
+      {
+        "ticker": "TWST",
+        "quadrant": "Q1",
+        "pnl_pct": 0.5253
+      },
+      {
+        "ticker": "RCL",
+        "quadrant": "Q1",
+        "pnl_pct": 0.5199
+      },
+      {
+        "ticker": "PSKY",
+        "quadrant": "Q1",
+        "pnl_pct": -0.5148
+      },
+      {
+        "ticker": "MRVL",
+        "quadrant": "Q1",
+        "pnl_pct": 0.4905
+      },
+      {
+        "ticker": "STZ",
+        "quadrant": "Q4",
+        "pnl_pct": 0.4874
+      },
+      {
+        "ticker": "NFLX",
+        "quadrant": "Q1",
+        "pnl_pct": 0.4862
+      },
+      {
+        "ticker": "FANG",
+        "quadrant": "Q3",
+        "pnl_pct": -0.4666
+      },
+      {
+        "ticker": "CLX",
+        "quadrant": "Q4",
+        "pnl_pct": 0.4565
+      },
+      {
+        "ticker": "CMI",
+        "quadrant": "Q2",
+        "pnl_pct": 0.449
+      },
+      {
+        "ticker": "HAS",
+        "quadrant": "Q1",
+        "pnl_pct": 0.4372
+      },
+      {
+        "ticker": "FLR",
+        "quadrant": "Q3",
+        "pnl_pct": 0.4349
+      },
+      {
+        "ticker": "LLY",
+        "quadrant": "Q3",
+        "pnl_pct": 0.4329
+      },
+      {
+        "ticker": "RL",
+        "quadrant": "Q1",
+        "pnl_pct": 0.4311
+      },
+      {
+        "ticker": "LVS",
+        "quadrant": "Q1",
+        "pnl_pct": 0.4294
+      },
+      {
+        "ticker": "PDD",
+        "quadrant": "Q1",
+        "pnl_pct": 0.4283
+      },
+      {
+        "ticker": "ARE",
+        "quadrant": "Q3",
+        "pnl_pct": 0.4271
+      },
+      {
+        "ticker": "AES",
+        "quadrant": "Q4",
+        "pnl_pct": 0.4124
+      },
+      {
+        "ticker": "ULTA",
+        "quadrant": "Q1",
+        "pnl_pct": 0.398
+      },
+      {
+        "ticker": "GRMN",
+        "quadrant": "Q1",
+        "pnl_pct": 0.3971
+      },
+      {
+        "ticker": "APTV",
+        "quadrant": "Q1",
+        "pnl_pct": 0.3917
+      },
+      {
+        "ticker": "MGM",
+        "quadrant": "Q1",
+        "pnl_pct": 0.3915
+      },
+      {
+        "ticker": "VLO",
+        "quadrant": "Q2",
+        "pnl_pct": 0.3863
+      },
+      {
+        "ticker": "EXE",
+        "quadrant": "Q3",
+        "pnl_pct": 0.3796
+      },
+      {
+        "ticker": "ISRG",
+        "quadrant": "Q3",
+        "pnl_pct": -0.3725
+      },
+      {
+        "ticker": "CBRE",
+        "quadrant": "Q3",
+        "pnl_pct": 0.3721
+      },
+      {
+        "ticker": "CAH",
+        "quadrant": "Q4",
+        "pnl_pct": 0.3575
+      },
+      {
+        "ticker": "DLR",
+        "quadrant": "Q3",
+        "pnl_pct": -0.3547
+      },
+      {
+        "ticker": "GM",
+        "quadrant": "Q1",
+        "pnl_pct": -0.3546
+      },
+      {
+        "ticker": "AVGO",
+        "quadrant": "Q1",
+        "pnl_pct": 0.3477
+      },
+      {
+        "ticker": "IR",
+        "quadrant": "Q2",
+        "pnl_pct": 0.3426
+      },
+      {
+        "ticker": "MU",
+        "quadrant": "Q1",
+        "pnl_pct": -0.3277
+      },
+      {
+        "ticker": "RMD",
+        "quadrant": "Q4",
+        "pnl_pct": 0.321
+      },
+      {
+        "ticker": "TSM",
+        "quadrant": "Q1",
+        "pnl_pct": -0.3205
+      },
+      {
+        "ticker": "CZR",
+        "quadrant": "Q1",
+        "pnl_pct": 0.3201
+      },
+      {
+        "ticker": "ADM",
+        "quadrant": "Q4",
+        "pnl_pct": 0.3182
+      },
+      {
+        "ticker": "IQV",
+        "quadrant": "Q3",
+        "pnl_pct": 0.317
+      },
+      {
+        "ticker": "BIIB",
+        "quadrant": "Q4",
+        "pnl_pct": -0.3165
+      },
+      {
+        "ticker": "BAX",
+        "quadrant": "Q4",
+        "pnl_pct": 0.3077
+      },
+      {
+        "ticker": "VCYT",
+        "quadrant": "Q1",
+        "pnl_pct": -0.3029
+      },
+      {
+        "ticker": "USO",
+        "quadrant": "Q2",
+        "pnl_pct": -0.3023
+      },
+      {
+        "ticker": "CAG",
+        "quadrant": "Q4",
+        "pnl_pct": 0.2981
+      },
+      {
+        "ticker": "ON",
+        "quadrant": "Q1",
+        "pnl_pct": 0.2921
+      },
+      {
+        "ticker": "DHR",
+        "quadrant": "Q3",
+        "pnl_pct": 0.2906
+      },
+      {
+        "ticker": "GCC",
+        "quadrant": "Q2",
+        "pnl_pct": -0.2868
+      },
+      {
+        "ticker": "TREX",
+        "quadrant": "Q3",
+        "pnl_pct": -0.2819
+      },
+      {
+        "ticker": "DIS",
+        "quadrant": "Q1",
+        "pnl_pct": 0.2812
+      },
+      {
+        "ticker": "PCG",
+        "quadrant": "Q4",
+        "pnl_pct": 0.2715
+      },
+      {
+        "ticker": "CRL",
+        "quadrant": "Q3",
+        "pnl_pct": 0.2712
+      },
+      {
+        "ticker": "SJM",
+        "quadrant": "Q4",
+        "pnl_pct": -0.2697
+      },
+      {
+        "ticker": "D",
+        "quadrant": "Q4",
+        "pnl_pct": 0.2676
+      },
+      {
+        "ticker": "CI",
+        "quadrant": "Q3",
+        "pnl_pct": 0.2662
+      },
+      {
+        "ticker": "TLT",
+        "quadrant": "Q1",
+        "pnl_pct": 0.2655
+      },
+      {
+        "ticker": "SBUX",
+        "quadrant": "Q1",
+        "pnl_pct": -0.2638
+      },
+      {
+        "ticker": "PLD",
+        "quadrant": "Q3",
+        "pnl_pct": 0.2533
+      },
+      {
+        "ticker": "CRWD",
+        "quadrant": "Q1",
+        "pnl_pct": 0.2527
+      },
+      {
+        "ticker": "ALGN",
+        "quadrant": "Q4",
+        "pnl_pct": 0.2517
+      },
+      {
+        "ticker": "WYNN",
+        "quadrant": "Q1",
+        "pnl_pct": 0.2482
+      },
+      {
+        "ticker": "CCI",
+        "quadrant": "Q2",
+        "pnl_pct": 0.2468
+      },
+      {
+        "ticker": "BLSH",
+        "quadrant": "Q1",
+        "pnl_pct": -0.2466
+      },
+      {
+        "ticker": "DBA",
+        "quadrant": "Q3",
+        "pnl_pct": 0.2402
+      },
+      {
+        "ticker": "DDOG",
+        "quadrant": "Q1",
+        "pnl_pct": 0.2347
+      },
+      {
+        "ticker": "DINO",
+        "quadrant": "Q3",
+        "pnl_pct": 0.2325
+      },
+      {
+        "ticker": "XRAY",
+        "quadrant": "Q3",
+        "pnl_pct": 0.2295
+      },
+      {
+        "ticker": "REGN",
+        "quadrant": "Q3",
+        "pnl_pct": 0.2289
+      },
+      {
+        "ticker": "MHK",
+        "quadrant": "Q1",
+        "pnl_pct": -0.2249
+      },
+      {
+        "ticker": "OMC",
+        "quadrant": "Q1",
+        "pnl_pct": -0.2226
+      },
+      {
+        "ticker": "FE",
+        "quadrant": "Q3",
+        "pnl_pct": 0.2221
+      },
+      {
+        "ticker": "MRK",
+        "quadrant": "Q3",
+        "pnl_pct": 0.2215
+      },
+      {
+        "ticker": "SBAC",
+        "quadrant": "Q3",
+        "pnl_pct": 0.2156
+      },
+      {
+        "ticker": "GFS",
+        "quadrant": "Q1",
+        "pnl_pct": -0.2132
+      },
+      {
+        "ticker": "DECK",
+        "quadrant": "Q1",
+        "pnl_pct": 0.2039
+      },
+      {
+        "ticker": "UNH",
+        "quadrant": "Q3",
+        "pnl_pct": 0.2016
+      },
+      {
+        "ticker": "KEY",
+        "quadrant": "Q2",
+        "pnl_pct": 0.2002
+      },
+      {
+        "ticker": "CFG",
+        "quadrant": "Q2",
+        "pnl_pct": 0.2002
+      },
+      {
+        "ticker": "COF",
+        "quadrant": "Q2",
+        "pnl_pct": 0.1998
+      },
+      {
+        "ticker": "DXCM",
+        "quadrant": "Q1",
+        "pnl_pct": -0.1988
+      },
+      {
+        "ticker": "EXPE",
+        "quadrant": "Q1",
+        "pnl_pct": -0.1976
+      },
+      {
+        "ticker": "MAS",
+        "quadrant": "Q3",
+        "pnl_pct": 0.1965
+      },
+      {
+        "ticker": "MNST",
+        "quadrant": "Q1",
+        "pnl_pct": 0.194
+      },
+      {
+        "ticker": "MTD",
+        "quadrant": "Q4",
+        "pnl_pct": -0.1924
+      },
+      {
+        "ticker": "XEL",
+        "quadrant": "Q3",
+        "pnl_pct": 0.1915
+      },
+      {
+        "ticker": "LYV",
+        "quadrant": "Q1",
+        "pnl_pct": 0.1897
+      },
+      {
+        "ticker": "TFC",
+        "quadrant": "Q2",
+        "pnl_pct": 0.1865
+      },
+      {
+        "ticker": "ES",
+        "quadrant": "Q3",
+        "pnl_pct": 0.1856
+      },
+      {
+        "ticker": "GS",
+        "quadrant": "Q2",
+        "pnl_pct": 0.1852
+      },
+      {
+        "ticker": "ETR",
+        "quadrant": "Q3",
+        "pnl_pct": 0.1812
+      },
+      {
+        "ticker": "FAST",
+        "quadrant": "Q1",
+        "pnl_pct": 0.1785
+      },
+      {
+        "ticker": "WST",
+        "quadrant": "Q3",
+        "pnl_pct": -0.1764
+      },
+      {
+        "ticker": "GOOGL",
+        "quadrant": "Q1",
+        "pnl_pct": 0.1756
+      },
+      {
+        "ticker": "ROKU",
+        "quadrant": "Q1",
+        "pnl_pct": -0.1731
+      },
+      {
+        "ticker": "CNX",
+        "quadrant": "Q3",
+        "pnl_pct": -0.1726
+      },
+      {
+        "ticker": "TRGP",
+        "quadrant": "Q3",
+        "pnl_pct": 0.1623
+      },
+      {
+        "ticker": "STLD",
+        "quadrant": "Q3",
+        "pnl_pct": 0.1578
+      },
+      {
+        "ticker": "TSN",
+        "quadrant": "Q4",
+        "pnl_pct": -0.1552
+      },
+      {
+        "ticker": "GILD",
+        "quadrant": "Q4",
+        "pnl_pct": 0.1547
+      },
+      {
+        "ticker": "PEP",
+        "quadrant": "Q4",
+        "pnl_pct": 0.1515
+      },
+      {
+        "ticker": "NUE",
+        "quadrant": "Q3",
+        "pnl_pct": 0.1509
+      },
+      {
+        "ticker": "EME",
+        "quadrant": "Q3",
+        "pnl_pct": 0.1501
+      },
+      {
+        "ticker": "EW",
+        "quadrant": "Q3",
+        "pnl_pct": -0.1501
+      },
+      {
+        "ticker": "KMB",
+        "quadrant": "Q4",
+        "pnl_pct": -0.1486
+      },
+      {
+        "ticker": "GEV",
+        "quadrant": "Q2",
+        "pnl_pct": 0.1483
+      },
+      {
+        "ticker": "NVDA",
+        "quadrant": "Q1",
+        "pnl_pct": 0.1423
+      },
+      {
+        "ticker": "ROK",
+        "quadrant": "Q2",
+        "pnl_pct": 0.1415
+      },
+      {
+        "ticker": "TMUS",
+        "quadrant": "Q1",
+        "pnl_pct": 0.141
+      },
+      {
+        "ticker": "EQIX",
+        "quadrant": "Q3",
+        "pnl_pct": -0.1394
+      },
+      {
+        "ticker": "HSIC",
+        "quadrant": "Q4",
+        "pnl_pct": -0.1361
+      },
+      {
+        "ticker": "LEN",
+        "quadrant": "Q1",
+        "pnl_pct": -0.1355
+      },
+      {
+        "ticker": "C",
+        "quadrant": "Q2",
+        "pnl_pct": 0.1351
+      },
+      {
+        "ticker": "PWR",
+        "quadrant": "Q3",
+        "pnl_pct": 0.1334
+      },
+      {
+        "ticker": "T",
+        "quadrant": "Q1",
+        "pnl_pct": 0.1333
+      },
+      {
+        "ticker": "GEHC",
+        "quadrant": "Q3",
+        "pnl_pct": -0.1317
+      },
+      {
+        "ticker": "EXC",
+        "quadrant": "Q4",
+        "pnl_pct": 0.1308
+      },
+      {
+        "ticker": "SRE",
+        "quadrant": "Q3",
+        "pnl_pct": 0.1291
+      },
+      {
+        "ticker": "CRC",
+        "quadrant": "Q3",
+        "pnl_pct": -0.1265
+      },
+      {
+        "ticker": "SOFI",
+        "quadrant": "Q1",
+        "pnl_pct": -0.126
+      },
+      {
+        "ticker": "HAL",
+        "quadrant": "Q2",
+        "pnl_pct": 0.1237
+      },
+      {
+        "ticker": "AMGN",
+        "quadrant": "Q1",
+        "pnl_pct": -0.1228
+      },
+      {
+        "ticker": "WY",
+        "quadrant": "Q3",
+        "pnl_pct": 0.116
+      },
+      {
+        "ticker": "WSM",
+        "quadrant": "Q1",
+        "pnl_pct": -0.1148
+      },
+      {
+        "ticker": "BK",
+        "quadrant": "Q2",
+        "pnl_pct": 0.113
+      },
+      {
+        "ticker": "ED",
+        "quadrant": "Q3",
+        "pnl_pct": -0.109
+      },
+      {
+        "ticker": "FTNT",
+        "quadrant": "Q1",
+        "pnl_pct": 0.1056
+      },
+      {
+        "ticker": "BBY",
+        "quadrant": "Q1",
+        "pnl_pct": 0.0996
+      },
+      {
+        "ticker": "ZTS",
+        "quadrant": "Q4",
+        "pnl_pct": -0.0981
+      },
+      {
+        "ticker": "TEAM",
+        "quadrant": "Q1",
+        "pnl_pct": -0.0959
+      },
+      {
+        "ticker": "ELV",
+        "quadrant": "Q4",
+        "pnl_pct": 0.0947
+      },
+      {
+        "ticker": "ADBE",
+        "quadrant": "Q1",
+        "pnl_pct": 0.0937
+      },
+      {
+        "ticker": "DPZ",
+        "quadrant": "Q1",
+        "pnl_pct": -0.0936
+      },
+      {
+        "ticker": "NEM",
+        "quadrant": "Q2",
+        "pnl_pct": 0.0894
+      },
+      {
+        "ticker": "CARR",
+        "quadrant": "Q2",
+        "pnl_pct": 0.089
+      },
+      {
+        "ticker": "HRL",
+        "quadrant": "Q4",
+        "pnl_pct": -0.0854
+      },
+      {
+        "ticker": "CPB",
+        "quadrant": "Q4",
+        "pnl_pct": -0.0847
+      },
+      {
+        "ticker": "ALL",
+        "quadrant": "Q2",
+        "pnl_pct": 0.0833
+      },
+      {
+        "ticker": "CE",
+        "quadrant": "Q2",
+        "pnl_pct": -0.0813
+      },
+      {
+        "ticker": "DOC",
+        "quadrant": "Q3",
+        "pnl_pct": -0.081
+      },
+      {
+        "ticker": "TAP",
+        "quadrant": "Q4",
+        "pnl_pct": 0.0797
+      },
+      {
+        "ticker": "CSL",
+        "quadrant": "Q2",
+        "pnl_pct": -0.0794
+      },
+      {
+        "ticker": "VRTX",
+        "quadrant": "Q3",
+        "pnl_pct": -0.0783
+      },
+      {
+        "ticker": "DAL",
+        "quadrant": "Q2",
+        "pnl_pct": 0.0775
+      },
+      {
+        "ticker": "CNP",
+        "quadrant": "Q4",
+        "pnl_pct": 0.0774
+      },
+      {
+        "ticker": "FOXA",
+        "quadrant": "Q1",
+        "pnl_pct": 0.0772
+      },
+      {
+        "ticker": "WMB",
+        "quadrant": "Q3",
+        "pnl_pct": 0.0759
+      },
+      {
+        "ticker": "CHD",
+        "quadrant": "Q4",
+        "pnl_pct": 0.0744
+      },
+      {
+        "ticker": "COO",
+        "quadrant": "Q3",
+        "pnl_pct": 0.0742
+      },
+      {
+        "ticker": "DOW",
+        "quadrant": "Q2",
+        "pnl_pct": 0.0742
+      },
+      {
+        "ticker": "TECH",
+        "quadrant": "Q3",
+        "pnl_pct": -0.0707
+      },
+      {
+        "ticker": "WELL",
+        "quadrant": "Q3",
+        "pnl_pct": -0.0689
+      },
+      {
+        "ticker": "KTOS",
+        "quadrant": "Q1",
+        "pnl_pct": -0.0678
+      },
+      {
+        "ticker": "MTCH",
+        "quadrant": "Q1",
+        "pnl_pct": 0.0665
+      },
+      {
+        "ticker": "MDLZ",
+        "quadrant": "Q4",
+        "pnl_pct": 0.0663
+      },
+      {
+        "ticker": "MKC",
+        "quadrant": "Q4",
+        "pnl_pct": -0.0654
+      },
+      {
+        "ticker": "EOG",
+        "quadrant": "Q2",
+        "pnl_pct": 0.0653
+      },
+      {
+        "ticker": "OXY",
+        "quadrant": "Q2",
+        "pnl_pct": 0.0648
+      },
+      {
+        "ticker": "LYB",
+        "quadrant": "Q2",
+        "pnl_pct": 0.0631
+      },
+      {
+        "ticker": "LUV",
+        "quadrant": "Q2",
+        "pnl_pct": 0.0623
+      },
+      {
+        "ticker": "UAL",
+        "quadrant": "Q2",
+        "pnl_pct": 0.0621
+      },
+      {
+        "ticker": "CHRD",
+        "quadrant": "Q2",
+        "pnl_pct": 0.0584
+      },
+      {
+        "ticker": "BA",
+        "quadrant": "Q2",
+        "pnl_pct": -0.0583
+      },
+      {
+        "ticker": "VICI",
+        "quadrant": "Q3",
+        "pnl_pct": 0.057
+      },
+      {
+        "ticker": "ROST",
+        "quadrant": "Q1",
+        "pnl_pct": -0.0553
+      },
+      {
+        "ticker": "KMX",
+        "quadrant": "Q1",
+        "pnl_pct": -0.0544
+      },
+      {
+        "ticker": "MUB",
+        "quadrant": "Q4",
+        "pnl_pct": 0.0542
+      },
+      {
+        "ticker": "CMCSA",
+        "quadrant": "Q2",
+        "pnl_pct": 0.0532
+      },
+      {
+        "ticker": "HCA",
+        "quadrant": "Q3",
+        "pnl_pct": -0.0525
+      },
+      {
+        "ticker": "RS",
+        "quadrant": "Q2",
+        "pnl_pct": 0.0512
+      },
+      {
+        "ticker": "SUI",
+        "quadrant": "Q3",
+        "pnl_pct": -0.051
+      },
+      {
+        "ticker": "V",
+        "quadrant": "Q2",
+        "pnl_pct": -0.0509
+      },
+      {
+        "ticker": "MKTX",
+        "quadrant": "Q2",
+        "pnl_pct": 0.0506
+      },
+      {
+        "ticker": "MPC",
+        "quadrant": "Q2",
+        "pnl_pct": 0.0506
+      },
+      {
+        "ticker": "EXR",
+        "quadrant": "Q2",
+        "pnl_pct": 0.0505
+      },
+      {
+        "ticker": "TXG",
+        "quadrant": "Q1",
+        "pnl_pct": 0.0466
+      },
+      {
+        "ticker": "OKE",
+        "quadrant": "Q2",
+        "pnl_pct": -0.0458
+      },
+      {
+        "ticker": "CMG",
+        "quadrant": "Q1",
+        "pnl_pct": 0.0445
+      },
+      {
+        "ticker": "PHM",
+        "quadrant": "Q1",
+        "pnl_pct": -0.0439
+      },
+      {
+        "ticker": "DHI",
+        "quadrant": "Q1",
+        "pnl_pct": -0.0439
+      },
+      {
+        "ticker": "AMT",
+        "quadrant": "Q2",
+        "pnl_pct": 0.0429
+      },
+      {
+        "ticker": "UBER",
+        "quadrant": "Q2",
+        "pnl_pct": -0.0411
+      },
+      {
+        "ticker": "KR",
+        "quadrant": "Q4",
+        "pnl_pct": -0.0406
+      },
+      {
+        "ticker": "ZS",
+        "quadrant": "Q1",
+        "pnl_pct": 0.0402
+      },
+      {
+        "ticker": "EBAY",
+        "quadrant": "Q1",
+        "pnl_pct": -0.0375
+      },
+      {
+        "ticker": "FOX",
+        "quadrant": "Q1",
+        "pnl_pct": -0.0367
+      },
+      {
+        "ticker": "INVH",
+        "quadrant": "Q3",
+        "pnl_pct": 0.0363
+      },
+      {
+        "ticker": "TT",
+        "quadrant": "Q2",
+        "pnl_pct": 0.0359
+      },
+      {
+        "ticker": "HBAN",
+        "quadrant": "Q2",
+        "pnl_pct": 0.0357
+      },
+      {
+        "ticker": "CTRA",
+        "quadrant": "Q3",
+        "pnl_pct": 0.0335
+      },
+      {
+        "ticker": "BKH",
+        "quadrant": "Q3",
+        "pnl_pct": 0.033
+      },
+      {
+        "ticker": "CL",
+        "quadrant": "Q4",
+        "pnl_pct": 0.0325
+      },
+      {
+        "ticker": "EQR",
+        "quadrant": "Q3",
+        "pnl_pct": 0.0322
+      },
+      {
+        "ticker": "DD",
+        "quadrant": "Q2",
+        "pnl_pct": 0.0289
+      },
+      {
+        "ticker": "AEP",
+        "quadrant": "Q3",
+        "pnl_pct": -0.0287
+      },
+      {
+        "ticker": "HST",
+        "quadrant": "Q3",
+        "pnl_pct": -0.0283
+      },
+      {
+        "ticker": "MCK",
+        "quadrant": "Q4",
+        "pnl_pct": 0.0273
+      },
+      {
+        "ticker": "EQT",
+        "quadrant": "Q2",
+        "pnl_pct": 0.0265
+      },
+      {
+        "ticker": "TFX",
+        "quadrant": "Q3",
+        "pnl_pct": 0.025
+      },
+      {
+        "ticker": "J",
+        "quadrant": "Q2",
+        "pnl_pct": -0.0249
+      },
+      {
+        "ticker": "PSA",
+        "quadrant": "Q3",
+        "pnl_pct": 0.0235
+      },
+      {
+        "ticker": "CDNS",
+        "quadrant": "Q1",
+        "pnl_pct": 0.0233
+      },
+      {
+        "ticker": "MS",
+        "quadrant": "Q2",
+        "pnl_pct": 0.023
+      },
+      {
+        "ticker": "PKG",
+        "quadrant": "Q2",
+        "pnl_pct": -0.0221
+      },
+      {
+        "ticker": "AXP",
+        "quadrant": "Q2",
+        "pnl_pct": 0.0215
+      },
+      {
+        "ticker": "TSCO",
+        "quadrant": "Q1",
+        "pnl_pct": -0.0213
+      },
+      {
+        "ticker": "GOOG",
+        "quadrant": "Q1",
+        "pnl_pct": -0.0205
+      },
+      {
+        "ticker": "HD",
+        "quadrant": "Q2",
+        "pnl_pct": -0.0199
+      },
+      {
+        "ticker": "KO",
+        "quadrant": "Q4",
+        "pnl_pct": 0.0187
+      },
+      {
+        "ticker": "ABNB",
+        "quadrant": "Q1",
+        "pnl_pct": -0.0177
+      },
+      {
+        "ticker": "IRM",
+        "quadrant": "Q3",
+        "pnl_pct": -0.0175
+      },
+      {
+        "ticker": "SPG",
+        "quadrant": "Q3",
+        "pnl_pct": 0.0172
+      },
+      {
+        "ticker": "TRV",
+        "quadrant": "Q2",
+        "pnl_pct": -0.0163
+      },
+      {
+        "ticker": "CAT",
+        "quadrant": "Q2",
+        "pnl_pct": 0.0159
+      },
+      {
+        "ticker": "CCJ",
+        "quadrant": "Q3",
+        "pnl_pct": 0.0145
+      },
+      {
+        "ticker": "VTIP",
+        "quadrant": "Q3",
+        "pnl_pct": 0.0139
+      },
+      {
+        "ticker": "NTRS",
+        "quadrant": "Q2",
+        "pnl_pct": -0.0119
+      },
+      {
+        "ticker": "TTWO",
+        "quadrant": "Q1",
+        "pnl_pct": 0.0114
+      },
+      {
+        "ticker": "SYY",
+        "quadrant": "Q4",
+        "pnl_pct": 0.0112
+      },
+      {
+        "ticker": "XYL",
+        "quadrant": "Q3",
+        "pnl_pct": 0.011
+      },
+      {
+        "ticker": "COST",
+        "quadrant": "Q4",
+        "pnl_pct": 0.0105
+      },
+      {
+        "ticker": "WFC",
+        "quadrant": "Q2",
+        "pnl_pct": 0.0103
+      },
+      {
+        "ticker": "PEG",
+        "quadrant": "Q4",
+        "pnl_pct": -0.01
+      },
+      {
+        "ticker": "CUBE",
+        "quadrant": "Q3",
+        "pnl_pct": -0.0095
+      },
+      {
+        "ticker": "ETN",
+        "quadrant": "Q3",
+        "pnl_pct": -0.0094
+      },
+      {
+        "ticker": "DTE",
+        "quadrant": "Q4",
+        "pnl_pct": 0.0083
+      },
+      {
+        "ticker": "O",
+        "quadrant": "Q2",
+        "pnl_pct": 0.008
+      },
+      {
+        "ticker": "DUK",
+        "quadrant": "Q3",
+        "pnl_pct": 0.0077
+      },
+      {
+        "ticker": "GE",
+        "quadrant": "Q2",
+        "pnl_pct": 0.0071
+      },
+      {
+        "ticker": "LRCX",
+        "quadrant": "Q1",
+        "pnl_pct": -0.0066
+      },
+      {
+        "ticker": "KHC",
+        "quadrant": "Q4",
+        "pnl_pct": 0.0043
+      },
+      {
+        "ticker": "USFD",
+        "quadrant": "Q4",
+        "pnl_pct": -0.0032
+      },
+      {
+        "ticker": "FIS",
+        "quadrant": "Q2",
+        "pnl_pct": 0.0028
+      },
+      {
+        "ticker": "RBLX",
+        "quadrant": "Q1",
+        "pnl_pct": 0.0025
+      },
+      {
+        "ticker": "CPT",
+        "quadrant": "Q3",
+        "pnl_pct": -0.0018
+      },
+      {
+        "ticker": "CRH",
+        "quadrant": "Q2",
+        "pnl_pct": 0.0017
+      },
+      {
+        "ticker": "DRI",
+        "quadrant": "Q1",
+        "pnl_pct": -0.0014
+      },
+      {
+        "ticker": "ADI",
+        "quadrant": "Q1",
+        "pnl_pct": 0.0012
+      },
+      {
+        "ticker": "SO",
+        "quadrant": "Q3",
+        "pnl_pct": -0.001
+      },
+      {
+        "ticker": "HWM",
+        "quadrant": "Q2",
+        "pnl_pct": 0.0009
+      },
+      {
+        "ticker": "BMY",
+        "quadrant": "Q2",
+        "pnl_pct": 0.0006
+      },
+      {
+        "ticker": "TIP",
+        "quadrant": "Q3",
+        "pnl_pct": -0.0006
+      },
+      {
+        "ticker": "XOM",
+        "quadrant": "Q2",
+        "pnl_pct": 0.0004
+      },
+      {
+        "ticker": "IWD",
+        "quadrant": "Q2",
+        "pnl_pct": 0.0004
+      },
+      {
+        "ticker": "VZ",
+        "quadrant": "Q1",
+        "pnl_pct": 0.0003
+      },
+      {
+        "ticker": "MOS",
+        "quadrant": "Q2",
+        "pnl_pct": 0.0003
+      },
+      {
+        "ticker": "JPM",
+        "quadrant": "Q2",
+        "pnl_pct": 0.0003
+      },
+      {
+        "ticker": "EMN",
+        "quadrant": "Q2",
+        "pnl_pct": 0.0002
+      },
+      {
+        "ticker": "ODFL",
+        "quadrant": "Q2",
+        "pnl_pct": 0.0002
+      },
+      {
+        "ticker": "FMC",
+        "quadrant": "Q2",
+        "pnl_pct": 0.0001
+      },
+      {
+        "ticker": "CF",
+        "quadrant": "Q2",
+        "pnl_pct": 0.0001
+      },
+      {
+        "ticker": "AIG",
+        "quadrant": "Q2",
+        "pnl_pct": 0.0
+      },
+      {
+        "ticker": "FITB",
+        "quadrant": "Q2",
+        "pnl_pct": 0.0
+      }
+    ]
+  },
+  "dominant_quadrants": {
+    "days_in_top2": {
+      "Q1": 608,
+      "Q2": 474,
+      "Q3": 553,
+      "Q4": 373
+    },
+    "regime_shifts": [
+      {
+        "date": "2024-05-21",
+        "from": [
+          "Q4",
+          "Q3"
+        ],
+        "to": [
+          "Q4",
+          "Q1"
+        ]
+      },
+      {
+        "date": "2024-05-26",
+        "from": [
+          "Q4",
+          "Q1"
+        ],
+        "to": [
+          "Q1",
+          "Q4"
+        ]
+      },
+      {
+        "date": "2024-06-24",
+        "from": [
+          "Q1",
+          "Q4"
+        ],
+        "to": [
+          "Q4",
+          "Q1"
+        ]
+      },
+      {
+        "date": "2024-06-27",
+        "from": [
+          "Q4",
+          "Q1"
+        ],
+        "to": [
+          "Q4",
+          "Q2"
+        ]
+      },
+      {
+        "date": "2024-07-01",
+        "from": [
+          "Q4",
+          "Q2"
+        ],
+        "to": [
+          "Q2",
+          "Q4"
+        ]
+      },
+      {
+        "date": "2024-07-13",
+        "from": [
+          "Q2",
+          "Q4"
+        ],
+        "to": [
+          "Q2",
+          "Q3"
+        ]
+      },
+      {
+        "date": "2024-07-16",
+        "from": [
+          "Q2",
+          "Q3"
+        ],
+        "to": [
+          "Q3",
+          "Q2"
+        ]
+      },
+      {
+        "date": "2024-07-18",
+        "from": [
+          "Q3",
+          "Q2"
+        ],
+        "to": [
+          "Q3",
+          "Q1"
+        ]
+      },
+      {
+        "date": "2024-07-21",
+        "from": [
+          "Q3",
+          "Q1"
+        ],
+        "to": [
+          "Q1",
+          "Q3"
+        ]
+      },
+      {
+        "date": "2024-07-25",
+        "from": [
+          "Q1",
+          "Q3"
+        ],
+        "to": [
+          "Q1",
+          "Q4"
+        ]
+      },
+      {
+        "date": "2024-08-04",
+        "from": [
+          "Q1",
+          "Q4"
+        ],
+        "to": [
+          "Q4",
+          "Q1"
+        ]
+      },
+      {
+        "date": "2024-08-11",
+        "from": [
+          "Q4",
+          "Q1"
+        ],
+        "to": [
+          "Q4",
+          "Q2"
+        ]
+      },
+      {
+        "date": "2024-08-21",
+        "from": [
+          "Q4",
+          "Q2"
+        ],
+        "to": [
+          "Q4",
+          "Q3"
+        ]
+      },
+      {
+        "date": "2024-08-25",
+        "from": [
+          "Q4",
+          "Q3"
+        ],
+        "to": [
+          "Q4",
+          "Q1"
+        ]
+      },
+      {
+        "date": "2024-09-04",
+        "from": [
+          "Q4",
+          "Q1"
+        ],
+        "to": [
+          "Q4",
+          "Q3"
+        ]
+      },
+      {
+        "date": "2024-09-26",
+        "from": [
+          "Q4",
+          "Q3"
+        ],
+        "to": [
+          "Q3",
+          "Q1"
+        ]
+      },
+      {
+        "date": "2024-10-07",
+        "from": [
+          "Q3",
+          "Q1"
+        ],
+        "to": [
+          "Q3",
+          "Q2"
+        ]
+      },
+      {
+        "date": "2024-10-22",
+        "from": [
+          "Q3",
+          "Q2"
+        ],
+        "to": [
+          "Q3",
+          "Q1"
+        ]
+      },
+      {
+        "date": "2024-10-26",
+        "from": [
+          "Q3",
+          "Q1"
+        ],
+        "to": [
+          "Q1",
+          "Q3"
+        ]
+      },
+      {
+        "date": "2024-11-17",
+        "from": [
+          "Q1",
+          "Q3"
+        ],
+        "to": [
+          "Q1",
+          "Q2"
+        ]
+      },
+      {
+        "date": "2024-12-02",
+        "from": [
+          "Q1",
+          "Q2"
+        ],
+        "to": [
+          "Q1",
+          "Q4"
+        ]
+      },
+      {
+        "date": "2024-12-17",
+        "from": [
+          "Q1",
+          "Q4"
+        ],
+        "to": [
+          "Q1",
+          "Q3"
+        ]
+      },
+      {
+        "date": "2025-01-02",
+        "from": [
+          "Q1",
+          "Q3"
+        ],
+        "to": [
+          "Q1",
+          "Q2"
+        ]
+      },
+      {
+        "date": "2025-01-05",
+        "from": [
+          "Q1",
+          "Q2"
+        ],
+        "to": [
+          "Q2",
+          "Q1"
+        ]
+      },
+      {
+        "date": "2025-01-13",
+        "from": [
+          "Q2",
+          "Q1"
+        ],
+        "to": [
+          "Q2",
+          "Q3"
+        ]
+      },
+      {
+        "date": "2025-01-18",
+        "from": [
+          "Q2",
+          "Q3"
+        ],
+        "to": [
+          "Q2",
+          "Q1"
+        ]
+      },
+      {
+        "date": "2025-02-01",
+        "from": [
+          "Q2",
+          "Q1"
+        ],
+        "to": [
+          "Q1",
+          "Q2"
+        ]
+      },
+      {
+        "date": "2025-02-04",
+        "from": [
+          "Q1",
+          "Q2"
+        ],
+        "to": [
+          "Q1",
+          "Q3"
+        ]
+      },
+      {
+        "date": "2025-02-05",
+        "from": [
+          "Q1",
+          "Q3"
+        ],
+        "to": [
+          "Q1",
+          "Q4"
+        ]
+      },
+      {
+        "date": "2025-02-06",
+        "from": [
+          "Q1",
+          "Q4"
+        ],
+        "to": [
+          "Q1",
+          "Q3"
+        ]
+      },
+      {
+        "date": "2025-02-08",
+        "from": [
+          "Q1",
+          "Q3"
+        ],
+        "to": [
+          "Q3",
+          "Q4"
+        ]
+      },
+      {
+        "date": "2025-03-04",
+        "from": [
+          "Q3",
+          "Q4"
+        ],
+        "to": [
+          "Q4",
+          "Q3"
+        ]
+      },
+      {
+        "date": "2025-03-20",
+        "from": [
+          "Q4",
+          "Q3"
+        ],
+        "to": [
+          "Q3",
+          "Q4"
+        ]
+      },
+      {
+        "date": "2025-03-23",
+        "from": [
+          "Q3",
+          "Q4"
+        ],
+        "to": [
+          "Q3",
+          "Q2"
+        ]
+      },
+      {
+        "date": "2025-03-26",
+        "from": [
+          "Q3",
+          "Q2"
+        ],
+        "to": [
+          "Q2",
+          "Q3"
+        ]
+      },
+      {
+        "date": "2025-04-04",
+        "from": [
+          "Q2",
+          "Q3"
+        ],
+        "to": [
+          "Q2",
+          "Q4"
+        ]
+      },
+      {
+        "date": "2025-04-06",
+        "from": [
+          "Q2",
+          "Q4"
+        ],
+        "to": [
+          "Q4",
+          "Q2"
+        ]
+      },
+      {
+        "date": "2025-04-10",
+        "from": [
+          "Q4",
+          "Q2"
+        ],
+        "to": [
+          "Q4",
+          "Q3"
+        ]
+      },
+      {
+        "date": "2025-04-23",
+        "from": [
+          "Q4",
+          "Q3"
+        ],
+        "to": [
+          "Q3",
+          "Q4"
+        ]
+      },
+      {
+        "date": "2025-04-25",
+        "from": [
+          "Q3",
+          "Q4"
+        ],
+        "to": [
+          "Q3",
+          "Q1"
+        ]
+      },
+      {
+        "date": "2025-04-28",
+        "from": [
+          "Q3",
+          "Q1"
+        ],
+        "to": [
+          "Q1",
+          "Q3"
+        ]
+      },
+      {
+        "date": "2025-05-27",
+        "from": [
+          "Q1",
+          "Q3"
+        ],
+        "to": [
+          "Q1",
+          "Q2"
+        ]
+      },
+      {
+        "date": "2025-06-02",
+        "from": [
+          "Q1",
+          "Q2"
+        ],
+        "to": [
+          "Q1",
+          "Q4"
+        ]
+      },
+      {
+        "date": "2025-06-09",
+        "from": [
+          "Q1",
+          "Q4"
+        ],
+        "to": [
+          "Q1",
+          "Q2"
+        ]
+      },
+      {
+        "date": "2025-06-16",
+        "from": [
+          "Q1",
+          "Q2"
+        ],
+        "to": [
+          "Q2",
+          "Q1"
+        ]
+      },
+      {
+        "date": "2025-07-05",
+        "from": [
+          "Q2",
+          "Q1"
+        ],
+        "to": [
+          "Q1",
+          "Q2"
+        ]
+      },
+      {
+        "date": "2025-07-07",
+        "from": [
+          "Q1",
+          "Q2"
+        ],
+        "to": [
+          "Q1",
+          "Q3"
+        ]
+      },
+      {
+        "date": "2025-07-26",
+        "from": [
+          "Q1",
+          "Q3"
+        ],
+        "to": [
+          "Q3",
+          "Q1"
+        ]
+      },
+      {
+        "date": "2025-08-04",
+        "from": [
+          "Q3",
+          "Q1"
+        ],
+        "to": [
+          "Q3",
+          "Q4"
+        ]
+      },
+      {
+        "date": "2025-08-22",
+        "from": [
+          "Q3",
+          "Q4"
+        ],
+        "to": [
+          "Q3",
+          "Q1"
+        ]
+      },
+      {
+        "date": "2025-08-31",
+        "from": [
+          "Q3",
+          "Q1"
+        ],
+        "to": [
+          "Q3",
+          "Q2"
+        ]
+      },
+      {
+        "date": "2025-09-18",
+        "from": [
+          "Q3",
+          "Q2"
+        ],
+        "to": [
+          "Q3",
+          "Q1"
+        ]
+      },
+      {
+        "date": "2025-10-10",
+        "from": [
+          "Q3",
+          "Q1"
+        ],
+        "to": [
+          "Q3",
+          "Q4"
+        ]
+      },
+      {
+        "date": "2025-11-05",
+        "from": [
+          "Q3",
+          "Q4"
+        ],
+        "to": [
+          "Q3",
+          "Q2"
+        ]
+      },
+      {
+        "date": "2025-12-13",
+        "from": [
+          "Q3",
+          "Q2"
+        ],
+        "to": [
+          "Q3",
+          "Q1"
+        ]
+      },
+      {
+        "date": "2025-12-17",
+        "from": [
+          "Q3",
+          "Q1"
+        ],
+        "to": [
+          "Q3",
+          "Q2"
+        ]
+      },
+      {
+        "date": "2025-12-20",
+        "from": [
+          "Q3",
+          "Q2"
+        ],
+        "to": [
+          "Q3",
+          "Q1"
+        ]
+      },
+      {
+        "date": "2025-12-29",
+        "from": [
+          "Q3",
+          "Q1"
+        ],
+        "to": [
+          "Q3",
+          "Q2"
+        ]
+      },
+      {
+        "date": "2026-02-05",
+        "from": [
+          "Q3",
+          "Q2"
+        ],
+        "to": [
+          "Q2",
+          "Q3"
+        ]
+      },
+      {
+        "date": "2026-02-16",
+        "from": [
+          "Q2",
+          "Q3"
+        ],
+        "to": [
+          "Q2",
+          "Q4"
+        ]
+      }
+    ],
+    "dominant_by_month": [
+      {
+        "month": "2024-05",
+        "top1": "Q4",
+        "top2": "Q1",
+        "days_in_month": 15
+      },
+      {
+        "month": "2024-06",
+        "top1": "Q4",
+        "top2": "Q1",
+        "days_in_month": 30
+      },
+      {
+        "month": "2024-07",
+        "top1": "Q4",
+        "top2": "Q2",
+        "days_in_month": 31
+      },
+      {
+        "month": "2024-08",
+        "top1": "Q4",
+        "top2": "Q1",
+        "days_in_month": 31
+      },
+      {
+        "month": "2024-09",
+        "top1": "Q3",
+        "top2": "Q4",
+        "days_in_month": 30
+      },
+      {
+        "month": "2024-10",
+        "top1": "Q3",
+        "top2": "Q1",
+        "days_in_month": 31
+      },
+      {
+        "month": "2024-11",
+        "top1": "Q1",
+        "top2": "Q3",
+        "days_in_month": 30
+      },
+      {
+        "month": "2024-12",
+        "top1": "Q1",
+        "top2": "Q3",
+        "days_in_month": 31
+      },
+      {
+        "month": "2025-01",
+        "top1": "Q2",
+        "top2": "Q1",
+        "days_in_month": 31
+      },
+      {
+        "month": "2025-02",
+        "top1": "Q3",
+        "top2": "Q4",
+        "days_in_month": 28
+      },
+      {
+        "month": "2025-03",
+        "top1": "Q3",
+        "top2": "Q4",
+        "days_in_month": 31
+      },
+      {
+        "month": "2025-04",
+        "top1": "Q3",
+        "top2": "Q4",
+        "days_in_month": 30
+      },
+      {
+        "month": "2025-05",
+        "top1": "Q1",
+        "top2": "Q3",
+        "days_in_month": 31
+      },
+      {
+        "month": "2025-06",
+        "top1": "Q1",
+        "top2": "Q2",
+        "days_in_month": 30
+      },
+      {
+        "month": "2025-07",
+        "top1": "Q1",
+        "top2": "Q3",
+        "days_in_month": 31
+      },
+      {
+        "month": "2025-08",
+        "top1": "Q3",
+        "top2": "Q4",
+        "days_in_month": 31
+      },
+      {
+        "month": "2025-09",
+        "top1": "Q3",
+        "top2": "Q2",
+        "days_in_month": 30
+      },
+      {
+        "month": "2025-10",
+        "top1": "Q3",
+        "top2": "Q4",
+        "days_in_month": 31
+      },
+      {
+        "month": "2025-11",
+        "top1": "Q3",
+        "top2": "Q2",
+        "days_in_month": 30
+      },
+      {
+        "month": "2025-12",
+        "top1": "Q3",
+        "top2": "Q2",
+        "days_in_month": 31
+      },
+      {
+        "month": "2026-01",
+        "top1": "Q2",
+        "top2": "Q3",
+        "days_in_month": 31
+      },
+      {
+        "month": "2026-02",
+        "top1": "Q2",
+        "top2": "Q3",
+        "days_in_month": 23
+      }
+    ]
+  }
+}

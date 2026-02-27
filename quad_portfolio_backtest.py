@@ -186,134 +186,6 @@ class QuadrantPortfolioBacktest:
             daily_returns = self.price_data.pct_change().abs()
             self.atr_data = daily_returns.rolling(window=self.atr_period).mean() * self.price_data
 
-
-class AggressiveStockBacktest(QuadrantPortfolioBacktest):
-    """
-    Aggressive variant:
-      - Uses top 2 quadrants each day.
-      - For each quad, aggregates ALL mapped equity ETF constituents in that quad.
-      - Applies the same volatility-chasing + EMA filter at the STOCK level.
-      - Globally ranks stocks by weight and allocates to TOP N (e.g. 15).
-
-    Non-equity ETFs and unmapped ETFs are ignored in the stock ranking,
-    except for the BTC-USD sleeve which is still mapped into crypto proxies
-    via BTC_PROXY_BASKET (same as base strategy).
-    """
-
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        # We already fetch constituents in fetch_data, but we DO NOT want the
-        # ETF→constituent expansion layer (we operate directly on stocks here).
-        self.allow_etf_expansion = False
-
-    def calculate_target_weights(self, top_quads):
-        """Calculate aggressive stock-level target weights with volatility chasing."""
-        weights = pd.DataFrame(0.0, index=top_quads.index,
-                               columns=self.price_data.columns)
-
-        for date in top_quads.index:
-            top1 = top_quads.loc[date, 'Top1']
-            top2 = top_quads.loc[date, 'Top2']
-
-            final_weights = {}
-
-            # Process each quad separately with volatility weighting
-            for quad in (top1, top2):
-                quad_weight = BASE_QUAD_LEVERAGE
-                if quad == 'Q1':
-                    quad_weight *= Q1_LEVERAGE_MULTIPLIER
-
-                # Build stock universe for this quad from ETF constituents
-                quad_stocks = set()
-                for etf in QUAD_ALLOCATIONS[quad].keys():
-                    if etf in ETF_CONSTITUENTS:
-                        for stock in ETF_CONSTITUENTS[etf]:
-                            if stock in self.price_data.columns:
-                                quad_stocks.add(stock)
-
-                if not quad_stocks:
-                    continue
-
-                # Get volatilities for this date at the stock level
-                quad_vols = {}
-                for ticker in quad_stocks:
-                    if ticker in self.volatility_data.columns and date in self.volatility_data.index:
-                        vol = self.volatility_data.loc[date, ticker]
-                        if pd.notna(vol) and vol > 0:
-                            quad_vols[ticker] = vol
-
-                if not quad_vols:
-                    continue
-
-                total_vol = sum(quad_vols.values())
-                if total_vol <= 0:
-                    continue
-
-                # Volatility-chasing weights within this quad's stock universe
-                vol_weights = {t: (v / total_vol) * quad_weight
-                               for t, v in quad_vols.items()}
-
-                # Apply EMA filter at stock level
-                for ticker, weight in vol_weights.items():
-                    if ticker in self.ema_data.columns and date in self.price_data.index:
-                        price = self.price_data.loc[date, ticker]
-                        ema = self.ema_data.loc[date, ticker]
-
-                        if pd.notna(price) and pd.notna(ema) and price > ema:
-                            final_weights[ticker] = final_weights.get(ticker, 0.0) + weight
-
-            # Optional BTC proxy handling (if any BTC-USD exposure exists)
-            if 'BTC-USD' in final_weights and BTC_PROXY_BASKET:
-                btc_weight = final_weights.pop('BTC-USD')
-
-                proxy_vols = {}
-                for proxy_ticker in BTC_PROXY_BASKET.keys():
-                    if proxy_ticker not in self.price_data.columns:
-                        continue
-                    if proxy_ticker not in self.volatility_data.columns:
-                        continue
-
-                    vol = self.volatility_data.loc[date, proxy_ticker]
-                    if pd.isna(vol) or vol <= 0:
-                        continue
-
-                    if proxy_ticker not in self.ema_data.columns:
-                        continue
-                    price = self.price_data.loc[date, proxy_ticker]
-                    ema = self.ema_data.loc[date, proxy_ticker]
-                    if pd.isna(price) or pd.isna(ema) or price <= ema:
-                        continue
-
-                    proxy_vols[proxy_ticker] = float(vol)
-
-                if proxy_vols:
-                    n = int(BTC_PROXY_MAX_POSITIONS) if BTC_PROXY_MAX_POSITIONS else 10
-                    top_proxies = sorted(proxy_vols.items(), key=lambda x: x[1], reverse=True)[:n]
-                    total_vol = sum(v for _, v in top_proxies)
-
-                    if total_vol > 0:
-                        for proxy_ticker, vol in top_proxies:
-                            proxy_weight = btc_weight * (vol / total_vol)
-                            final_weights[proxy_ticker] = final_weights.get(proxy_ticker, 0.0) + proxy_weight
-
-            # Enforce aggressive cap: top N stocks by weight
-            max_positions = self.max_positions or 15
-            if max_positions and len(final_weights) > max_positions:
-                sorted_weights = sorted(final_weights.items(), key=lambda x: x[1], reverse=True)
-                top_n_weights = dict(sorted_weights[:max_positions])
-
-                original_total = sum(final_weights.values())
-                new_total = sum(top_n_weights.values())
-                scale_factor = original_total / new_total if new_total > 0 else 1
-
-                final_weights = {t: w * scale_factor for t, w in top_n_weights.items()}
-
-            # Apply final weights to matrix
-            for ticker, weight in final_weights.items():
-                weights.loc[date, ticker] = weight
-
-        return weights
-    
     def calculate_quad_scores(self):
         """
         Calculate momentum scores for each quadrant using QUAD_INDICATORS
@@ -513,8 +385,17 @@ class AggressiveStockBacktest(QuadrantPortfolioBacktest):
         # Determine top 2 quads each day
         print("\nDetermining top 2 quadrants daily...")
         top_quads = self.determine_top_quads(quad_scores.iloc[warmup:])
+        # Restrict to requested backtest window [start_date, end_date]
+        start_ts = pd.Timestamp(self.start_date)
+        end_ts = pd.Timestamp(self.end_date)
+        top_quads = top_quads[(top_quads.index >= start_ts) & (top_quads.index <= end_ts)]
+        if len(top_quads) < 2:
+            raise ValueError(
+                f"Backtest window has too few days: {self.start_date.date()} to {self.end_date.date()}. "
+                "Ensure start < end and data exists for the range."
+            )
         self.quad_history = top_quads
-        
+
         # Calculate target weights (ETF-level or overridden by subclasses)
         print("Calculating target portfolio weights...")
         target_weights = self.calculate_target_weights(top_quads)
@@ -556,7 +437,7 @@ class AggressiveStockBacktest(QuadrantPortfolioBacktest):
         print("  Exit rule: Immediate (no lag)")
         print("  P&L: Overnight at OLD positions, Intraday at NEW positions")
         
-        portfolio_value = pd.Series(self.initial_capital, index=target_weights.index)
+        portfolio_value = pd.Series(float(self.initial_capital), index=target_weights.index, dtype=float)
         actual_positions = pd.Series(0.0, index=target_weights.columns)  # Current holdings
         prev_positions = pd.Series(0.0, index=target_weights.columns)  # Track previous positions for cost calculation
         pending_entries = {}  # {ticker: target_weight} - waiting for confirmation
@@ -1043,6 +924,8 @@ class AggressiveStockBacktest(QuadrantPortfolioBacktest):
             pv = pv[pv.index <= pd.Timestamp(report_end_date)]
         
         if len(pv) < 2:
+            pv = self.portfolio_value
+        if len(pv) < 2:
             raise ValueError("Insufficient data for report")
         
         start_dt = pv.index[0]
@@ -1331,6 +1214,28 @@ class AggressiveStockBacktest(QuadrantPortfolioBacktest):
             
         except Exception as e:
             print(f"\nCould not compare to SPY: {e}")
+
+    def print_ticker_attribution(self, top_n: int = 25):
+        """Print full-period P/L attribution by ticker."""
+        if not getattr(self, "daily_ticker_pnl", None):
+            print("\n[Attribution] No daily_ticker_pnl data available.")
+            return
+
+        df = pd.DataFrame(self.daily_ticker_pnl)
+        grouped = (
+            df.groupby("ticker")["pnl_pct"]
+            .sum()
+            .sort_values(ascending=False)
+        )
+
+        print("\n" + "=" * 70)
+        print("FULL-PERIOD P/L ATTRIBUTION BY TICKER")
+        print("=" * 70)
+        print(f"{'Rank':<6}{'Ticker':<15}{'P/L (pct pts)':>15}")
+        print("-" * 70)
+        for rank, (ticker, pnl) in enumerate(grouped.head(top_n).items(), 1):
+            print(f"{rank:<6}{ticker:<15}{pnl:>14.4f}")
+        print("=" * 70)
     
     def plot_results(self):
         """Plot portfolio performance (unhedged, and hedged if available)."""
@@ -1374,6 +1279,113 @@ class AggressiveStockBacktest(QuadrantPortfolioBacktest):
         print("\n" + "=" * 70)
         print("📊 Chart displayed")
         print("=" * 70)
+
+
+class AggressiveStockBacktest(QuadrantPortfolioBacktest):
+    """
+    Aggressive variant:
+      - Uses top 2 quadrants each day.
+      - For each quad, aggregates ALL mapped equity ETF constituents in that quad.
+      - Applies the same volatility-chasing + EMA filter at the STOCK level.
+      - Globally ranks stocks by weight and allocates to TOP N (e.g. 15).
+
+    Non-equity ETFs and unmapped ETFs are ignored in the stock ranking,
+    except for the BTC-USD sleeve which is still mapped into crypto proxies
+    via BTC_PROXY_BASKET (same as base strategy).
+    """
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.allow_etf_expansion = False
+
+    def calculate_target_weights(self, top_quads):
+        """Calculate aggressive stock-level target weights with volatility chasing."""
+        weights = pd.DataFrame(0.0, index=top_quads.index,
+                               columns=self.price_data.columns)
+
+        for date in top_quads.index:
+            top1 = top_quads.loc[date, 'Top1']
+            top2 = top_quads.loc[date, 'Top2']
+            final_weights = {}
+
+            for quad in (top1, top2):
+                quad_weight = BASE_QUAD_LEVERAGE
+                if quad == 'Q1':
+                    quad_weight *= Q1_LEVERAGE_MULTIPLIER
+
+                quad_stocks = set()
+                for etf in QUAD_ALLOCATIONS[quad].keys():
+                    if etf in ETF_CONSTITUENTS:
+                        for stock in ETF_CONSTITUENTS[etf]:
+                            if stock in self.price_data.columns:
+                                quad_stocks.add(stock)
+
+                if not quad_stocks:
+                    continue
+
+                quad_vols = {}
+                for ticker in quad_stocks:
+                    if ticker in self.volatility_data.columns and date in self.volatility_data.index:
+                        vol = self.volatility_data.loc[date, ticker]
+                        if pd.notna(vol) and vol > 0:
+                            quad_vols[ticker] = vol
+
+                if not quad_vols:
+                    continue
+
+                total_vol = sum(quad_vols.values())
+                if total_vol <= 0:
+                    continue
+
+                vol_weights = {t: (v / total_vol) * quad_weight
+                               for t, v in quad_vols.items()}
+
+                for ticker, weight in vol_weights.items():
+                    if ticker in self.ema_data.columns and date in self.price_data.index:
+                        price = self.price_data.loc[date, ticker]
+                        ema = self.ema_data.loc[date, ticker]
+                        if pd.notna(price) and pd.notna(ema) and price > ema:
+                            final_weights[ticker] = final_weights.get(ticker, 0.0) + weight
+
+            if 'BTC-USD' in final_weights and BTC_PROXY_BASKET:
+                btc_weight = final_weights.pop('BTC-USD')
+                proxy_vols = {}
+                for proxy_ticker in BTC_PROXY_BASKET.keys():
+                    if proxy_ticker not in self.price_data.columns or proxy_ticker not in self.volatility_data.columns:
+                        continue
+                    vol = self.volatility_data.loc[date, proxy_ticker]
+                    if pd.isna(vol) or vol <= 0:
+                        continue
+                    if proxy_ticker not in self.ema_data.columns:
+                        continue
+                    price = self.price_data.loc[date, proxy_ticker]
+                    ema = self.ema_data.loc[date, proxy_ticker]
+                    if pd.isna(price) or pd.isna(ema) or price <= ema:
+                        continue
+                    proxy_vols[proxy_ticker] = float(vol)
+
+                if proxy_vols:
+                    n = int(BTC_PROXY_MAX_POSITIONS) if BTC_PROXY_MAX_POSITIONS else 10
+                    top_proxies = sorted(proxy_vols.items(), key=lambda x: x[1], reverse=True)[:n]
+                    total_vol = sum(v for _, v in top_proxies)
+                    if total_vol > 0:
+                        for proxy_ticker, vol in top_proxies:
+                            proxy_weight = btc_weight * (vol / total_vol)
+                            final_weights[proxy_ticker] = final_weights.get(proxy_ticker, 0.0) + proxy_weight
+
+            max_positions = self.max_positions or 15
+            if max_positions and len(final_weights) > max_positions:
+                sorted_weights = sorted(final_weights.items(), key=lambda x: x[1], reverse=True)
+                top_n_weights = dict(sorted_weights[:max_positions])
+                original_total = sum(final_weights.values())
+                new_total = sum(top_n_weights.values())
+                scale_factor = original_total / new_total if new_total > 0 else 1
+                final_weights = {t: w * scale_factor for t, w in top_n_weights.items()}
+
+            for ticker, weight in final_weights.items():
+                weights.loc[date, ticker] = weight
+
+        return weights
 
 
 if __name__ == "__main__":

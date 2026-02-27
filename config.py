@@ -3,10 +3,12 @@ Configuration for Macro Quadrant Trading Strategy
 """
 
 import os
+from pathlib import Path
 from dotenv import load_dotenv
 
-# Load environment variables
-load_dotenv()
+# Load environment variables from this repo's .env (independent of CWD)
+_ENV_PATH = Path(__file__).resolve().parent / ".env"
+load_dotenv(dotenv_path=_ENV_PATH, override=False)
 
 # === HYPERLIQUID CONFIGURATION ===
 PRIVATE_KEY = os.getenv("PRIVATE_KEY", "0x04793e9c32fb5def7a646610fd7a4bbb2c769b3b110b8049ef926e8815082d30")
@@ -131,6 +133,11 @@ REGIME_LEVERAGE = {
 TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN", "7206335521:AAGQeuhik1SrN_qMakb9bxkI1iAJmg8A3Wo")
 TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "7119645510")
 
+# === IBKR EXECUTION SETTINGS (LONGSHORT) ===
+# Account used for executing the equity-only strategy on IBKR.
+# Set IB_ACCOUNT in .env for this project, e.g. IB_ACCOUNT=U24651836
+IB_ACCOUNT = os.getenv("IB_ACCOUNT", "").strip()
+
 # === QUADRANT DESCRIPTIONS ===
 QUADRANT_DESCRIPTIONS = {
     'Q1': 'Growth ↑, Inflation ↓ (Goldilocks)',
@@ -156,6 +163,8 @@ QUAD_ALLOCATIONS = {
         'BTC-USD': 0.60 * 0.40,     # 40% of 60% Growth (Bitcoin)
         'ARKK': 0.60 * 0.30,     # 30% of 60% Growth
         'IWM': 0.60 * 0.15,      # 15% of 60% Growth (Small Caps)
+        'ROBO': 0.60 * 0.05,     # 5% of 60% Growth (AI/robotics)
+        'JEDI': 0.60 * 0.05,     # 5% of 60% Growth (AI/defense)
         'XLC': 0.15 * 0.50,      # 50% of 15% Consumer Disc
         'XLY': 0.15 * 0.50,      # 50% of 15% Consumer Disc
         'TLT': 0.10 * 0.50,      # 50% of 10% Bonds
@@ -166,6 +175,7 @@ QUAD_ALLOCATIONS = {
         'DBC': 0.35 * 0.20,      # 20% of 35% Commodities
         'GCC': 0.35 * 0.20,      # 20% of 35% Commodities
         'LIT': 0.35 * 0.10,      # 10% of 35% Commodities (Lithium)
+        'URA': 0.35 * 0.10,      # 10% of 35% Commodities (Uranium)
         'XLF': 0.30 * 0.333,     # 33% of 30% Cyclicals
         'XLI': 0.30 * 0.333,     # 33% of 30% Cyclicals
         'XLB': 0.30 * 0.334,     # 34% of 30% Cyclicals
@@ -228,44 +238,56 @@ QUAD_INDICATORS = {
 # - Proxies must pass the same EMA filter (above 50d EMA) to be eligible
 # - Within the crypto sleeve, weights are set by volatility-chasing (higher vol = higher weight)
 # - The sleeve is capped to at most BTC_PROXY_MAX_POSITIONS tickers (default 10)
+# - The numeric values here are placeholders; the implementation currently
+#   uses only the keys (tickers) and then volatility-weights the eligible ones.
 BTC_PROXY_BASKET = {
-    # BTC Treasury Companies
-    'MSTR': 0.10,
-    'STRIVE': 0.05,
-
-    # ETH Treasury Companies
-    'SBET': 0.05,
-
-    # Pure Play Miners
-    'MARA': 0.03,
-    'CLSK': 0.02,
-    'RIOT': 0.03,
-    'BITF': 0.02,
+    'IREN': 0.02,
+    'COIN': 0.02,
+    'APLD': 0.02,
+    'BMNR': 0.02,
+    'WULF': 0.02,
+    'RIOT': 0.02,
     'CIFR': 0.02,
-
-    # Diversified Miners
-    'IREN': 0.03,
-    'CORZ': 0.03,
+    'CORZ': 0.02,
+    'BITF': 0.02,
     'HUT': 0.02,
+    'CLSK': 0.02,
+    'GLXY': 0.02,
+    'MARA': 0.02,
     'BTDR': 0.02,
     'BTBT': 0.02,
-    'WULF': 0.02,
     'HIVE': 0.02,
-
-    # Altcoin Digital Asset Treasuries
-    'ASST': 0.015,
-    'UPXI': 0.015,
-    'AVX': 0.01,
-    'DFDV': 0.01,
-
-    # Infrastructure/Exchanges
-    'COIN': 0.03,
-    'GLXY': 0.02,
+    'BKKT': 0.02,
+    'CAN': 0.02,
+    'NA': 0.02,
+    'FUFU': 0.02,
+    'CD': 0.02,
+    'BTCS': 0.02,
+    'CS': 0.02,
+    'SLNH': 0.02,
+    'EXOD': 0.02,
+    'CANG': 0.02,
+    'MATH': 0.02,
+    'BTM': 0.02,
+    'MSTR': 0.02,
+    'XXI': 0.02,
     'CRCL': 0.02,
     'HOOD': 0.02,
-    'BLSH': 0.015,
-    'CAN': 0.015,
-    'SQ': 0.02,
+    'IBKR': 0.02,
+    'SMLR': 0.02,
+    'KULR': 0.02,
+    'DAPP': 0.02,
+    'SOLS': 0.02,
+    'UPXI': 0.02,
+    'STRV': 0.02,
+    'STSS': 0.02,
+    'BTGO': 0.02,
+    'XYZ': 0.02,
+    'BLSH': 0.02,
+    'KLAR': 0.02,
+    'ETOR': 0.02,
+    'CNCK': 0.02,
+    'SOFI': 0.02,
 }
 
 BTC_PROXY_MAX_POSITIONS = 10

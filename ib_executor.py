@@ -23,7 +23,7 @@ except ImportError:
 class IBExecutor:
     """Execute trades via Interactive Brokers API using CFDs"""
     
-    def __init__(self, host='127.0.0.1', port=7497, client_id=1):
+    def __init__(self, host='127.0.0.1', port=7497, client_id=1, account=None):
         """
         Initialize IB connection
         
@@ -32,11 +32,13 @@ class IBExecutor:
             port: 7497 for paper trading, 7496 for live (TWS)
                   4002 for paper trading, 4001 for live (IB Gateway)
             client_id: Unique client ID
+            account: Optional IBKR account ID to bind operations to
         """
         self.ib = IB()
         self.host = host
         self.port = port
         self.client_id = client_id
+        self.account = (account or "").strip()
         self.connected = False
         
         # CFD contract mapping (ticker -> IB CFD contract)
@@ -48,6 +50,8 @@ class IBExecutor:
             self.ib.connect(self.host, self.port, clientId=self.client_id)
             self.connected = True
             print(f"✓ Connected to IB at {self.host}:{self.port}")
+            if self.account:
+                print(f"  Using account: {self.account}")
             return True
         except Exception as e:
             print(f"✗ Failed to connect to IB: {e}")
@@ -112,10 +116,12 @@ class IBExecutor:
         if not self.connected:
             print("Not connected to IB")
             return 0.0
-        
+
+        acct = self.account if self.account else ""
+
         # Try to get account summary (more reliable)
         try:
-            account_summary = self.ib.accountSummary()
+            account_summary = self.ib.accountSummary(acct) if acct else self.ib.accountSummary()
             for item in account_summary:
                 if item.tag == 'NetLiquidation':
                     # Prefer USD, but accept base currency (GBP, EUR, etc.)
@@ -128,9 +134,8 @@ class IBExecutor:
                         return value
         except:
             pass
-        
         # Fallback: Try accountValues
-        account_values = self.ib.accountValues()
+        account_values = self.ib.accountValues(acct) if acct else self.ib.accountValues()
         for item in account_values:
             if item.tag == 'NetLiquidation':
                 if item.currency == 'USD':
@@ -155,9 +160,11 @@ class IBExecutor:
         """
         if not self.connected:
             return {}
-        
+
+        acct = self.account if self.account else ""
         positions = {}
-        for position in self.ib.positions():
+        ib_positions = self.ib.positions(acct) if acct else self.ib.positions()
+        for position in ib_positions:
             symbol = position.contract.symbol if hasattr(position.contract, 'symbol') else position.contract.localSymbol
             contract_type = position.contract.secType
             quantity = position.position
@@ -272,6 +279,8 @@ class IBExecutor:
         
         # Create market order
         order = MarketOrder(action, quantity)
+        if getattr(self, "account", None):
+            order.account = self.account
         
         # Place order
         trade = self.ib.placeOrder(contract, order)

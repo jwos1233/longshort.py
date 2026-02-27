@@ -25,6 +25,7 @@ from signal_generator import SignalGenerator
 from ib_executor import IBExecutor
 from position_manager import PositionManager
 from telegram_notifier import get_notifier
+from config import IB_ACCOUNT
 from datetime import datetime
 import yfinance as yf
 import pandas as pd
@@ -33,7 +34,7 @@ import pandas as pd
 class SimpleLiveTrader:
     """Simplified live trader - generate, confirm, and execute in one run"""
     
-    def __init__(self, ib_port=4001, dry_run=True, enable_telegram=True):
+    def __init__(self, ib_port=4001, dry_run=True, enable_telegram=True, ib_account=None):
         """
         Initialize trader
         
@@ -41,6 +42,7 @@ class SimpleLiveTrader:
             ib_port: IB Gateway port (4001=live, 4002=paper)
             dry_run: If True, show what would happen but don't trade
             enable_telegram: Send notifications
+            ib_account: IBKR account ID (overrides IB_ACCOUNT from config/env)
         """
         self.signal_gen = SignalGenerator(
             momentum_days=20, 
@@ -53,6 +55,8 @@ class SimpleLiveTrader:
         )
         self.ib_port = ib_port
         self.dry_run = dry_run
+        # Prefer explicit ib_account CLI arg, else fall back to IB_ACCOUNT from config/env
+        self.ib_account = (ib_account or IB_ACCOUNT or "").strip()
         self.telegram = get_notifier() if enable_telegram else None
     
     def get_current_ema_status(self, tickers: list, ema_period: int = 50) -> dict:
@@ -247,8 +251,10 @@ class SimpleLiveTrader:
                     print(f"  ... and {len(atr_data) - 3} more")
             else:
                 print("  ⚠️ WARNING: No ATR data available - stops will NOT be placed!")
+
+            print(f"IB Account: {self.ib_account or '(not set)'}")
             
-            with IBExecutor(port=self.ib_port) as ib_exec:
+            with IBExecutor(port=self.ib_port, account=self.ib_account) as ib_exec:
                 if not ib_exec.connected:
                     print("\nERROR: Failed to connect to IB Gateway")
                     print("Make sure IB Gateway is running on port", self.ib_port)
@@ -266,8 +272,8 @@ class SimpleLiveTrader:
                     print("\nERROR: Invalid account value")
                     return
                 
-                # Initialize position manager
-                position_manager = PositionManager(ib_exec.ib)
+                # Initialize position manager (binds to same account, if provided)
+                position_manager = PositionManager(ib_exec.ib, account=self.ib_account)
                 
                 # Get positions before
                 positions_before = ib_exec.get_current_positions()
@@ -461,12 +467,28 @@ This matches the backtest logic exactly:
         """
     )
     
-    parser.add_argument('--port', type=int, default=4001,
-                       help='IB port (4001=live Gateway, 4002=paper Gateway)')
-    parser.add_argument('--live', action='store_true',
-                       help='Execute live trades (default is dry run)')
-    parser.add_argument('--no-telegram', action='store_true',
-                       help='Disable Telegram notifications')
+    parser.add_argument(
+        '--port',
+        type=int,
+        default=4001,
+        help='IB port (4001=live Gateway, 4002=paper Gateway)',
+    )
+    parser.add_argument(
+        '--live',
+        action='store_true',
+        help='Execute live trades (default is dry run)',
+    )
+    parser.add_argument(
+        '--no-telegram',
+        action='store_true',
+        help='Disable Telegram notifications',
+    )
+    parser.add_argument(
+        '--account',
+        type=str,
+        default=None,
+        help='IBKR account ID to use (overrides IB_ACCOUNT env).',
+    )
     
     args = parser.parse_args()
     
@@ -474,7 +496,8 @@ This matches the backtest logic exactly:
     trader = SimpleLiveTrader(
         ib_port=args.port,
         dry_run=not args.live,
-        enable_telegram=not args.no_telegram
+        enable_telegram=not args.no_telegram,
+        ib_account=args.account,
     )
     
     # Run

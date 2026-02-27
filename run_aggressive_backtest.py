@@ -39,6 +39,10 @@ def main():
     start_date = datetime.strptime(args.start, "%Y-%m-%d") if args.start else default_start
     end_date = datetime.strptime(args.end, "%Y-%m-%d") if args.end else default_end
 
+    if start_date > end_date:
+        start_date, end_date = end_date, start_date
+        print("(Start was after end; swapped to use full backtest range.)")
+
     print("=" * 70)
     print("AGGRESSIVE STOCK BACKTEST: TOP 15 NAMES (VOL-CHASING, TOP 2 QUADS)")
     print("=" * 70)
